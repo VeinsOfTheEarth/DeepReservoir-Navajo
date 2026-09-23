@@ -1,5 +1,3 @@
-> **Prepublication artifact:** This figure uses the archived pre-correction Phase-95 policy or reward set and is included for provenance. Refresh it after final corrected-policy selection.
-
 # NIIP Reflex
 
 Run `python -B paper/figures/niip-reflex/build.py` from the repository root.

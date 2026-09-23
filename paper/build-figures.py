@@ -17,7 +17,7 @@ def main() -> int:
     figures = json.loads(CATALOG.read_text(encoding="utf-8"))["figures"]
     automated = [
         figure for figure in figures
-        if figure.get("status") in {"paper", "archived_pre_correction"}
+        if figure.get("status") == "paper"
         and figure["source"] == "repo_script"
     ]
     manual = [figure["slug"] for figure in figures if figure not in automated]

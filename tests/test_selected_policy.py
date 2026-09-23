@@ -31,8 +31,8 @@ def test_selected_policy_config_matches_metadata() -> None:
     train = cfg["base_train"]
 
     assert cfg["submission_name"] == selected_policy.SELECTED_PUBLIC_NAME
-    assert cfg["seeds"] == [selected_policy.SELECTED_LEGACY_SEED]
-    assert exp["legacy_name"] == selected_policy.SELECTED_LEGACY_FAMILY
+    assert cfg["seeds"] == [selected_policy.SELECTED_SEED]
+    assert exp["source_family"] == selected_policy.SELECTED_SOURCE_FAMILY
     assert exp["reward_spec"] == selected_policy.SELECTED_REWARD_SPEC
     assert train["policy_type"] == selected_policy.SELECTED_POLICY_TYPE
     assert train["action_mode"] == selected_policy.SELECTED_ACTION_MODE
@@ -78,14 +78,14 @@ def test_selected_reward_spec_is_registered_and_buildable() -> None:
     assert len(reward.components) == 7
     assert [(c.objective, c.variant, c.alpha) for c in reward.components] == [
         ("dam_safety", "spill_guard_warn98", 1.0),
-        ("storage_control", "target_peak875_concave0_softupper98", 2.5),
-        ("hydropower", "positive_discretionary_efficiency", 1.5),
-        ("flooding", "penalty_caps_jon", 0.25),
+        ("storage_control", "target_oishift875to90_concave0_softupper98", 2.5),
+        ("hydropower", "positive_efficiency", 1.5),
+        ("flooding", "penalty_caps_archuleta_bluff", 0.25),
         ("niip", "delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon", 3.0),
         ("esa_min_flow", "green_logistic_jon", 2.5),
         (
             "esa_spring_peak_release",
-            "farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong",
+            "farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar",
             2.0,
         ),
     ]
@@ -101,16 +101,15 @@ def test_selected_policy_model_artifact_is_loadable() -> None:
     assert loaded.__class__.__name__ == "PPO"
 
 
-def test_selected_policy_eval_artifacts_are_present_and_frozen() -> None:
-    expected = {
-        selected_policy.SELECTED_EVAL_METRICS_CSV_PATH: "95EDFB57B6EA5F7A959801ACA8EED4B66BC88874A0563675CB56D994BB9D493A",
-        selected_policy.SELECTED_EVAL_METRICS_JSON_PATH: "5C8578033623753718A3447191AAB7E00C7A2DA234068157B692FF06E816D9CC",
-        selected_policy.SELECTED_EVAL_ROLLOUT_PATH: "D01F74C5E48519C4B8E32018618AA52956F95DCC8BCD4B273250A53A18CD27C6",
-    }
-    for path, expected_hash in expected.items():
+def test_selected_policy_eval_artifacts_match_manifest() -> None:
+    paths = (
+        selected_policy.SELECTED_EVAL_METRICS_CSV_PATH,
+        selected_policy.SELECTED_EVAL_METRICS_JSON_PATH,
+        selected_policy.SELECTED_EVAL_ROLLOUT_PATH,
+    )
+    for path in paths:
         assert path.exists()
-        assert selected_policy.SELECTED_ARTIFACT_SHA256[path.name] == expected_hash
-        assert _sha256(path) == expected_hash
+        assert _sha256(path) == selected_policy.SELECTED_ARTIFACT_SHA256[path.name]
 
 
 def test_selected_policy_split_head_masks_match_expected_dimensions() -> None:
@@ -131,7 +130,7 @@ def test_public_spr_advice_default_is_operational() -> None:
     assert normalize_spr_advice_mode("") == selected_policy.SELECTED_SPR_ADVICE_MODE
 
 
-def test_legacy_hindsight_spr_modes_are_not_public_inputs() -> None:
+def test_hindsight_spr_modes_are_not_public_inputs() -> None:
     with pytest.raises(ValueError):
         normalize_spr_advice_mode("oracle_future")
     with pytest.raises(ValueError):

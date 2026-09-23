@@ -1,0 +1,204 @@
+{
+  "agent": {
+    "algo_class": "PPO",
+    "batch_size": 60,
+    "clip_range": "FloatSchedule(ConstantSchedule(val=0.2))",
+    "device": "device(type='cpu')",
+    "ent_coef": 0.0,
+    "gae_lambda": 0.95,
+    "gamma": 0.999,
+    "learning_rate": 0.0003,
+    "max_grad_norm": 0.5,
+    "n_epochs": 10,
+    "n_steps": 3600,
+    "normalize_advantage": true,
+    "policy_class": "SplitActionHeadsActorCriticPolicy",
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "obs_column_names": [
+        "storage_af",
+        "storage_budget_frac",
+        "niip_historic_demand_frac",
+        "esa_required_release_frac",
+        "animas_spr_frac",
+        "spr_needed_frac_10000cfs_5d",
+        "spr_needed_frac_8000cfs_10d",
+        "spr_needed_frac_5000cfs_21d",
+        "spr_needed_frac_2500cfs_10d",
+        "spr_progress_10000cfs_5d",
+        "spr_progress_8000cfs_10d",
+        "spr_progress_5000cfs_21d",
+        "spr_progress_2500cfs_10d",
+        "spr_advice_target_req05_frac",
+        "spr_advice_threshold_frac",
+        "spr_advice_progress_frac",
+        "spr_advice_viability_frac",
+        "spr_advice_active",
+        "spill_pressure_frac",
+        "spill_avoidance_sj_frac"
+      ],
+      "sj_exclude_names": [
+        "animas_spr_frac"
+      ],
+      "sj_exclude_prefixes": [
+        "spr_"
+      ]
+    },
+    "policy_summary": {
+      "activation_fn": "Tanh",
+      "features_extractor_class": "FlattenExtractor",
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "normalize_images": true,
+      "optimizer_class": "Adam",
+      "ortho_init": true,
+      "parameter_counts": {
+        "total": 25097,
+        "trainable": 25097
+      },
+      "share_features_extractor": true
+    },
+    "python_version": "3.10.20",
+    "sde_sample_freq": -1,
+    "stable_baselines3_version": "2.7.1",
+    "torch_version": "2.5.1",
+    "use_sde": false,
+    "vf_coef": 0.5
+  },
+  "library_versions": {
+    "python": "3.10.20",
+    "stable_baselines3": "2.7.1",
+    "torch": "2.5.1"
+  },
+  "policy": {
+    "activation_fn": "Tanh",
+    "features_extractor_class": "FlattenExtractor",
+    "module_parameter_counts": {
+      "action_net": {
+        "total": 260,
+        "trainable": 260
+      },
+      "features_extractor": {
+        "total": 0,
+        "trainable": 0
+      },
+      "mlp_extractor": {
+        "total": 24768,
+        "trainable": 24768
+      },
+      "pi_features_extractor": {
+        "total": 0,
+        "trainable": 0
+      },
+      "value_net": {
+        "total": 65,
+        "trainable": 65
+      },
+      "vf_features_extractor": {
+        "total": 0,
+        "trainable": 0
+      }
+    },
+    "module_reprs": {
+      "action_net": "_SplitActionMeanNet(\n  (sj_action): Linear(in_features=64, out_features=1, bias=True)\n  (niip_action): Linear(in_features=64, out_features=1, bias=True)\n  (spr_action): Linear(in_features=64, out_features=1, bias=True)\n  (discretionary_sj_action): Linear(in_features=64, out_features=1, bias=True)\n)",
+      "features_extractor": "FlattenExtractor(\n  (flatten): Flatten(start_dim=1, end_dim=-1)\n)",
+      "mlp_extractor": "_SplitActionMlpExtractor(\n  (sj_branch): _MaskedBranch(\n    (net): Sequential(\n      (0): Linear(in_features=6, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (niip_branch): _MaskedBranch(\n    (net): Sequential(\n      (0): Linear(in_features=5, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (spr_branch): _MaskedBranch(\n    (net): Sequential(\n      (0): Linear(in_features=20, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (discretionary_sj_branch): _MaskedBranch(\n    (net): Sequential(\n      (0): Linear(in_features=6, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (vf_branch): _MaskedBranch(\n    (net): Sequential(\n      (0): Linear(in_features=20, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n)",
+      "pi_features_extractor": "FlattenExtractor(\n  (flatten): Flatten(start_dim=1, end_dim=-1)\n)",
+      "value_net": "Linear(in_features=64, out_features=1, bias=True)",
+      "vf_features_extractor": "FlattenExtractor(\n  (flatten): Flatten(start_dim=1, end_dim=-1)\n)"
+    },
+    "net_arch": {
+      "pi": [
+        64,
+        64
+      ],
+      "vf": [
+        64,
+        64
+      ]
+    },
+    "normalize_images": true,
+    "optimizer": {
+      "class": "Adam",
+      "defaults": {
+        "amsgrad": false,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "capturable": false,
+        "differentiable": false,
+        "eps": 1e-05,
+        "foreach": null,
+        "fused": null,
+        "lr": 0.0003,
+        "maximize": false,
+        "weight_decay": 0
+      }
+    },
+    "ortho_init": true,
+    "parameter_counts": {
+      "total": 25097,
+      "trainable": 25097
+    },
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "obs_column_names": [
+        "storage_af",
+        "storage_budget_frac",
+        "niip_historic_demand_frac",
+        "esa_required_release_frac",
+        "animas_spr_frac",
+        "spr_needed_frac_10000cfs_5d",
+        "spr_needed_frac_8000cfs_10d",
+        "spr_needed_frac_5000cfs_21d",
+        "spr_needed_frac_2500cfs_10d",
+        "spr_progress_10000cfs_5d",
+        "spr_progress_8000cfs_10d",
+        "spr_progress_5000cfs_21d",
+        "spr_progress_2500cfs_10d",
+        "spr_advice_target_req05_frac",
+        "spr_advice_threshold_frac",
+        "spr_advice_progress_frac",
+        "spr_advice_viability_frac",
+        "spr_advice_active",
+        "spill_pressure_frac",
+        "spill_avoidance_sj_frac"
+      ],
+      "sj_exclude_names": [
+        "animas_spr_frac"
+      ],
+      "sj_exclude_prefixes": [
+        "spr_"
+      ]
+    },
+    "policy_repr": "SplitActionHeadsActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): _SplitActionMlpExtractor(\n    (sj_branch): _MaskedBranch(\n      (net): Sequential(\n        (0): Linear(in_features=6, out_features=64, bias=True)\n        (1): Tanh()\n        (2): Linear(in_features=64, out_features=64, bias=True)\n        (3): Tanh()\n      )\n    )\n    (niip_branch): _MaskedBranch(\n      (net): Sequential(\n        (0): Linear(in_features=5, out_features=64, bias=True)\n        (1): Tanh()\n        (2): Linear(in_features=64, out_features=64, bias=True)\n        (3): Tanh()\n      )\n    )\n    (spr_branch): _MaskedBranch(\n      (net): Sequential(\n        (0): Linear(in_features=20, out_features=64, bias=True)\n        (1): Tanh()\n        (2): Linear(in_features=64, out_features=64, bias=True)\n        (3): Tanh()\n      )\n    )\n    (discretionary_sj_branch): _MaskedBranch(\n      (net): Sequential(\n        (0): Linear(in_features=6, out_features=64, bias=True)\n        (1): Tanh()\n        (2): Linear(in_features=64, out_features=64, bias=True)\n        (3): Tanh()\n      )\n    )\n    (vf_branch): _MaskedBranch(\n      (net): Sequential(\n        (0): Linear(in_features=20, out_features=64, bias=True)\n        (1): Tanh()\n        (2): Linear(in_features=64, out_features=64, bias=True)\n        (3): Tanh()\n      )\n    )\n  )\n  (action_net): _SplitActionMeanNet(\n    (sj_action): Linear(in_features=64, out_features=1, bias=True)\n    (niip_action): Linear(in_features=64, out_features=1, bias=True)\n    (spr_action): Linear(in_features=64, out_features=1, bias=True)\n    (discretionary_sj_action): Linear(in_features=64, out_features=1, bias=True)\n  )\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)",
+    "share_features_extractor": true
+  }
+}

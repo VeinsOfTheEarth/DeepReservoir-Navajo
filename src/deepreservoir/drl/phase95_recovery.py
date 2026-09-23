@@ -1,9 +1,8 @@
 """Plan, run, and summarize the corrected Phase 95 recovery search.
 
-The archived Phase 95 artifacts remain frozen. This runner repeats the exact
-eight-family, sixteen-seed search with the approved model corrections, records
-the full execution contract, and evaluates every policy against a newly
-generated corrected historic benchmark.
+This runner performs the eight-family, sixteen-seed search with the approved
+model corrections, records the full execution contract, and evaluates every
+policy against the corrected historic benchmark.
 """
 
 from __future__ import annotations

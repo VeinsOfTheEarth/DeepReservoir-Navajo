@@ -2,22 +2,22 @@
 
 Research code, processed inputs, trained-model artifacts, and figure builders for a study of deep-reinforcement-learning control of Navajo Reservoir in the San Juan River basin.
 
-> **Prepublication status:** The physical environment, metrics, and corrected Phase 95 search workflow include the manuscript-audit corrections through September 2026. The bundled model and model-dependent paper figures are an archived pre-correction baseline. They remain available for provenance and figure development, but they are not the final corrected paper policy or final results. Final policy selection and one coordinated result-figure refresh are still in progress.
+The repository contains the corrected Phase 95 search and the selected policy from recovery task 105 (`reward_jon_p95_oishift875to90_heff`, seed 13). The policy passed all ten historical screening criteria and led the three all-screen finalists in both objective alignment and viability. Model-dependent figures and tables have been rebuilt from this checkpoint.
 
 ## Repository contents
 
 | Location | Contents |
 | --- | --- |
 | `src/deepreservoir/` | Reservoir environment, structured policy, rewards, metrics, training, and evaluation code |
-| `config_files/` | Archived baseline and corrected-search configurations |
+| `config_files/` | Selected-policy and corrected-search configurations |
 | `data/` | Processed model inputs and calibration products |
-| `results/corrected-phase95-recovery/` | Compact aggregate output from the completed corrected 128-policy search |
-| `artifacts/legacy_phase95_policy/` | Archived pre-correction checkpoint and evaluation artifacts |
+| `results/corrected-phase95-recovery/` | Aggregate output from all 128 corrected search policies |
+| `artifacts/selected_policy/` | Selected checkpoint, evaluation, training trace, and perturbation results |
 | `paper/figures/` | Main-text and appendix figure builders, data, editable sources, and exports |
-| `paper/tables/` | Table builders and current archived-baseline outputs |
+| `paper/tables/` | Table builders and corrected selected-policy outputs |
 | `tests/` | Scientific and reproducibility checks |
 
-The training record begins on **June 7, 1967** and ends on December 31, 2013. Evaluation covers January 1, 2014 through August 17, 2024.
+Training uses June 7, 1967 through December 31, 2013. Evaluation covers January 1, 2014 through August 17, 2024.
 
 ## Install and verify
 
@@ -29,27 +29,23 @@ python -m pip check
 python -m pytest -q
 ```
 
-Rebuild the currently cataloged programmatic main-paper figures and the portable appendix figures:
+Rebuild figures and tables:
 
 ```powershell
 python paper/build-figures.py
+python paper/tables/selected_policy_comparison_with_historic/build.py
+python paper/tables/selected_policy_metrics/build.py
 python paper/figures/appendix/a-data-environment/build.py
 python paper/figures/appendix/b-hydropower/build.py
 python paper/figures/appendix/c-hydrologic-simplifications/build.py
 ```
 
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for evaluation, training, tables, and perturbation experiments. [CORRECTED_SEARCH.md](CORRECTED_SEARCH.md) describes the corrected Phase 95 search and explains why the archived policy is not the final paper policy.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for evaluation, training, and perturbation commands. [CORRECTED_SEARCH.md](CORRECTED_SEARCH.md) documents the corrected search and selection.
 
-## Data and attribution
+## Data and use
 
-[DATA_AVAILABILITY.md](DATA_AVAILABILITY.md) explains the included processed inputs. [DATA_SOURCES.md](DATA_SOURCES.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) record source, attribution, and licensing information. Large source reports and workbooks that are not runtime dependencies are linked to their authoritative copies instead of being redistributed here.
+[DATA_AVAILABILITY.md](DATA_AVAILABILITY.md), [DATA_SOURCES.md](DATA_SOURCES.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) document the included data and their sources. Repository-controlled pickle files are trusted release artifacts; do not load replacements from untrusted sources.
 
-The repository-controlled pickle files are trusted release artifacts. Do not load replacement pickle files from untrusted sources.
+This is research software, not an operational decision authority. Operational use would require independent validation, operator review, and integration with operational forecasts and procedures.
 
-## Use and release status
-
-This is research software and is not an operational decision authority. Reservoir deployment would require independent validation, operator review, and integration with operational forecasts and procedures.
-
-The project software license will be added after the approved copyright-holder wording is confirmed. Third-party data, fonts, imagery, and editable assets remain subject to the terms listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-For the source-snapshot lineage and exclusions, see [PROVENANCE.md](PROVENANCE.md). Citation metadata are in [CITATION.cff](CITATION.cff).
+The project software license will be added after the approved copyright-holder wording is confirmed. Citation metadata are in [CITATION.cff](CITATION.cff).

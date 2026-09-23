@@ -1,45 +1,23 @@
-> **Snapshot scope:** Processed model inputs are bundled. The trained checkpoint and model-dependent results currently included are an archived pre-correction baseline; corrected aggregate search results are separate under `results/corrected-phase95-recovery/`.
-
 # Data Availability
 
-The repository bundles the processed daily inputs, calibrated physical
-relationships, and archived pre-correction results used by the current model-dependent figures. Figure-specific
-results from earlier experiments are stored beside their figure builders; those
-figures do not require the original experiment directories.
+The repository bundles the processed daily inputs, calibrated physical relationships, corrected selected-policy artifacts, and compact figure data needed to evaluate the model and rebuild the paper outputs. Earlier design-comparison inputs are stored beside their figure builders and do not require private experiment directories.
 
-## Physical Inputs
+## Physical inputs
 
-- Reservoir inflow, storage, release, elevation, and **reported historical
-  evaporation**. Evaporation is not predicted by a learned model.
+- Reservoir inflow, storage, release, elevation, and reported historical evaporation.
 - San Juan and Animas streamflow records used for downstream flows and scoring.
-- Historical NIIP delivery and annual demand targets.
-- Elevation-storage relationships and hydropower parameters, with their
-  calibration sources.
-- Spring peak release parameters and snow-water-equivalent records used by
-  retained opportunity-index diagnostics. SWE is **not** an input to the archived
-  actor; its exact 20-input observation vector is defined in
-  `src/deepreservoir/drl/observations.py`.
+- Historical NIIP delivery used as the daily demand proxy and annual demand targets.
+- Elevation-storage relationships and hydropower parameters with calibration sources.
+- Spring-peak parameters and snow-water-equivalent records used by opportunity-index diagnostics. Snow water equivalent is not one of the selected policy's 20 observation features.
 
-The Farmington correction scripts and their source/correction records in
-`data/patch_sanjuan_at_farmington/` are retained so the processed historic
-benchmark can be traced to its inputs. They are not run during evaluation.
-Calibration sources are likewise retained for provenance, not loaded anew for
-each rollout.
+Farmington correction scripts and their source records are retained under `data/patch_sanjuan_at_farmington/`. Calibration sources are retained for provenance and are not re-downloaded during evaluation.
 
-## Training Hydrology
+## Training hydrology
 
-The archived configuration applies annual holdout-mean scaling to the training
-reservoir inflow, reported evaporation, and Animas Farmington flow. Evaluation
-forcing is not rescaled for scoring. This calibration uses information from the
-evaluation period; it is reproduced as an original study choice, not presented
-as an independent forecast validation. Observation normalization also retains
-the original full-record reference values.
+The selected configuration applies annual holdout-mean scaling to training-period reservoir inflow, reported evaporation, and Animas Farmington flow. Evaluation forcing is unchanged. The selected policy uses the common 2019 storage datum and storage normalization fitted on the training window.
 
-## Bundled Results
+## Bundled results
 
-`artifacts/legacy_phase95_policy/` contains the frozen checkpoint, evaluation rollout,
-metrics, and selected-family seed results. Additional inputs for the included
-figures live in their `paper/figures/<figure-name>/data/` directories.
+`artifacts/selected_policy/` contains the checkpoint, resolved configuration, run manifest, evaluation rollout and metrics, selected-family seed metrics, training trace, and the two perturbation sweeps. `results/corrected-phase95-recovery/` contains aggregate records for all 128 corrected search policies. Figure-specific extracts live under `paper/figures/<figure-name>/data/`.
 
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for evaluation, training, and figure
-commands, and [ARTIFACT_MANIFEST.md](ARTIFACT_MANIFEST.md) for checkpoint identity.
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for commands and [ARTIFACT_MANIFEST.md](ARTIFACT_MANIFEST.md) for checkpoint identity.

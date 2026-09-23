@@ -916,11 +916,11 @@ def _flooding_penalty_caps(q0: float, qlag2: object) -> float:
 
 @register_reward("flooding", "penalty_caps_jon")
 def flooding_penalty_caps_jon(ctx: RewardContext) -> float:
-    """Legacy Phase-95 guardrail using Farmington for the 5,000-cfs term.
+    """Deprecated compatibility guardrail using Farmington for the 5,000-cfs term.
 
-    This variant is retained because the archived selected policy was trained
-    with it. New training intended to represent the operating criteria should
-    use ``penalty_caps_archuleta_bluff``.
+    This variant is retained only to reproduce earlier internal experiments.
+    Training intended to represent the operating criteria should use
+    ``penalty_caps_archuleta_bluff``.
     """
     q0 = float(ctx.info.get("sj_at_farmington_cfs", 0.0))
     qlag2 = ctx.info.get("sj_at_farmington_lag2_cfs", None)

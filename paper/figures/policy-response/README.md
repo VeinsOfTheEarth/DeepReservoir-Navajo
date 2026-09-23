@@ -1,5 +1,3 @@
-> **Prepublication artifact:** This figure uses the archived pre-correction Phase-95 policy or reward set and is included for provenance. Refresh it after final corrected-policy selection.
-
 # Policy Response to Changed Inflow
 
 This figure shows what changes when the selected policy can update its actions

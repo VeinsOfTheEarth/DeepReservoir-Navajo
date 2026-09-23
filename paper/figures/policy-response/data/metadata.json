@@ -8,11 +8,11 @@
   "action_replay_definition": "The deterministic normalized action vector from each unperturbed evaluation day is used as the saved action schedule on the corresponding altered-inflow day; environment controllers and physical constraints remain active.",
   "historic_metrics": {
     "esa_min_flow_frac_days_met": 0.95801133436373,
-    "flooding_frac_days_met": 0.9621329211746522,
-    "hydropower_frac_of_max_possible": 0.30316666549816307,
+    "flooding_frac_days_met": 0.999742334449884,
+    "hydropower_frac_of_max_possible": 0.3002375563379423,
     "niip_annual_volume_frac_of_contract": 1.0,
     "policy_spr_score": 0.44272727272727264,
-    "storage_frac_of_max_possible": 0.7090526891588079
+    "storage_frac_of_max_possible": 0.6856296239512203
   },
   "inflow_scales": [
     0.5,
@@ -27,12 +27,12 @@
     1.4,
     1.5
   ],
-  "max_abs_water_balance_residual_af": 1622.9256198303774,
+  "max_abs_water_balance_residual_af": 2255.710743799573,
   "n_days": 3882,
   "nominal_replay_max_action_error": 0.0,
   "nominal_replay_max_storage_error_af": 0.0,
-  "selected_policy_model": "artifacts\\legacy_phase95_policy\\navajo_reservoir_selected_policy.zip",
-  "selected_policy_model_sha256": "15a68c98679134e80b451497f7b910ef822f9bb04711414d0e48f437cff22b09",
+  "selected_policy_model": "artifacts\\selected_policy\\navajo_reservoir_selected_policy.zip",
+  "selected_policy_model_sha256": "28af314ad14c626796c93771eee72774aa505ff4e646a233b9b51c7ffacdaab2",
   "spill_free_days_historic_benchmark": 1.0,
   "window_end": "2024-08-17",
   "window_start": "2014-01-01"

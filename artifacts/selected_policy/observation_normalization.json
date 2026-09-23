@@ -1,0 +1,14 @@
+{
+  "column": "storage_af",
+  "ddof": 1,
+  "fit_window": {
+    "end": "2013-12-31",
+    "start": "1967-06-07"
+  },
+  "mean": 1223153.2172910043,
+  "mode": "train_window",
+  "n_observations": 17010,
+  "schema_version": 1,
+  "source": "training_window",
+  "std": 250203.99750230316
+}

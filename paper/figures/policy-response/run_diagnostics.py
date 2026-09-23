@@ -81,8 +81,13 @@ def _parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _load_window(start: str, end: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    all_data = model.load_all_model_data()
+def _load_window(
+    start: str,
+    end: str,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.Series | None]:
+    all_data = model.load_all_model_data(
+        storage_datum_mode=selected_policy.SELECTED_STORAGE_DATUM_MODE
+    )
     raw, _ = helpers.slice_by_window(
         all_data["raw"],
         start_token=start,
@@ -90,7 +95,15 @@ def _load_window(start: str, end: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.D
         label="policy_response_inflow",
     )
     norm = all_data["norm"].loc[raw.index]
-    return raw, norm, all_data["norm_stats"]
+    norm_stats, _ = model._storage_norm_stats_for_evaluation(  # noqa: SLF001
+        model_path=selected_policy.SELECTED_MODEL_PATH,
+        full_record_norm_stats=all_data["norm_stats"],
+        mode=selected_policy.SELECTED_STORAGE_NORMALIZATION,
+    )
+    prior_day = model._previous_calendar_hydrology_row(  # noqa: SLF001
+        all_data["raw"], first_date=raw.index[0]
+    )
+    return raw, norm, norm_stats, prior_day
 
 
 def _scaled_inflow_data(
@@ -117,6 +130,7 @@ def _make_eval_env(
     raw: pd.DataFrame,
     norm: pd.DataFrame,
     norm_stats: pd.DataFrame,
+    prior_day: pd.Series | None,
 ):
     return model.make_env(
         data_raw=raw,
@@ -135,6 +149,13 @@ def _make_eval_env(
         spr_proxy_priority_release=True,
         spr_proxy_owns_sj_window=False,
         spr_advice_mode=selected_policy.SELECTED_SPR_ADVICE_MODE,
+        decision_hydrology_timing=selected_policy.SELECTED_DECISION_HYDROLOGY_TIMING,
+        niip_fallback_mode=selected_policy.SELECTED_NIIP_FALLBACK_MODE,
+        storage_datum_mode=selected_policy.SELECTED_STORAGE_DATUM_MODE,
+        storage_normalization=selected_policy.SELECTED_STORAGE_NORMALIZATION,
+        storage_budget_target_frac_of_max=selected_policy.SELECTED_STORAGE_BUDGET_TARGET_FRAC,
+        mask_incomplete_initial_spr=selected_policy.SELECTED_MASK_INCOMPLETE_INITIAL_SPR,
+        prior_day_hydrology=prior_day,
     )
 
 
@@ -143,8 +164,9 @@ def _run_adaptive(
     raw: pd.DataFrame,
     norm: pd.DataFrame,
     norm_stats: pd.DataFrame,
+    prior_day: pd.Series | None,
 ) -> pd.DataFrame:
-    env = _make_eval_env(raw, norm, norm_stats)
+    env = _make_eval_env(raw, norm, norm_stats, prior_day)
     return model._run_rollout_env(agent=agent, eval_env=env)  # noqa: SLF001
 
 
@@ -153,8 +175,9 @@ def _run_replay(
     raw: pd.DataFrame,
     norm: pd.DataFrame,
     norm_stats: pd.DataFrame,
+    prior_day: pd.Series | None,
 ) -> pd.DataFrame:
-    env = _make_eval_env(raw, norm, norm_stats)
+    env = _make_eval_env(raw, norm, norm_stats, prior_day)
     replay_agent = ActionReplayAgent(nominal_actions)
     return model._run_rollout_env(agent=replay_agent, eval_env=env)  # type: ignore[arg-type]  # noqa: SLF001
 
@@ -295,12 +318,12 @@ def main() -> None:
     output_dir = Path(args.outdir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    raw_nominal, norm_nominal, norm_stats = _load_window(args.start, args.end)
+    raw_nominal, norm_nominal, norm_stats, prior_day = _load_window(args.start, args.end)
     print("[policy-response] loading selected policy")
     agent = PPO.load(selected_policy.SELECTED_MODEL_PATH, device=args.device)
 
     print("[policy-response] building the unperturbed action schedule")
-    nominal = _run_adaptive(agent, raw_nominal, norm_nominal, norm_stats)
+    nominal = _run_adaptive(agent, raw_nominal, norm_nominal, norm_stats, prior_day)
     action_columns = [f"action_{index}" for index in range(len(ACTION_LABELS))]
     nominal_actions = nominal[action_columns].to_numpy(dtype=np.float32)
     historic_metrics = drl_metrics.compute_historic_summary_metrics(nominal)
@@ -314,10 +337,17 @@ def main() -> None:
         change_pct = 100.0 * (scale - 1.0)
         print(f"[policy-response] inflow {change_pct:+.0f}%")
         raw, norm = _scaled_inflow_data(raw_nominal, norm_nominal, norm_stats, scale)
+        scenario_prior_day = None if prior_day is None else prior_day.copy()
+        if scenario_prior_day is not None:
+            scenario_prior_day["inflow_cfs"] = (
+                float(scenario_prior_day["inflow_cfs"]) * scale
+            )
         adaptive = nominal if np.isclose(scale, 1.0) else _run_adaptive(
-            agent, raw, norm, norm_stats
+            agent, raw, norm, norm_stats, scenario_prior_day
         )
-        replay = _run_replay(nominal_actions, raw, norm, norm_stats)
+        replay = _run_replay(
+            nominal_actions, raw, norm, norm_stats, scenario_prior_day
+        )
 
         rollout_rows.append(_rollout_summary(adaptive, mode="adaptive", scale=scale))
         rollout_rows.append(_rollout_summary(replay, mode="replay", scale=scale))

@@ -43,11 +43,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 _THRESHOLD_METRIC_TOL = 1e-3
 
 FLOOD_COMPARISON_PROFILE_CORRECTED = "archuleta_bluff_common_valid"
-FLOOD_COMPARISON_PROFILE_LEGACY_PHASE95 = "legacy_phase95"
-FLOOD_COMPARISON_PROFILES = (
-    FLOOD_COMPARISON_PROFILE_CORRECTED,
-    FLOOD_COMPARISON_PROFILE_LEGACY_PHASE95,
-)
+FLOOD_COMPARISON_PROFILES = (FLOOD_COMPARISON_PROFILE_CORRECTED,)
 
 
 # -----------------------------------------------------------------------------
@@ -737,11 +733,6 @@ def compute_flooding_comparison_metrics(
     mask.  The Bluff proxy already contains the model's two-day routing
     approximation, so the observed Bluff series is not shifted again.
 
-    ``legacy_phase95`` exists only to reproduce the archived Phase-95 screen.
-    It uses Farmington for the 5,000-cfs term, a two-day Farmington lag for the
-    12,000-cfs term, treats unavailable lag values as safe, and retains every
-    rollout row in the denominator.  New scientific comparisons should use the
-    corrected profile.
 
     Corrected comparisons intentionally require the four explicit agent and
     historic location columns.  In particular, historic reservoir release is
@@ -774,55 +765,29 @@ def compute_flooding_comparison_metrics(
             dtype=bool,
         )
 
-    if resolved_profile == FLOOD_COMPARISON_PROFILE_CORRECTED:
-        columns = require_numeric(
-            (
-                "sj_at_archuleta_proxy_cfs",
-                "sj_at_bluff_proxy_cfs",
-                "sj_archuleta_q_cfs",
-                "sj_bluff_q_cfs",
-            )
+    columns = require_numeric(
+        (
+            "sj_at_archuleta_proxy_cfs",
+            "sj_at_bluff_proxy_cfs",
+            "sj_archuleta_q_cfs",
+            "sj_bluff_q_cfs",
         )
-        agent_same = columns["sj_at_archuleta_proxy_cfs"]
-        agent_downstream = columns["sj_at_bluff_proxy_cfs"]
-        historic_same = columns["sj_archuleta_q_cfs"]
-        historic_downstream = columns["sj_bluff_q_cfs"]
+    )
+    agent_same = columns["sj_at_archuleta_proxy_cfs"]
+    agent_downstream = columns["sj_at_bluff_proxy_cfs"]
+    historic_same = columns["sj_archuleta_q_cfs"]
+    historic_downstream = columns["sj_bluff_q_cfs"]
 
-        agent_available = finite(agent_same) & finite(agent_downstream)
-        historic_available = finite(historic_same) & finite(historic_downstream)
-        comparison_mask = agent_available & historic_available
+    agent_available = finite(agent_same) & finite(agent_downstream)
+    historic_available = finite(historic_same) & finite(historic_downstream)
+    comparison_mask = agent_available & historic_available
 
-        agent_safe = _lt_threshold(agent_same, same_day_thresh_cfs) & _lt_threshold(
-            agent_downstream, downstream_thresh_cfs
-        )
-        historic_safe = _lt_threshold(
-            historic_same, same_day_thresh_cfs
-        ) & _lt_threshold(historic_downstream, downstream_thresh_cfs)
-    else:
-        columns = require_numeric(
-            (
-                "sj_at_farmington_cfs",
-                "sj_at_farmington_lag2_cfs",
-                "sj_farmington_q_cfs",
-            )
-        )
-        agent_same = columns["sj_at_farmington_cfs"]
-        agent_downstream = columns["sj_at_farmington_lag2_cfs"]
-        historic_same = columns["sj_farmington_q_cfs"]
-        historic_downstream = historic_same.shift(2)
-
-        agent_available = finite(agent_same) & finite(agent_downstream)
-        historic_available = finite(historic_same) & finite(historic_downstream)
-        comparison_mask = pd.Series(True, index=df_eval.index, dtype=bool)
-
-        agent_safe = _lt_threshold(agent_same, same_day_thresh_cfs) & (
-            agent_downstream.isna()
-            | _lt_threshold(agent_downstream, downstream_thresh_cfs)
-        )
-        historic_safe = _lt_threshold(historic_same, same_day_thresh_cfs) & (
-            historic_downstream.isna()
-            | _lt_threshold(historic_downstream, downstream_thresh_cfs)
-        )
+    agent_safe = _lt_threshold(agent_same, same_day_thresh_cfs) & _lt_threshold(
+        agent_downstream, downstream_thresh_cfs
+    )
+    historic_safe = _lt_threshold(
+        historic_same, same_day_thresh_cfs
+    ) & _lt_threshold(historic_downstream, downstream_thresh_cfs)
 
     comparison_days = int(comparison_mask.sum())
     agent_safe_days = int((agent_safe & comparison_mask).sum())

@@ -11,7 +11,7 @@ def test_only_paper_commands_are_available():
     args = parser.parse_args(["eval", "--outdir", "runs/check"])
     assert args.model == selected_policy.SELECTED_MODEL_PATH
     args = parser.parse_args(["train", "--outdir", "runs/check"])
-    assert args.seed == 4 and args.timesteps is None and args.torch_threads == 1
+    assert args.seed == 13 and args.timesteps is None and args.torch_threads == 1
 
 
 def test_config_supplies_environment_settings():
@@ -31,12 +31,12 @@ def test_config_supplies_environment_settings():
         }
     )
     assert options["spr_proxy_priority_release"] is True
-    assert options["decision_hydrology_timing"] == "same_day"
-    assert options["niip_fallback_mode"] == "legacy_full_series"
-    assert options["storage_datum_mode"] == "reported"
-    assert options["storage_normalization"] == "full_record"
-    assert options["storage_budget_target_frac_of_max"] == 0.780
-    assert options["mask_incomplete_initial_spr"] is False
+    assert options["decision_hydrology_timing"] == "previous_day"
+    assert options["niip_fallback_mode"] == "training_only"
+    assert options["storage_datum_mode"] == "elevation_2019"
+    assert options["storage_normalization"] == "train_window"
+    assert options["storage_budget_target_frac_of_max"] == 0.875
+    assert options["mask_incomplete_initial_spr"] is True
 
 
 def test_corrected_environment_overrides_survive_cli_option_resolution():
@@ -79,12 +79,12 @@ def test_eval_uses_selected_dates_and_configuration(tmp_path):
     assert options["window_end"] == "2024-08-17"
     assert options["reward_spec"] == selected_policy.SELECTED_REWARD_SPEC
     assert options["which_metrics"] == "all"
-    assert options["decision_hydrology_timing"] == "same_day"
-    assert options["niip_fallback_mode"] == "legacy_full_series"
-    assert options["storage_datum_mode"] == "reported"
-    assert options["storage_normalization"] == "full_record"
-    assert options["storage_budget_target_frac_of_max"] == 0.780
-    assert options["mask_incomplete_initial_spr"] is False
+    assert options["decision_hydrology_timing"] == "previous_day"
+    assert options["niip_fallback_mode"] == "training_only"
+    assert options["storage_datum_mode"] == "elevation_2019"
+    assert options["storage_normalization"] == "train_window"
+    assert options["storage_budget_target_frac_of_max"] == 0.875
+    assert options["mask_incomplete_initial_spr"] is True
     assert "save_plots" not in options and "run_stress_tests" not in options
 
 
@@ -100,12 +100,12 @@ def test_training_uses_complete_rollouts_and_selected_settings(tmp_path):
     assert options["total_timesteps"] == options["n_steps"] == 3600
     assert options["batch_size"] == 60 and options["gamma"] == 0.999
     assert options["rich_training_diagnostics"] is True
-    assert constructor.call_args.kwargs["decision_hydrology_timing"] == "same_day"
-    assert constructor.call_args.kwargs["niip_fallback_mode"] == "legacy_full_series"
-    assert constructor.call_args.kwargs["storage_datum_mode"] == "reported"
-    assert constructor.call_args.kwargs["storage_normalization"] == "full_record"
-    assert constructor.call_args.kwargs["storage_budget_target_frac_of_max"] == 0.780
-    assert constructor.call_args.kwargs["mask_incomplete_initial_spr"] is False
+    assert constructor.call_args.kwargs["decision_hydrology_timing"] == "previous_day"
+    assert constructor.call_args.kwargs["niip_fallback_mode"] == "training_only"
+    assert constructor.call_args.kwargs["storage_datum_mode"] == "elevation_2019"
+    assert constructor.call_args.kwargs["storage_normalization"] == "train_window"
+    assert constructor.call_args.kwargs["storage_budget_target_frac_of_max"] == 0.875
+    assert constructor.call_args.kwargs["mask_incomplete_initial_spr"] is True
     assert (args.outdir / "paper-run.json").is_file()
 
 

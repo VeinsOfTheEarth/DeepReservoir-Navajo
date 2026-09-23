@@ -65,7 +65,7 @@ def historic_niip_month_day_fallback_lookup(
 ) -> tuple[float, ...]:
     """Return a deterministic 366-value calendar lookup for missing NIIP days.
 
-    ``legacy_full_series`` reproduces the archived Phase-95 preprocessing by
+    ``legacy_full_series`` reproduces the earlier full-series preprocessing by
     taking month/day medians over the complete NIIP file. ``training_only``
     calculates the same lookup from observations through 2013-12-31, before
     the paper evaluation period begins. Exact-date observations are never

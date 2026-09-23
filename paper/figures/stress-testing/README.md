@@ -10,7 +10,7 @@ trajectory Parquet file:
 - `inflow-scaling-sweep-summary.csv` and `inflow-scaling-sweep-storage.parquet`
 
 These are byte-identical copies of the corresponding underscore-named files
-under `artifacts/legacy_phase95_policy/initial_storage_sweep/` and
-`artifacts/legacy_phase95_policy/inflow_scaling_sweep/`. The selected-policy rollout
+under `artifacts/selected_policy/initial_storage_sweep/` and
+`artifacts/selected_policy/inflow_scaling_sweep/`. The selected-policy rollout
 and physical-environment thresholds remain shared repository inputs. Routine
 rebuilds use the local sweep snapshots, not transient run directories.

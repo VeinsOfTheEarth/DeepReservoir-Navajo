@@ -116,7 +116,7 @@ def normalize_spr_advice_mode(value: str | None) -> str:
 def normalize_decision_hydrology_timing(value: str | None) -> str:
     """Normalize when daily hydrology becomes available to the controller.
 
-    ``same_day`` retains the archived Phase-95 convention. ``previous_day``
+    ``same_day`` retains the earlier compatibility convention. ``previous_day``
     exposes only the previous daily Animas, inflow, and evaporation values when
     the policy and deterministic request logic act on the current date.
     """

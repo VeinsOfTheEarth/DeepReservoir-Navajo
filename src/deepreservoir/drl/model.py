@@ -230,7 +230,7 @@ def normalize_train_hydrology_transform(value: str | None) -> str:
 def normalize_storage_normalization(value: str | None) -> str:
     """Resolve how the dynamic storage observation is standardized.
 
-    ``full_record`` preserves the preprocessing used by the frozen Phase-95
+    ``full_record`` preserves the earlier full-record preprocessing
     checkpoint. ``train_window`` fits storage mean and sample standard deviation
     only on the configured training dates; those values are then stored beside
     the trained model for evaluation.

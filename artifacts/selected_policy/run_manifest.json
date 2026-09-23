@@ -1,0 +1,432 @@
+{
+  "artifacts": {
+    "last_model": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/last_model.zip",
+    "observation_normalization": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/observation_normalization.json",
+    "resolved_config": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/resolved_config.json",
+    "train_best_total_reward_metadata": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/train_best_total_reward_model.json",
+    "train_best_total_reward_model": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/train_best_total_reward_model.zip"
+  },
+  "config": {
+    "action_log_std_init": null,
+    "action_mode": "esa_base_spr_proxy_4d_max",
+    "action_scaling": "linear",
+    "algo": "ppo",
+    "batch_size": 60,
+    "clip_range": "FloatSchedule(ConstantSchedule(val=0.2))",
+    "data_range": {
+      "end": "2024-08-17",
+      "max_water_year": 2024,
+      "min_water_year": 1967,
+      "n_days": 20892,
+      "start": "1967-06-07"
+    },
+    "decision_hydrology_timing": "previous_day",
+    "device": "cpu",
+    "device_requested": "cpu",
+    "device_resolved": "device(type='cpu')",
+    "ent_coef": 0.0,
+    "episode_length_train": 3600,
+    "esa_baseflow_max_multiplier": 1.5,
+    "esa_min_flow_floor": false,
+    "gae_lambda": 0.95,
+    "gamma": 0.999,
+    "learning_rate": 0.0003,
+    "mask_incomplete_initial_spr": true,
+    "max_grad_norm": 0.5,
+    "max_release_niip_cfs": 2500.0,
+    "max_release_sj_main_cfs": 5000.0,
+    "n_epochs": 10,
+    "n_steps": 3600,
+    "net_arch": {
+      "pi": [
+        64,
+        64
+      ],
+      "vf": [
+        64,
+        64
+      ]
+    },
+    "niip_fallback_mode": "training_only",
+    "obs_context": "storage_niiphist_esa_req_sprall_advice_budget_spill",
+    "observation_columns": [
+      "storage_af",
+      "storage_budget_frac",
+      "niip_historic_demand_frac",
+      "esa_required_release_frac",
+      "animas_spr_frac",
+      "spr_needed_frac_10000cfs_5d",
+      "spr_needed_frac_8000cfs_10d",
+      "spr_needed_frac_5000cfs_21d",
+      "spr_needed_frac_2500cfs_10d",
+      "spr_progress_10000cfs_5d",
+      "spr_progress_8000cfs_10d",
+      "spr_progress_5000cfs_21d",
+      "spr_progress_2500cfs_10d",
+      "spr_advice_target_req05_frac",
+      "spr_advice_threshold_frac",
+      "spr_advice_progress_frac",
+      "spr_advice_viability_frac",
+      "spr_advice_active",
+      "spill_pressure_frac",
+      "spill_avoidance_sj_frac"
+    ],
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "obs_column_names": [
+        "storage_af",
+        "storage_budget_frac",
+        "niip_historic_demand_frac",
+        "esa_required_release_frac",
+        "animas_spr_frac",
+        "spr_needed_frac_10000cfs_5d",
+        "spr_needed_frac_8000cfs_10d",
+        "spr_needed_frac_5000cfs_21d",
+        "spr_needed_frac_2500cfs_10d",
+        "spr_progress_10000cfs_5d",
+        "spr_progress_8000cfs_10d",
+        "spr_progress_5000cfs_21d",
+        "spr_progress_2500cfs_10d",
+        "spr_advice_target_req05_frac",
+        "spr_advice_threshold_frac",
+        "spr_advice_progress_frac",
+        "spr_advice_viability_frac",
+        "spr_advice_active",
+        "spill_pressure_frac",
+        "spill_avoidance_sj_frac"
+      ],
+      "sj_exclude_names": [
+        "animas_spr_frac"
+      ],
+      "sj_exclude_prefixes": [
+        "spr_"
+      ]
+    },
+    "policy_net_arch": "default64",
+    "policy_type": "split_action_heads_sj_no_spr",
+    "reward_balancing": "none",
+    "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+    "seed": 13,
+    "spr_advice_mode": "days_remaining",
+    "spr_proxy_owns_sj_window": false,
+    "spr_proxy_priority_release": true,
+    "storage_budget_target_frac_of_max": 0.875,
+    "storage_datum_meta": {
+      "conversion": "storage_af = elevation_to_capacity_2019(elev_ft)",
+      "interpolation": "piecewise linear with endpoint clamping",
+      "mode": "elevation_2019",
+      "n_converted": 20892,
+      "preserved_reported_column": "storage_reported_af",
+      "relationship_parameter": "data/elevation_area_storage_relationships/2019_elevation_area_capacity.pkl",
+      "reported_minus_2019_mean_af": 48064.3731007094,
+      "reported_minus_2019_median_af": 50674.75,
+      "source": "2019 Reclamation area-capacity table",
+      "source_document": "data/elevation_area_storage_relationships/NavajoReservoir Area_Capacity Table_508-VI.pdf",
+      "storage_column": "storage_af"
+    },
+    "storage_datum_mode": "elevation_2019",
+    "storage_normalization": "train_window",
+    "storage_normalization_meta": {
+      "column": "storage_af",
+      "ddof": 1,
+      "fit_window": {
+        "end": "2013-12-31",
+        "start": "1967-06-07"
+      },
+      "mean": 1223153.2172910043,
+      "mode": "train_window",
+      "n_observations": 17010,
+      "schema_version": 1,
+      "source": "training_window",
+      "std": 250203.99750230316
+    },
+    "target_kl": null,
+    "train": {
+      "resolved": {
+        "end": "2013-12-31",
+        "end_token": "2013-12-31",
+        "n_days": 17010,
+        "start": "1967-06-07",
+        "start_token": "1967-06-07"
+      },
+      "train_end": "2013-12-31",
+      "train_start": "1967-06-07"
+    },
+    "train_hydrology_transform": "match_holdout_annual_mean",
+    "train_hydrology_transform_meta": {
+      "applied": true,
+      "columns": [
+        "inflow_cfs",
+        "evap_af",
+        "animas_farmington_q_cfs"
+      ],
+      "factors": {
+        "animas_farmington_q_cfs": 0.7816648917184698,
+        "evap_af": 0.9564238949563652,
+        "inflow_cfs": 0.751954344407625
+      },
+      "name": "match_holdout_annual_mean",
+      "reference_end": "2024-08-17",
+      "reference_start": "2014-01-01"
+    },
+    "vf_coef": 0.5
+  },
+  "created_at": "2026-09-17T09:31:03",
+  "last_updated_at": "2026-09-17T12:19:01",
+  "launch_mode": "phase95_corrected_recovery",
+  "logdir": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013",
+  "project": "DeepReservoir",
+  "reservoir": "Navajo",
+  "sb3": {
+    "algo_class": "PPO",
+    "batch_size": 60,
+    "clip_range": "FloatSchedule(ConstantSchedule(val=0.2))",
+    "device": "device(type='cpu')",
+    "ent_coef": 0.0,
+    "gae_lambda": 0.95,
+    "gamma": 0.999,
+    "learning_rate": 0.0003,
+    "max_grad_norm": 0.5,
+    "n_epochs": 10,
+    "n_steps": 3600,
+    "normalize_advantage": true,
+    "policy_class": "SplitActionHeadsActorCriticPolicy",
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "obs_column_names": [
+        "storage_af",
+        "storage_budget_frac",
+        "niip_historic_demand_frac",
+        "esa_required_release_frac",
+        "animas_spr_frac",
+        "spr_needed_frac_10000cfs_5d",
+        "spr_needed_frac_8000cfs_10d",
+        "spr_needed_frac_5000cfs_21d",
+        "spr_needed_frac_2500cfs_10d",
+        "spr_progress_10000cfs_5d",
+        "spr_progress_8000cfs_10d",
+        "spr_progress_5000cfs_21d",
+        "spr_progress_2500cfs_10d",
+        "spr_advice_target_req05_frac",
+        "spr_advice_threshold_frac",
+        "spr_advice_progress_frac",
+        "spr_advice_viability_frac",
+        "spr_advice_active",
+        "spill_pressure_frac",
+        "spill_avoidance_sj_frac"
+      ],
+      "sj_exclude_names": [
+        "animas_spr_frac"
+      ],
+      "sj_exclude_prefixes": [
+        "spr_"
+      ]
+    },
+    "policy_summary": {
+      "activation_fn": "Tanh",
+      "features_extractor_class": "FlattenExtractor",
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      },
+      "normalize_images": true,
+      "optimizer_class": "Adam",
+      "ortho_init": true,
+      "parameter_counts": {
+        "total": 25097,
+        "trainable": 25097
+      },
+      "share_features_extractor": true
+    },
+    "python_version": "3.10.20",
+    "resolved_config_path": "/vast/projects/vote/DeepReservoir-phase95-recovery/runs/phase95-recovery/full/reward_jon_p95_oishift875to90_heff/seed_013/resolved_config.json",
+    "sde_sample_freq": -1,
+    "stable_baselines3_version": "2.7.1",
+    "torch_version": "2.5.1",
+    "use_sde": false,
+    "vf_coef": 0.5
+  },
+  "status": "completed",
+  "train_invocations": [
+    {
+      "agent_num_timesteps": 3157200,
+      "ended_at": "2026-09-17T12:19:01",
+      "ppo_args": {
+        "batch_size": 60,
+        "clip_range": "FloatSchedule(ConstantSchedule(val=0.2))",
+        "ent_coef": 0.0,
+        "gae_lambda": 0.95,
+        "gamma": 0.999,
+        "learning_rate": 0.0003,
+        "max_grad_norm": 0.5,
+        "n_epochs": 10,
+        "n_steps": 3600,
+        "net_arch": {
+          "pi": [
+            64,
+            64
+          ],
+          "vf": [
+            64,
+            64
+          ]
+        },
+        "policy_kwargs": {
+          "net_arch": {
+            "pi": [
+              64,
+              64
+            ],
+            "vf": [
+              64,
+              64
+            ]
+          },
+          "obs_column_names": [
+            "storage_af",
+            "storage_budget_frac",
+            "niip_historic_demand_frac",
+            "esa_required_release_frac",
+            "animas_spr_frac",
+            "spr_needed_frac_10000cfs_5d",
+            "spr_needed_frac_8000cfs_10d",
+            "spr_needed_frac_5000cfs_21d",
+            "spr_needed_frac_2500cfs_10d",
+            "spr_progress_10000cfs_5d",
+            "spr_progress_8000cfs_10d",
+            "spr_progress_5000cfs_21d",
+            "spr_progress_2500cfs_10d",
+            "spr_advice_target_req05_frac",
+            "spr_advice_threshold_frac",
+            "spr_advice_progress_frac",
+            "spr_advice_viability_frac",
+            "spr_advice_active",
+            "spill_pressure_frac",
+            "spill_avoidance_sj_frac"
+          ],
+          "sj_exclude_names": [
+            "animas_spr_frac"
+          ],
+          "sj_exclude_prefixes": [
+            "spr_"
+          ]
+        },
+        "target_kl": null,
+        "vf_coef": 0.5
+      },
+      "requested_n_episodes": 877,
+      "requested_total_timesteps": 3157200,
+      "requested_train_args": {
+        "action_log_std_init": null,
+        "action_mode": "esa_base_spr_proxy_4d_max",
+        "batch_size": 60,
+        "clip_range": null,
+        "decision_hydrology_timing": "previous_day",
+        "device": "cpu",
+        "ent_coef": null,
+        "gae_lambda": null,
+        "gamma": 0.999,
+        "learning_rate": null,
+        "mask_incomplete_initial_spr": true,
+        "max_grad_norm": null,
+        "n_epochs": 10,
+        "n_steps": 3600,
+        "niip_fallback_mode": "training_only",
+        "policy_net_arch": "default64",
+        "policy_type": "split_action_heads_sj_no_spr",
+        "spr_advice_mode": "days_remaining",
+        "storage_budget_target_frac_of_max": 0.875,
+        "storage_datum_mode": "elevation_2019",
+        "storage_normalization": "train_window",
+        "target_kl": null,
+        "train_hydrology_transform": "match_holdout_annual_mean",
+        "vf_coef": null
+      },
+      "resolved_train_args": {
+        "batch_size": 60,
+        "clip_range": "FloatSchedule(ConstantSchedule(val=0.2))",
+        "device": "device(type='cpu')",
+        "ent_coef": 0.0,
+        "gae_lambda": 0.95,
+        "gamma": 0.999,
+        "learning_rate": 0.0003,
+        "max_grad_norm": 0.5,
+        "n_epochs": 10,
+        "n_steps": 3600,
+        "normalize_advantage": true,
+        "policy_kwargs": {
+          "net_arch": {
+            "pi": [
+              64,
+              64
+            ],
+            "vf": [
+              64,
+              64
+            ]
+          },
+          "obs_column_names": [
+            "storage_af",
+            "storage_budget_frac",
+            "niip_historic_demand_frac",
+            "esa_required_release_frac",
+            "animas_spr_frac",
+            "spr_needed_frac_10000cfs_5d",
+            "spr_needed_frac_8000cfs_10d",
+            "spr_needed_frac_5000cfs_21d",
+            "spr_needed_frac_2500cfs_10d",
+            "spr_progress_10000cfs_5d",
+            "spr_progress_8000cfs_10d",
+            "spr_progress_5000cfs_21d",
+            "spr_progress_2500cfs_10d",
+            "spr_advice_target_req05_frac",
+            "spr_advice_threshold_frac",
+            "spr_advice_progress_frac",
+            "spr_advice_viability_frac",
+            "spr_advice_active",
+            "spill_pressure_frac",
+            "spill_avoidance_sj_frac"
+          ],
+          "sj_exclude_names": [
+            "animas_spr_frac"
+          ],
+          "sj_exclude_prefixes": [
+            "spr_"
+          ]
+        },
+        "sde_sample_freq": -1,
+        "use_sde": false,
+        "vf_coef": 0.5
+      },
+      "resume": false,
+      "rich_training_diagnostics": false,
+      "started_at": "2026-09-17T09:31:03",
+      "track_reward_components": true,
+      "train_wall_seconds": 10071.489860612899
+    }
+  ]
+}

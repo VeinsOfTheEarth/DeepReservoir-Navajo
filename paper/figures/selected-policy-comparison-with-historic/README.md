@@ -1,5 +1,3 @@
-> **Prepublication artifact:** This figure uses the archived pre-correction Phase-95 policy or reward set and is included for provenance. Refresh it after final corrected-policy selection.
-
 # Selected Policy Comparison With Historic
 
 Run `python -B paper/figures/selected-policy-comparison-with-historic/build.py`

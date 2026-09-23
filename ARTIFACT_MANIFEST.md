@@ -1,48 +1,22 @@
-> **Prepublication artifact status:** This document describes the archived pre-correction Phase 95 seed-004 policy. Its weights were trained under superseded model definitions, so it is retained for provenance and is not the final corrected paper policy. See [CORRECTED_SEARCH.md](CORRECTED_SEARCH.md).
+# Selected Policy Artifact Manifest
 
-# Archived Phase-95 Policy Artifact Manifest
-
-This manifest records the archived pre-correction model artifact and its local source artifacts.
-
-The trained PPO model and frozen evaluation artifacts are included at:
-
-```text
-artifacts/legacy_phase95_policy/navajo_reservoir_selected_policy.zip
-artifacts/legacy_phase95_policy/selected_policy_eval_metrics.csv
-artifacts/legacy_phase95_policy/selected_policy_eval_metrics.json
-artifacts/legacy_phase95_policy/selected_policy_eval_rollout.parquet
-```
+The selected checkpoint is corrected Phase 95 recovery task 105, family `reward_jon_p95_oishift875to90_heff`, seed 13. It was trained from recovery commit `8e7fdcf7f68a103b7249dfb8516b8a28dce87f62` under plan `a46c01d4fdda860feb330e4af867ce73a003880c6a73745e16d9e466d6e8b009`.
 
 | Public artifact | SHA256 |
 | --- | --- |
-| `artifacts/legacy_phase95_policy/navajo_reservoir_selected_policy.zip` | `15A68C98679134E80B451497F7B910EF822F9BB04711414D0E48F437CFF22B09` |
-| `artifacts/legacy_phase95_policy/selected_policy_eval_metrics.csv` | `95EDFB57B6EA5F7A959801ACA8EED4B66BC88874A0563675CB56D994BB9D493A` |
-| `artifacts/legacy_phase95_policy/selected_policy_eval_metrics.json` | `5C8578033623753718A3447191AAB7E00C7A2DA234068157B692FF06E816D9CC` |
-| `artifacts/legacy_phase95_policy/selected_policy_eval_rollout.parquet` | `D01F74C5E48519C4B8E32018618AA52956F95DCC8BCD4B273250A53A18CD27C6` |
+| `artifacts/selected_policy/corrected_historic_benchmark.json` | `F5BE0DA54C5637247CE848A51FF0EDFE59082758D29AAC99F5571661EF2FFF3A` |
+| `artifacts/selected_policy/corrected_objective_screen.json` | `0E0DE72134704652E3DEEC97F934BEE1D24D20A82F2D49EDFDD2303919B3FD4B` |
+| `artifacts/selected_policy/navajo_reservoir_selected_policy.zip` | `28AF314AD14C626796C93771EEE72774AA505FF4E646A233B9B51C7FFACDAAB2` |
+| `artifacts/selected_policy/observation_normalization.json` | `16315A1A11BA251245A4F293F205B90AED750269E3DC8D677A9B02E322A76D20` |
+| `artifacts/selected_policy/phase95-task.json` | `23FF802F5372BE85C65559842B05A24FAFB32D9BF9D917511D7895B5449F733B` |
+| `artifacts/selected_policy/recovery_diagnostics.json` | `A9118AA6E9B5091198140556AD60EB41D4EA11CA3CFAD1343A450AADFE35F29F` |
+| `artifacts/selected_policy/resolved_config.json` | `239D8BA10FE31231CF61744134402732C32F60F2C560DE1DDF22305A08BA4A0B` |
+| `artifacts/selected_policy/run_manifest.json` | `91264D8B1EF8B00EE2210613569AF741A410EACBE496C2DE1E49DDD32DAC2934` |
+| `artifacts/selected_policy/selected_policy_eval_metrics.csv` | `45A5157865639802800CB86842EDE0789999567FD56554AF503E0703E3620BD3` |
+| `artifacts/selected_policy/selected_policy_eval_metrics.json` | `B6813C6D40CA8EA9A5214ACA2B306955325219E733D5E06B686056E51A18F9F2` |
+| `artifacts/selected_policy/selected_policy_eval_rollout.parquet` | `8AA576060E2F295363BCE4B6FDED8C1705D71BE65D8775B4BE28EE45E7B669EA` |
+| `artifacts/selected_policy/selected_policy_family_seed_metrics.csv` | `5F1EDA4213443F25633F079F2E1581DAA2488313CAAD762CCF97464DD3CA2617` |
+| `artifacts/selected_policy/train_update_metrics.csv` | `4631979A1F54B4E5A6E1E72B2E41808484F394B057428A92BB9780DD1696FF60` |
+| `artifacts/selected_policy/train_update_metrics.parquet` | `54EE323C1CC92C7794B2F05C8603E8CA32FBD6D67E64D094A1A10F100149C0F0` |
 
-The source run provenance is:
-
-```text
-runs/reward_jon_p95_peak875_hdisceff/seed_004
-```
-
-The `runs/` directory is ignored by git. These hashes are included so the stable public artifacts above can be checked against the local source run.
-
-| Artifact | SHA256 |
-| --- | --- |
-| `last_model.zip` | `15A68C98679134E80B451497F7B910EF822F9BB04711414D0E48F437CFF22B09` |
-| `resolved_config.json` | `239D8BA10FE31231CF61744134402732C32F60F2C560DE1DDF22305A08BA4A0B` |
-| `run_manifest.json` | `CCFC296489BB8705173B9BDED5674EFD2A4651905FC397189340C293601DEE3D` |
-| `eval__holdout_2014_2024_08_17/eval_metrics.json` | `5C8578033623753718A3447191AAB7E00C7A2DA234068157B692FF06E816D9CC` |
-| `eval__holdout_2014_2024_08_17/eval_rollout.parquet` | `D01F74C5E48519C4B8E32018618AA52956F95DCC8BCD4B273250A53A18CD27C6` |
-
-## Artifact Release Decision
-
-The archived model weights, rollout, and metrics are tracked so the prepublication figures do not depend on an ignored local `runs/` directory. Larger report bundles should still live outside git unless the paper release needs them directly.
-
-Recommended options:
-
-1. GitHub Release assets or Zenodo for larger figure/report bundles.
-2. Git LFS only if future model artifacts become too large for normal git history.
-
-The public snapshot does not depend on an ignored local `runs/` directory for loading the archived policy or building the included figures. Public instructions should use `src/deepreservoir/drl/selected_policy.py` and the stable artifact paths above.
+The runtime directory is not required to load the checkpoint, evaluate it, or rebuild the paper figures.

@@ -2,7 +2,7 @@
 
 Rows compare historic management, the mean across all seeds in the selected
 policy family, and the frozen selected policy. The selected policy is
-``reward_jon_p95_peak875_hdisceff/seed_004``.
+``reward_jon_p95_oishift875to90_heff/seed_013``.
 """
 
 from __future__ import annotations
@@ -29,12 +29,12 @@ from deepreservoir.drl.metrics import compute_historic_summary_metrics
 OUTPUT_DIR = Path(__file__).resolve().parent
 DEFAULT_CSV = OUTPUT_DIR / "selected_policy_comparison_with_historic.csv"
 DEFAULT_TEX = OUTPUT_DIR / "selected_policy_comparison_with_historic.tex"
-DEFAULT_FAMILY_DIR = REPO_ROOT / "runs" / "reward_jon_p95_peak875_hdisceff"
+DEFAULT_FAMILY_DIR = REPO_ROOT / "runs" / "reward_jon_p95_oishift875to90_heff"
 DEFAULT_EVAL_NAME = "eval__holdout_2014_2024_08_17"
 DEFAULT_FAMILY_SEED_METRICS_CSV = (
     REPO_ROOT
     / "artifacts"
-    / "legacy_phase95_policy"
+    / "selected_policy"
     / "selected_policy_family_seed_metrics.csv"
 )
 

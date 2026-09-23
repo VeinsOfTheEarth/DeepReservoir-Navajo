@@ -14,7 +14,7 @@ from deepreservoir.drl.rewards import PRACTICAL_MIN_STORAGE_AF
 
 SPR_REWARD_KEY = (
     "esa_spring_peak_release."
-    "farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong"
+    "farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar"
 )
 
 
@@ -163,7 +163,7 @@ def test_corrected_mode_masks_partial_spring_control_reward_and_state(
     )
 
 
-def test_legacy_mode_keeps_partial_spring_behavior(
+def test_unmasked_mode_keeps_partial_spring_behavior(
     model_data: dict[str, object],
 ) -> None:
     env = _spring_env(model_data, mask_incomplete_initial_spr=False)
@@ -177,5 +177,5 @@ def test_legacy_mode_keeps_partial_spring_behavior(
     assert info["spr_proxy_mask_applied"] is False
     assert info["spr_proxy_target_cfs"] == 10_000.0
     assert info["release_sj_main_cfs"] == pytest.approx(4_000.0)
-    assert info["reward_components_step"][SPR_REWARD_KEY] > 0.0
+    assert info["reward_components_step"][SPR_REWARD_KEY] < 0.0
     assert all(count == 1 for count in env._spr_days_so_far_by_spec.values())

@@ -40,8 +40,13 @@ def _scale_values() -> list[float]:
     return [float(np.round(value, 10)) for value in values]
 
 
-def _load_window(start: str, end: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    all_data = model.load_all_model_data()
+def _load_window(
+    start: str,
+    end: str,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.Series | None]:
+    all_data = model.load_all_model_data(
+        storage_datum_mode=selected_policy.SELECTED_STORAGE_DATUM_MODE
+    )
     raw_slice, _ = helpers.slice_by_window(
         all_data["raw"],
         start_token=start,
@@ -49,7 +54,15 @@ def _load_window(start: str, end: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.D
         label="inflow_scaling_sweep",
     )
     norm_slice = all_data["norm"].loc[raw_slice.index]
-    return raw_slice, norm_slice, all_data["norm_stats"]
+    norm_stats, _ = model._storage_norm_stats_for_evaluation(  # noqa: SLF001
+        model_path=selected_policy.SELECTED_MODEL_PATH,
+        full_record_norm_stats=all_data["norm_stats"],
+        mode=selected_policy.SELECTED_STORAGE_NORMALIZATION,
+    )
+    prior_day = model._previous_calendar_hydrology_row(  # noqa: SLF001
+        all_data["raw"], first_date=raw_slice.index[0]
+    )
+    return raw_slice, norm_slice, norm_stats, prior_day
 
 
 def _recompute_norm_inflow(
@@ -97,13 +110,18 @@ def main() -> None:
     outdir = Path(args.outdir)
     outdir.mkdir(parents=True, exist_ok=True)
 
-    raw_slice, norm_slice, norm_stats = _load_window(args.start, args.end)
+    raw_slice, norm_slice, norm_stats, prior_day = _load_window(args.start, args.end)
     scale_values = _scale_values()
 
     trajectory_frames: list[pd.DataFrame] = []
     metric_rows: list[dict[str, object]] = []
 
     for inflow_scale in scale_values:
+        prior_day_for_scenario = None if prior_day is None else prior_day.copy()
+        if prior_day_for_scenario is not None:
+            prior_day_for_scenario["inflow_cfs"] = (
+                float(prior_day_for_scenario["inflow_cfs"]) * inflow_scale
+            )
         inflow_change_pct = 100.0 * (inflow_scale - 1.0)
         print(
             "[inflow-scaling-sweep] running "
@@ -133,6 +151,13 @@ def main() -> None:
             spr_proxy_priority_release=True,
             spr_proxy_owns_sj_window=False,
             spr_advice_mode=selected_policy.SELECTED_SPR_ADVICE_MODE,
+            decision_hydrology_timing=selected_policy.SELECTED_DECISION_HYDROLOGY_TIMING,
+            niip_fallback_mode=selected_policy.SELECTED_NIIP_FALLBACK_MODE,
+            storage_datum_mode=selected_policy.SELECTED_STORAGE_DATUM_MODE,
+            storage_normalization=selected_policy.SELECTED_STORAGE_NORMALIZATION,
+            storage_budget_target_frac_of_max=selected_policy.SELECTED_STORAGE_BUDGET_TARGET_FRAC,
+            mask_incomplete_initial_spr=selected_policy.SELECTED_MASK_INCOMPLETE_INITIAL_SPR,
+            prior_day_hydrology=prior_day_for_scenario,
         )
 
         traj = pd.DataFrame(
@@ -171,8 +196,9 @@ def main() -> None:
         {
             "selected_policy": {
                 "public_name": selected_policy.SELECTED_PUBLIC_NAME,
-                "legacy_family": selected_policy.SELECTED_LEGACY_FAMILY,
-                "legacy_seed": selected_policy.SELECTED_LEGACY_SEED,
+                "source_family": selected_policy.SELECTED_SOURCE_FAMILY,
+                "source_task_id": selected_policy.SELECTED_TASK_ID,
+                "seed": selected_policy.SELECTED_SEED,
                 "model_path": str(selected_policy.SELECTED_MODEL_PATH.relative_to(REPO_ROOT)),
                 "reward_spec": selected_policy.SELECTED_REWARD_SPEC,
                 "obs_context": selected_policy.SELECTED_OBS_CONTEXT,

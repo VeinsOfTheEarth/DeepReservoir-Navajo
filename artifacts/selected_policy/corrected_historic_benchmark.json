@@ -1,0 +1,28 @@
+{
+  "benchmark_sha256": "11af0f359546ca6499bfae9140aabdd065d51ec67e688c3529cde423613e044a",
+  "flood_comparison": {
+    "comparison_days": 3879,
+    "historic_available_days": 3881,
+    "historic_safe_days": 3878,
+    "profile": "archuleta_bluff_common_valid"
+  },
+  "historic_metrics": {
+    "esa_min_flow_frac_days_met": 0.95801133436373,
+    "flooding_frac_days_met": 0.9997422015983501,
+    "hydropower_frac_of_max_possible": 0.3002375563379423,
+    "niip_annual_volume_frac_of_contract": 1.0,
+    "spr_freq_years_meeting_10000cfs_5d": 0.09090909090909091,
+    "spr_freq_years_meeting_2500cfs_10d": 0.7272727272727273,
+    "spr_freq_years_meeting_5000cfs_21d": 0.2727272727272727,
+    "spr_freq_years_meeting_8000cfs_10d": 0.18181818181818182,
+    "storage_frac_of_max_possible": 0.6856296239512203,
+    "total_spill_af": 0.0
+  },
+  "metric_profile": "corrected_phase95_historic_screen_v1",
+  "schema_version": 1,
+  "window": {
+    "end": "2024-08-17",
+    "name": "holdout_2014_2024_08_17",
+    "start": "2014-01-01"
+  }
+}

@@ -179,7 +179,7 @@ def _plot_flood(ax: plt.Axes) -> None:
     same_day = cap_component(q, 5000, 7000)
     lagged = cap_component(q, 12000, 16000)
 
-    ax.plot(q, same_day, color=ROLE_COLORS["flood"], lw=2.0, label="Farmington gage")
+    ax.plot(q, same_day, color=ROLE_COLORS["flood"], lw=2.0, label="Archuleta proxy")
     ax.plot(q, lagged, color="#F87171", lw=2.0, ls="-.", label="Bluff gage")
     ax.axvline(
         5000,
@@ -187,7 +187,7 @@ def _plot_flood(ax: plt.Axes) -> None:
         lw=1.0,
         ls="--",
         alpha=0.9,
-        label="Farmington threshold",
+        label="Archuleta threshold",
     )
     ax.axvline(
         12000,

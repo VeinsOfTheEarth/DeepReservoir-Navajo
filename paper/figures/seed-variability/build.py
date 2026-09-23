@@ -27,7 +27,7 @@ from figurestyle import OBJECTIVE_COLORS
 OUTPUT_DIR = Path(__file__).resolve().parent
 DATA_DIR = OUTPUT_DIR / "data"
 
-SELECTED_SEED = "seed_004"
+SELECTED_SEED = "seed_013"
 SEED_AXIS_MIN = 0.5
 SEED_AXIS_MAX = 2.55
 SEED_FLOOR_Y = 0.56

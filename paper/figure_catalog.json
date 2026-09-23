@@ -34,7 +34,7 @@
         "paper/figures/spr-flow/spr-flow.pdf"
       ],
       "editable_source": "paper/figures/spr-flow/spr-flow.pptx",
-      "notes": "Author-confirmed PowerPoint source and PDF export. The stale PNG and earlier prototypes are archived locally; export a new raster version from PowerPoint if needed."
+        "notes": "Author-confirmed PowerPoint source and PDF export, updated for the selected reward's remaining-calendar-days feasibility checks. Export a new raster version from PowerPoint if needed."
     },
     {
       "slug": "reward-functions-diagrams",
@@ -45,8 +45,7 @@
         "paper/figures/reward-functions-diagrams/reward-functions-diagrams.pdf"
       ],
       "notes": "Composite stitched figure for selected-policy non-SPR reward functions.",
-      "status": "archived_pre_correction",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper"
     },
     {
       "slug": "architecture-network-nodes",
@@ -79,8 +78,7 @@
         "paper/figures/selected-policy-comparison-with-historic/selected-policy-comparison-with-historic.pdf"
       ],
       "notes": "Selected policy versus historic management dashboard: full-period storage and SPR/Farmington time series, daily release scatterplot, NIIP/hydropower climatologies, SPR threshold-frequency summary, and compact raw-metric comparison.",
-      "status": "archived_pre_correction",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper"
     },
     {
       "slug": "stress-testing",
@@ -91,9 +89,8 @@
         "paper/figures/stress-testing/stress-testing.pdf"
       ],
       "notes": "Main stress-testing figure for the selected policy: initial-storage and inflow-volume perturbations with storage trajectories and objective-response curves.",
-      "status": "archived_pre_correction",
-      "data_directory": "paper/figures/stress-testing/data",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper",
+      "data_directory": "paper/figures/stress-testing/data"
     },
     {
       "slug": "release-attribution",
@@ -104,8 +101,7 @@
         "paper/figures/release-attribution/release-attribution.pdf"
       ],
       "notes": "Diagnostic release attribution for the selected policy; frame as interpretability rather than causal intent.",
-      "status": "archived_pre_correction",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper"
     },
     {
       "slug": "seed-variability",
@@ -116,9 +112,8 @@
         "paper/figures/seed-variability/seed-variability.pdf"
       ],
       "notes": "Selected-family seed-level objective performance, with the selected policy highlighted; grouped alternative excluded.",
-      "status": "archived_pre_correction",
-      "data_directory": "paper/figures/seed-variability/data",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper",
+      "data_directory": "paper/figures/seed-variability/data"
     },
     {
       "slug": "experiment-search",
@@ -129,9 +124,8 @@
         "paper/figures/experiment-search/experiment-search.pdf"
       ],
       "notes": "Experiment-search design lesson showing finish-line rarity across archived phases and Phase 95.",
-      "status": "archived_pre_correction",
-      "data_directory": "paper/figures/experiment-search/data",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper",
+      "data_directory": "paper/figures/experiment-search/data"
     },
     {
       "slug": "niip-reflex",
@@ -142,35 +136,32 @@
         "paper/figures/niip-reflex/niip-reflex.pdf"
       ],
       "notes": "Two-panel NIIP reflex design lesson showing SPR-associated NIIP delivery reflex behavior and the reduction after split actor heads.",
-      "status": "archived_pre_correction",
-      "data_directory": "paper/figures/niip-reflex/data",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "status": "paper",
+      "data_directory": "paper/figures/niip-reflex/data"
     },
     {
       "slug": "training-reward-signals",
       "source": "repo_script",
-      "status": "archived_pre_correction",
+      "status": "paper",
       "script": "paper/figures/training-reward-signals/build.py",
       "outputs": [
         "paper/figures/training-reward-signals/training-reward-signals.png",
         "paper/figures/training-reward-signals/training-reward-signals.pdf"
       ],
       "data_directory": "paper/figures/training-reward-signals/data",
-      "notes": "Signed rewards, absolute reward shares, and SPR/storage training paths from diagnostic retraining.",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "notes": "Signed rewards, absolute reward shares, and SPR/storage training paths from diagnostic retraining."
     },
     {
       "slug": "policy-response",
       "source": "repo_script",
-      "status": "archived_pre_correction",
+      "status": "paper",
       "script": "paper/figures/policy-response/build.py",
       "outputs": [
         "paper/figures/policy-response/policy-response.png",
         "paper/figures/policy-response/policy-response.pdf"
       ],
       "data_directory": "paper/figures/policy-response/data",
-      "notes": "Three-panel comparison of updated actions versus a saved action schedule under inflow perturbations.",
-      "snapshot_note": "Included for provenance and prepublication figure development; refresh after final corrected-policy selection."
+      "notes": "Three-panel comparison of updated actions versus a saved action schedule under inflow perturbations."
     }
   ],
   "tables": [
@@ -193,55 +184,13 @@
       "notes": "Compact LaTeX table comparing historic management, the selected-family seed mean, and the selected policy."
     }
   ],
-  "pending_figures": [
-    {
-      "slug": "experiment-search",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "niip-reflex",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "policy-response",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "release-attribution",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "reward-functions-diagrams",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "seed-variability",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "selected-policy-comparison-with-historic",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "stress-testing",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    },
-    {
-      "slug": "training-reward-signals",
-      "reason": "Refresh checkpoint-dependent data and exports after final corrected-policy selection."
-    }
-  ],
+  "pending_figures": [],
   "figure_layout_cleanup": {
-    "status": "prepublication_complete",
+    "status": "corrected_selected_policy_complete",
     "verified_programmatic_figures": 11,
-    "png_comparison": "All eleven programmatic main-figure PNGs rebuilt in the public staging tree were byte-identical to their staged references. Model-dependent references remain archived pre-correction outputs.",
-    "retained_priority_figures": [
-      "training-reward-signals",
-      "policy-response"
-    ],
-    "notes": "The snapshot contains fourteen inherited main/supporting figure directories and three portable appendix packages producing six appendix figures. Model-dependent main figures are explicitly marked for one coordinated refresh."
+    "notes": "All model-dependent figures were rebuilt from corrected Phase 95 task 105; manual editable figures remain authoritative."
   },
-  "snapshot_status": "Prepublication catalog: system/method figures are current; model-dependent figures marked archived_pre_correction use the legacy Phase-95 policy.",
+  "snapshot_status": "Current corrected selected-policy catalog.",
   "appendix_packages": [
     {
       "slug": "appendix-a-data-environment",

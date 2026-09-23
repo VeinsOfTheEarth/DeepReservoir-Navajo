@@ -1,7 +1,8 @@
 {
-  "evaluation_reference": "archived selected-policy deterministic evaluation",
+  "evaluation_rollout": "artifacts\\selected_policy\\selected_policy_eval_rollout.parquet",
   "rolling_updates": 25,
-  "selected_legacy_family": "reward_jon_p95_peak875_hdisceff",
-  "selected_seed": 4,
-  "training_source": "same-configuration rich diagnostic retraining"
+  "seed": 13,
+  "source_family": "reward_jon_p95_oishift875to90_heff",
+  "source_task_id": 105,
+  "training_trace": "artifacts\\selected_policy\\train_update_metrics.csv"
 }

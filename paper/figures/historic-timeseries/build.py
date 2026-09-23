@@ -37,6 +37,7 @@ from common import (
 )
 
 from deepreservoir.define_env.spring_peak_release_curve import SpringPeakReleaseCurve
+from deepreservoir.data.storage_datum import apply_storage_datum_mode
 from deepreservoir.drl.niip_targets import (
     historic_niip_delivery_target_for_dates,
     load_historic_niip_delivery_series,
@@ -131,19 +132,20 @@ def _add_common_context(ax: plt.Axes, *, show_labels: bool = False) -> None:
         )
         ax.text(
             SPR_START,
-            1.035,
-            "SPR begins",
+            0.97,
+            "Post-recommendation period",
             transform=ax.get_xaxis_transform(),
-            ha="center",
-            va="bottom",
-            fontsize=8.8,
+            ha="right",
+            va="top",
+            rotation=90,
+            fontsize=7.4,
             color=GRAY,
         )
 
 
 def build() -> list[Path]:
     set_theme()
-    raw = load_raw_model_data()
+    raw, _ = apply_storage_datum_mode(load_raw_model_data(), mode="elevation_2019")
     train, eval_df = selected_policy_train_eval_split(raw)
 
     fig, axes = plt.subplots(
@@ -233,7 +235,14 @@ def build() -> list[Path]:
     demand = demand.loc[:COMMON_X_END]
     record_start = pd.Timestamp(demand.index.min()) if not demand.empty else pd.NaT
     backfill_idx = pd.date_range(COMMON_X_START, record_start - pd.Timedelta(days=1), freq="D")
-    backfill = historic_niip_delivery_target_for_dates(backfill_idx) if len(backfill_idx) else pd.Series(dtype=float)
+    backfill = (
+        historic_niip_delivery_target_for_dates(
+            backfill_idx,
+            fallback_mode="training_only",
+        )
+        if len(backfill_idx)
+        else pd.Series(dtype=float)
+    )
     backfill_smoothed = backfill.rolling(30, center=True, min_periods=7).mean()
     if not backfill.empty:
         axes[2].plot(
@@ -243,7 +252,7 @@ def build() -> list[Path]:
             lw=1.0,
             ls="--",
             alpha=0.78,
-            label="Pre-record median backfill",
+            label="Training-period median backfill",
             zorder=4,
         )
     axes[2].plot(
@@ -257,7 +266,7 @@ def build() -> list[Path]:
     )
     if not demand.empty:
         axes[2].axvline(record_start, color=GRAY, lw=0.9, ls=":", alpha=0.82)
-    axes[2].set_ylabel("NIIP demand\n(cfs)")
+    axes[2].set_ylabel("NIIP delivery proxy\n(cfs)")
     axes[2].set_ylim(bottom=0)
     axes[2].set_yticks([0, 300, 600, 900, 1200])
     axes[2].legend(

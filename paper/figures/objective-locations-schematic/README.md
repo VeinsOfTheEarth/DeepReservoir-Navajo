@@ -12,8 +12,9 @@ agricultural delivery-volume objective; daily delivery timing is excluded.
 
 ## Authoritative Source
 
-`objective-locations-schematic.pptx` is the manually refined source, renamed
-from `objective-locations-schematic-hand-edit.pptx` without changing its contents.
+`objective-locations-schematic.pptx` is the manually refined source, updated to
+place the 5,000-cfs flood criterion at Archuleta and define NIIP performance
+against the complete-season historic-delivery proxy.
 `objective-locations-schematic.pdf` is the matching final paper export. Edit
 the PowerPoint and export a new PDF for revisions.
 

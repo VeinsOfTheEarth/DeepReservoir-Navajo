@@ -18,5 +18,5 @@
 # Preserve spacing in the original Bureau of Reclamation CSV export.
 data/navajo_reservoir_historic/*.csv -whitespace
 # Preserve byte-exact archived evaluation artifacts verified by SHA-256.
-artifacts/legacy_phase95_policy/selected_policy_eval_metrics.csv -text -whitespace
-artifacts/legacy_phase95_policy/selected_policy_eval_metrics.json -text -whitespace
+artifacts/selected_policy/selected_policy_eval_metrics.csv -text -whitespace
+artifacts/selected_policy/selected_policy_eval_metrics.json -text -whitespace

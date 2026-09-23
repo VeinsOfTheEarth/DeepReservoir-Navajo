@@ -1,9 +1,17 @@
 {
   "submission_name": "selected_policy_navajo_reservoir",
-  "artifact_status": "archived_pre_correction",
+  "artifact_status": "corrected_phase95_selected",
+  "selection": {
+    "task_id": 105,
+    "reward_family": "reward_jon_p95_oishift875to90_heff",
+    "seed": 13,
+    "objective_pass_count": 10,
+    "objective_count": 10,
+    "selection_basis": "Highest objective-alignment and viability scores among the three corrected Phase 95 policies that passed all ten historic screens; daily diagnostics also avoided the universal action saturation observed in the other two finalists."
+  },
   "runs_root": "./runs",
   "seeds": [
-    4
+    13
   ],
   "base_train": {
     "train_start": "1967-06-07",
@@ -25,7 +33,14 @@
     "spr_proxy_priority_release": true,
     "spr_proxy_owns_sj_window": false,
     "max_release_sj_main_cfs": 5000.0,
-    "max_release_niip_cfs": 2500.0
+    "max_release_niip_cfs": 2500.0,
+    "decision_hydrology_timing": "previous_day",
+    "niip_fallback_mode": "training_only",
+    "storage_datum_mode": "elevation_2019",
+    "storage_normalization": "train_window",
+    "storage_budget_target_frac_of_max": 0.875,
+    "mask_incomplete_initial_spr": true,
+    "n_epochs": 10
   },
   "base_eval": {
     "which_metrics": "all",
@@ -42,19 +57,18 @@
     ]
   },
   "notes": [
-    "Archived pre-correction config derived from Phase 95 reward_jon_p95_peak875_hdisceff/seed_004; legacy selected-policy identifiers are retained for provenance and API compatibility.",
-    "The policy uses operational SPR days_remaining advice, not perfect-future SPR knowledge.",
-    "The hard screen compares against historical management on no spill, storage, ESA minimum flow, flood-safe days, all four SPR threshold frequencies, hydropower, and NIIP annual volume. NIIP daily timing is retained as a diagnostic but not a hard pass/fail criterion.",
-    "Training hydrology is annual holdout-mean bias adjusted for San Juan inflow, evaporation, and Animas Farmington flow."
+    "Selected from the corrected Phase 95 recovery search after all 128 tasks completed.",
+    "The policy uses previous-day hydrology and operational days_remaining SPR advice without future-flow observations.",
+    "The hard screen compares against historical management on spill, storage, minimum flow, flood-safe days, four spring-peak frequencies, hydropower, and annual NIIP volume."
   ],
   "experiments": [
     {
       "name": "selected_policy_navajo_reservoir",
-      "legacy_name": "reward_jon_p95_peak875_hdisceff",
-      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_peak875_concave0_softupper98@2.50,hydropower:positive_discretionary_efficiency@1.50,flooding:penalty_caps_jon@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong@2.00",
-      "description": "Archived pre-correction Navajo Reservoir policy candidate: operational SPR advice, split action heads, four-action release controller, high-storage target, discretionary hydropower-efficiency shaping, and annual bias-corrected training hydrology.",
-      "experiment_reason": "Seed 004 was the pre-correction Phase 95 paper candidate under the metrics used at that time. It is retained as an archived baseline and is not the final corrected paper policy.",
-      "reward_summary": "Dam safety: spill guard with warning pressure starting at 98% storage (alpha 1.00)\nStorage: 87.5% fixed peak-storage target with concave low-storage recovery and soft upper guard near 98% (alpha 2.50)\nHydropower: positive generation reward with efficiency shaping only on discretionary San Juan release (alpha 1.50)\nFlood control: penalize downstream flow-cap exceedance (alpha 0.25)\nNIIP: historic delivery match with hard-meet credit and softened overdelivery, evaluated primarily by annual volume (alpha 3.00)\nESA minimum flow: smooth logistic reward for maintaining the 500 cfs Farmington minimum flow, with ESA action capped at 1.50x daily deficit (alpha 2.50)\nSPR: operational no-future threshold proxy ledger with strong excess-release penalty and days_remaining advice (alpha 2.00)\nAction/controller: four-action MAX architecture for ESA/baseflow, NIIP, SPR bridge release, and discretionary San Juan release\nTraining hydrology: annual holdout-mean matched San Juan inflow, evaporation, and Animas Farmington flow"
+      "source_family": "reward_jon_p95_oishift875to90_heff",
+      "source_task_id": 105,
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: OI-shifted 87.5% to 90% storage target with full hydropower-efficiency shaping.",
+      "experiment_reason": "This endpoint led the three all-screen finalists in both objective alignment and viability and showed the most usable action variation."
     }
   ]
 }

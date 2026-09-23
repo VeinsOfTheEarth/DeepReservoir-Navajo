@@ -1,4 +1,4 @@
-"""Run the archived Phase-95 baseline configuration and checkpoint.
+"""Evaluate or retrain the corrected selected Navajo policy.
 
 Figure builders live under paper/; evaluation does not generate extra reports.
 """
@@ -15,15 +15,15 @@ from deepreservoir.drl import selected_policy
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("info", help="Show archived configuration and available dates")
-    evaluate = commands.add_parser("eval", help="Evaluate the archived checkpoint with current code")
+    commands.add_parser("info", help="Show selected configuration and available dates")
+    evaluate = commands.add_parser("eval", help="Evaluate the corrected selected checkpoint")
     evaluate.add_argument("--model", type=Path, default=selected_policy.SELECTED_MODEL_PATH)
     evaluate.add_argument("--outdir", type=Path, required=True)
     evaluate.add_argument("--device", default="cpu")
-    train = commands.add_parser("train", help="Retrain the archived baseline policy configuration")
+    train = commands.add_parser("train", help="Retrain the corrected selected-policy configuration")
     train.add_argument("--outdir", type=Path, required=True)
-    train.add_argument("--seed", type=int, default=selected_policy.SELECTED_LEGACY_SEED)
-    train.add_argument("--timesteps", type=int, help="Short-run check; defaults to archived training budget")
+    train.add_argument("--seed", type=int, default=selected_policy.SELECTED_SEED)
+    train.add_argument("--timesteps", type=int, help="Short-run check; defaults to the selected training budget")
     train.add_argument("--device", default="cpu")
     train.add_argument("--torch-threads", type=int, default=1)
     train.add_argument("--diagnostics", action="store_true", help="Log training-reward-signals data")
@@ -139,7 +139,7 @@ def main(argv: list[str] | None = None) -> None:
         raw = load_all_model_data()["raw"]
         print(f"Config: {selected_policy.SELECTED_CONFIG_PATH}")
         print(f"Daily data: {raw.index.min().date()} to {raw.index.max().date()}")
-        print(f"Archived policy: {selected_policy.SELECTED_MODEL_PATH}")
+        print(f"Selected policy: {selected_policy.SELECTED_MODEL_PATH}")
 
 
 if __name__ == "__main__":

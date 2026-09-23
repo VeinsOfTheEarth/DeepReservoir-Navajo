@@ -8,7 +8,6 @@ import pytest
 
 from deepreservoir.drl.metrics import (
     FLOOD_COMPARISON_PROFILE_CORRECTED,
-    FLOOD_COMPARISON_PROFILE_LEGACY_PHASE95,
     compute_flooding_comparison_metrics,
 )
 
@@ -79,81 +78,24 @@ def test_corrected_comparison_does_not_substitute_release_for_archuleta() -> Non
         compute_flooding_comparison_metrics(rollout)
 
 
-def test_legacy_profile_retains_missing_lag_as_safe_and_all_rows() -> None:
-    dates = pd.date_range("2014-01-01", periods=4, freq="D")
-    rollout = pd.DataFrame(
-        {
-            "sj_at_farmington_cfs": [4_900.0, 5_100.0, 4_900.0, 4_900.0],
-            "sj_at_farmington_lag2_cfs": [np.nan, np.nan, 13_000.0, 11_000.0],
-            "sj_farmington_q_cfs": [4_900.0, 5_100.0, 4_900.0, 4_900.0],
-        },
-        index=dates,
-    )
-
-    result = compute_flooding_comparison_metrics(
-        rollout,
-        profile=FLOOD_COMPARISON_PROFILE_LEGACY_PHASE95,
-    )
-
-    assert result["flooding_comparison_days"] == 4
-    assert result["agent_flooding_available_days"] == 2
-    assert result["historic_flooding_available_days"] == 2
-    assert result["agent_flooding_safe_days"] == 2
-    assert result["historic_flooding_safe_days"] == 3
-    assert result["agent_flooding_frac_days_met"] == pytest.approx(0.5)
-    assert result["historic_flooding_frac_days_met"] == pytest.approx(0.75)
-
-
 @pytest.fixture(scope="module")
-def archived_phase95_rollout() -> pd.DataFrame:
-    path = REPO_ROOT / "artifacts" / "legacy_phase95_policy" / "selected_policy_eval_rollout.parquet"
+def selected_policy_rollout() -> pd.DataFrame:
+    path = REPO_ROOT / "artifacts" / "selected_policy" / "selected_policy_eval_rollout.parquet"
     rollout = pd.read_parquet(path)
     rollout.index = pd.DatetimeIndex(rollout.index)
     return rollout.sort_index()
 
 
-def test_legacy_profile_reproduces_frozen_phase95_flood_screen(
-    archived_phase95_rollout: pd.DataFrame,
+def test_selected_policy_uses_corrected_common_holdout_denominator(
+    selected_policy_rollout: pd.DataFrame,
 ) -> None:
-    result = compute_flooding_comparison_metrics(
-        archived_phase95_rollout,
-        profile=FLOOD_COMPARISON_PROFILE_LEGACY_PHASE95,
-    )
-
-    assert result["flooding_comparison_days"] == 3_882
-    assert result["agent_flooding_frac_days_met"] == pytest.approx(
-        0.9778464708912932
-    )
-    assert result["historic_flooding_frac_days_met"] == pytest.approx(
-        0.9621329211746522
-    )
-
-
-def test_corrected_profile_has_expected_common_holdout_denominator(
-    archived_phase95_rollout: pd.DataFrame,
-) -> None:
-    # The archived rollout predates the explicit proxy aliases and the joined
-    # Archuleta series. Populate those columns explicitly for a post-hoc,
-    # corrected-location comparison; the helper itself intentionally performs
-    # no fallback or external data loading.
-    rollout = archived_phase95_rollout.copy()
-    rollout["sj_at_archuleta_proxy_cfs"] = rollout["sj_main_flow_cfs"]
-    rollout["sj_at_bluff_proxy_cfs"] = rollout["sj_at_farmington_lag2_cfs"]
-
-    archuleta = pd.read_csv(
-        REPO_ROOT / "data" / "daily_flows" / "daily_sj_archuleta.csv",
-        parse_dates=["time"],
-    ).set_index("time")["value"]
-    rollout["sj_archuleta_q_cfs"] = archuleta.reindex(rollout.index)
-
-    result = compute_flooding_comparison_metrics(rollout)
-
+    result = compute_flooding_comparison_metrics(selected_policy_rollout)
     assert result["agent_flooding_available_days"] == 3_880
     assert result["historic_flooding_available_days"] == 3_881
     assert result["flooding_comparison_days"] == 3_879
-    assert result["agent_flooding_safe_days"] == 3_879
+    assert result["agent_flooding_safe_days"] == 3_878
     assert result["historic_flooding_safe_days"] == 3_878
-    assert result["agent_flooding_frac_days_met"] == pytest.approx(1.0)
+    assert result["agent_flooding_frac_days_met"] == pytest.approx(3_878 / 3_879)
     assert result["historic_flooding_frac_days_met"] == pytest.approx(3_878 / 3_879)
 
 

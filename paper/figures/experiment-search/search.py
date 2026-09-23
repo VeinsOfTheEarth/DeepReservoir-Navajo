@@ -39,7 +39,7 @@ OUTPUT_DIR = Path(__file__).resolve().parent
 
 DATA_DIR = OUTPUT_DIR / "data"
 
-SELECTED_SEED = "seed_004"
+SELECTED_SEED = "seed_013"
 
 DEFAULT_PHASE95_SEED_METRICS = DATA_DIR / "phase95-seed-metrics-with-pass-flags.csv"
 
@@ -356,7 +356,7 @@ def build_experiment_search(
     for col in score_cols:
         seeds[col] = score_frame[col]
 
-    selected_mask = (seeds["family"] == "reward_jon_p95_peak875_hdisceff") & (seeds["seed"] == SELECTED_SEED)
+    selected_mask = (seeds["family"] == "reward_jon_p95_oishift875to90_heff") & (seeds["seed"] == SELECTED_SEED)
     seeds["is_selected_policy"] = selected_mask
     total = len(seeds)
     finish_count = int(seeds["finish_line_clean"].sum())
