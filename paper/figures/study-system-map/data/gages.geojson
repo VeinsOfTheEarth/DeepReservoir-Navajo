@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "gages",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"attribution": "Contains information from MERIT Hydro v1.0.1, made available under the Open Data Commons Open Database License (ODbL) 1.0.",
+"license": "ODbL-1.0",
+"license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+"source": {"dataset":"MERIT Hydro","version":"1.0.1","url":"https://global-hydrodynamics.github.io/MERIT_Hydro/","citation_doi":"https://doi.org/10.1029/2019WR024873","processing_interface":"Veins of the Earth (VotE)"},
+"modifications": "Selected six USGS gages, retained their VotE/MERIT Hydro mapped reach identifiers, added project display labels and roles, and reprojected the result to EPSG:4326.",
+"license_scope": "Applied conservatively to this mixed-origin database because it contains MERIT Hydro-derived mapped reach identifiers; USGS-origin station identifiers, names, drainage areas, and locations remain public-domain U.S. government data.",
+"features": [
+{ "type": "Feature", "properties": { "id_gage": 14643897418.0, "id_source": "09379500", "station_name": "SAN JUAN RIVER NEAR BLUFF, UT", "drainarea_km2_source": 59569.77, "mapped_id_reach": 14642679415.0, "display_name": "SJ near Bluff", "role": "key" }, "geometry": { "type": "Point", "coordinates": [ -109.8666889, 37.15067778 ] } },
+{ "type": "Feature", "properties": { "id_gage": 14818767598.0, "id_source": "09371010", "station_name": "SAN JUAN RIVER AT FOUR CORNERS, CO", "drainarea_km2_source": 37813.854, "mapped_id_reach": 14817897596.0, "display_name": "SJ at Four Corners", "role": "supporting" }, "geometry": { "type": "Point", "coordinates": [ -109.0295833, 37.00113889 ] } },
+{ "type": "Feature", "properties": { "id_gage": 14890977867.0, "id_source": "09368000", "station_name": "SAN JUAN RIVER AT SHIPROCK, NM", "drainarea_km2_source": 33410.871, "mapped_id_reach": 14890281863.0, "display_name": "SJ at Shiprock", "role": "supporting" }, "geometry": { "type": "Point", "coordinates": [ -108.6830556, 36.77666667 ] } },
+{ "type": "Feature", "properties": { "id_gage": 14986503931.0, "id_source": "09365000", "station_name": "SAN JUAN RIVER AT FARMINGTON, NM", "drainarea_km2_source": 18751.5276, "mapped_id_reach": 14987199938.0, "display_name": "SJ at Farmington", "role": "key" }, "geometry": { "type": "Point", "coordinates": [ -108.2255889, 36.72301667 ] } },
+{ "type": "Feature", "properties": { "id_gage": 15096645837.0, "id_source": "09355500", "station_name": "SAN JUAN RIVER NEAR ARCHULETA, NM", "drainarea_km2_source": 8443.3674, "mapped_id_reach": 15096645829.0, "display_name": "SJ near Archuleta", "role": "key" }, "geometry": { "type": "Point", "coordinates": [ -107.6986389, 36.80188889 ] } },
+{ "type": "Feature", "properties": { "id_gage": 14991549932.0, "id_source": "09364500", "station_name": "ANIMAS RIVER AT FARMINGTON, NM", "drainarea_km2_source": 3522.3864, "mapped_id_reach": 14991549934.0, "display_name": "Animas at Farmington", "role": "key" }, "geometry": { "type": "Point", "coordinates": [ -108.20175, 36.7225 ] } }
+]
+}

@@ -1,0 +1,11 @@
+metric,historic
+total_spill_af,0.0
+storage_frac_of_max_possible,0.7090526891588079
+esa_min_flow_frac_days_met,0.95801133436373
+flooding_frac_days_met,0.9621329211746522
+spr_freq_years_meeting_10000cfs_5d,0.09090909090909091
+spr_freq_years_meeting_8000cfs_10d,0.18181818181818182
+spr_freq_years_meeting_5000cfs_21d,0.2727272727272727
+spr_freq_years_meeting_2500cfs_10d,0.7272727272727273
+hydropower_frac_of_max_possible,0.30316666549816307
+niip_annual_volume_frac_of_contract,1.0

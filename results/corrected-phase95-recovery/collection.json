@@ -1,0 +1,21 @@
+{
+    "benchmark_error":  null,
+    "collected_at":  "2026-09-17T18:53:46.515138+00:00",
+    "complete":  true,
+    "family_summary_path":  "phase95_family_summary.csv",
+    "historic_benchmark_csv_path":  "corrected_historic_benchmark.csv",
+    "historic_benchmark_json_path":  "corrected_historic_benchmark.json",
+    "metrics_path":  "phase95_metrics.csv",
+    "missing_task_ids":  [
+
+                         ],
+    "n_completed_tasks":  128,
+    "n_rows":  128,
+    "n_tasks":  128,
+    "objective_screen_path":  "phase95_objective_screen.csv",
+    "plan_id":  "a46c01d4fdda860feb330e4af867ce73a003880c6a73745e16d9e466d6e8b009",
+    "retired_stale_outputs":  [
+
+                              ],
+    "task_status_path":  "phase95_task_status.csv"
+}

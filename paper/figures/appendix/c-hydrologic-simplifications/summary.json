@@ -1,0 +1,133 @@
+{
+  "methods": {
+    "event_lags_source": "Slide deck slides 8--10; original event-selection code unavailable",
+    "flood_lag_basis": "Slide 10 reports approximately 48 h Navajo Reservoir to Bluff; retain two daily steps for the flood proxy",
+    "annual_window": "1970--2024, site-specific years with at least 330 valid daily records",
+    "farmington_patch": "max(0, Archuleta + Animas - full-overlap mean bias)"
+  },
+  "slide_travel_times_hours": {
+    "archuleta_to_farmington": 8.6,
+    "navajo_to_farmington": 10.0,
+    "farmington_to_four_corners": 19.9,
+    "farmington_to_bluff": 38.0,
+    "navajo_to_bluff": 48.0
+  },
+  "selected_daily_bluff_lag_days": 2,
+  "annual_site_summary": {
+    "San Juan near Bluff": {
+      "n_years_at_least_330_days": 55,
+      "first_year": 1970,
+      "last_year": 2024,
+      "median_annual_mean_cfs": 1552.123287671233,
+      "median_annual_daily_peak_cfs": 8250.0,
+      "maximum_recorded_daily_peak_cfs": 34700.0
+    },
+    "Animas at Farmington": {
+      "n_years_at_least_330_days": 55,
+      "first_year": 1970,
+      "last_year": 2024,
+      "median_annual_mean_cfs": 734.2301369863013,
+      "median_annual_daily_peak_cfs": 4330.0,
+      "maximum_recorded_daily_peak_cfs": 8880.0
+    },
+    "Chaco at Waterflow": {
+      "n_years_at_least_330_days": 18,
+      "first_year": 1976,
+      "last_year": 1993,
+      "median_annual_mean_cfs": 41.125164383561646,
+      "median_annual_daily_peak_cfs": 1800.0,
+      "maximum_recorded_daily_peak_cfs": 3870.0
+    },
+    "Mancos at Towaoc": {
+      "n_years_at_least_330_days": 55,
+      "first_year": 1970,
+      "last_year": 2024,
+      "median_annual_mean_cfs": 32.263224043715844,
+      "median_annual_daily_peak_cfs": 484.0,
+      "maximum_recorded_daily_peak_cfs": 1890.0
+    },
+    "Chinle at Mexican Water": {
+      "n_years_at_least_330_days": 55,
+      "first_year": 1970,
+      "last_year": 2024,
+      "median_annual_mean_cfs": 16.519287671232878,
+      "median_annual_daily_peak_cfs": 610.0,
+      "maximum_recorded_daily_peak_cfs": 6000.0
+    },
+    "La Plata at Farmington": {
+      "n_years_at_least_330_days": 49,
+      "first_year": 1970,
+      "last_year": 2024,
+      "median_annual_mean_cfs": 11.7674043715847,
+      "median_annual_daily_peak_cfs": 223.0,
+      "maximum_recorded_daily_peak_cfs": 1260.0
+    }
+  },
+  "farmington_gap_fill": {
+    "n_overlap_days": 25085,
+    "bias_cfs": 46.68002072951963,
+    "pre_gap_bias_cfs": 46.668961379827515,
+    "training_period_bias_cfs": 46.51718456049302,
+    "adjusted_proxy_r2": 0.9803997515883207,
+    "adjusted_proxy_mae_cfs": 160.2120728807206,
+    "n_patched_days": 822,
+    "n_patched_evaluation_days": 819
+  },
+  "headwater_to_bluff_volume_comparison": {
+    "common_days": 25886,
+    "first_day": "1954-12-01",
+    "last_day": "2025-11-07",
+    "archuleta_plus_animas_over_bluff_pct": 96.24167791445116
+  },
+  "inputs": {
+    "San Juan near Bluff": {
+      "path": "data/daily_flows/daily_sj_bluff.csv",
+      "sha256": "ce3cbca20064c9fe29f3776587abdaaf0ca41d0d6cf8516fb13af46b852ab842"
+    },
+    "Animas at Farmington": {
+      "path": "data/daily_flows/daily_animas_farmington.csv",
+      "sha256": "b9416a344d00afe239e13b7d3fd3a13b2acb188c54cadc87c7970794d38ff58d"
+    },
+    "Chaco at Waterflow": {
+      "path": "data/daily_flows/daily_chaco_waterflow.csv",
+      "sha256": "ab44068da234c1fa4f92ac162bd96b61ee6e6b84f4d5d792e91425e00127db51"
+    },
+    "Mancos at Towaoc": {
+      "path": "data/daily_flows/daily_mancos_towaoc.csv",
+      "sha256": "e9418bf64126929d5456243a605eb2e11672de1dc2c0fa80c8f160e08344b96e"
+    },
+    "Chinle at Mexican Water": {
+      "path": "data/daily_flows/daily_chinle_mexicanwater.csv",
+      "sha256": "836a8492250a17fc3ee77db840068f7b63a1406aeeb24f2b9262192e6e81b729"
+    },
+    "La Plata at Farmington": {
+      "path": "data/daily_flows/daily_laplata_farmington.csv",
+      "sha256": "3d29090885ad7a4277c946f17cad4fabac29b548e5528ceb80047a6accffa7ec"
+    },
+    "archuleta": {
+      "path": "data/daily_flows/daily_sj_archuleta.csv",
+      "sha256": "fd4cf9373dbb48cf6ed314a12ec58851d80766875b944abcd6e312f224363dc4"
+    },
+    "farmington_original": {
+      "path": "data/patch_sanjuan_at_farmington/daily_sj_farmington_original_backup.csv",
+      "sha256": "fe58a8aca9732b5f3709196ca8339b8150ffa2fed7987b92138da70d5a4914ea"
+    },
+    "farmington_patched": {
+      "path": "data/daily_flows/daily_sj_farmington.csv",
+      "sha256": "7d2fa7667a99f0c1499e526a24619e4c3ea5c5fa2e5706eb2926615f49f08a7d"
+    },
+    "patched_rows": {
+      "path": "data/patch_sanjuan_at_farmington/patched_rows.csv",
+      "sha256": "f3c84a7b3c160aa90f70abb493600ebbc45dd3bea0d2ddeb5ec25c5b354b1168"
+    },
+    "figure_style": {
+      "path": "paper/figure-support/figurestyle.py",
+      "sha256": "fe1a3e8978197ef531ecc7cbb589b11c981cf9470d4974980b9e2bab6bff8211"
+    }
+  },
+  "optional_provenance": {
+    "historical_analysis_deck": {
+      "provided": false
+    }
+  }
+}

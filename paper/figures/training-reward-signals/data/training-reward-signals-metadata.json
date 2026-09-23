@@ -1,0 +1,7 @@
+{
+  "evaluation_reference": "archived selected-policy deterministic evaluation",
+  "rolling_updates": 25,
+  "selected_legacy_family": "reward_jon_p95_peak875_hdisceff",
+  "selected_seed": 4,
+  "training_source": "same-configuration rich diagnostic retraining"
+}

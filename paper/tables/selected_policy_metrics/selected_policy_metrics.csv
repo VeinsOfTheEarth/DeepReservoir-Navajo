@@ -1,0 +1,12 @@
+objective,metric,selected_policy,benchmark,delta,units,benchmark_label,hard_screen,result,selected_policy_display,benchmark_display,delta_display
+Dam safety,Spill volume,0.0,0.0,0.0,acre-ft,Historical management,yes,Pass,0,0,0
+Storage,Storage / maximum possible,0.7198171095386058,0.7090526891588079,0.010764420379797857,%,Historical management,yes,Pass,71.982%,70.905%,1.076%
+ESA minimum flow,Days meeting 500 cfs Farmington minimum,1.0,0.95801133436373,0.04198866563627002,%,Historical management,yes,Pass,100.000%,95.801%,4.199%
+Flood control,Flood-safe days,0.9778464708912932,0.9997424008243173,-0.02189592993302414,%,Historical management,yes,Miss,97.785%,99.974%,-2.190%
+Spring peak release,"10,000 cfs / 5 d frequency",0.18181818181818182,0.09090909090909091,0.09090909090909091,%,Historical management,yes,Pass,18.182%,9.091%,9.091%
+Spring peak release,"8,000 cfs / 10 d frequency",0.36363636363636365,0.18181818181818182,0.18181818181818182,%,Historical management,yes,Pass,36.364%,18.182%,18.182%
+Spring peak release,"5,000 cfs / 21 d frequency",0.5454545454545454,0.2727272727272727,0.2727272727272727,%,Historical management,yes,Pass,54.545%,27.273%,27.273%
+Spring peak release,"2,500 cfs / 10 d frequency",1.0,0.7272727272727273,0.2727272727272727,%,Historical management,yes,Pass,100.000%,72.727%,27.273%
+Hydropower,Hydropower / maximum possible,0.30369730638142434,0.30316666549816307,0.0005306408832612686,%,Historical management,yes,Pass,30.370%,30.317%,0.053%
+NIIP,Annual volume / contract,1.055795140017504,1.0,0.055795140017504075,%,Contractual target,yes,Pass,105.580%,100.000%,5.580%
+NIIP diagnostic,Daily historical-demand timing,0.9839642616515096,1.0,-0.01603573834849037,%,Historical management,no,Diagnostic,98.396%,100.000%,-1.604%

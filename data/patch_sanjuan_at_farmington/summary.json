@@ -1,0 +1,88 @@
+{
+  "files": {
+    "sj_archuleta": "data/daily_flows/daily_sj_archuleta.csv",
+    "animas_farmington": "data/daily_flows/daily_animas_farmington.csv",
+    "sj_farmington": "data/daily_flows/daily_sj_farmington.csv"
+  },
+  "coverage": {
+    "sj_archuleta": {
+      "start": "1954-12-01",
+      "end": "2025-11-07",
+      "n_days": 25907
+    },
+    "animas_farmington": {
+      "start": "1913-10-01",
+      "end": "2025-11-07",
+      "n_days": 37292
+    },
+    "sj_farmington": {
+      "start": "1930-10-01",
+      "end": "2025-11-07",
+      "n_days": 33915
+    },
+    "gap_window": {
+      "start": "2020-08-20",
+      "end": "2022-11-08",
+      "n_days": 811,
+      "proxy_days_available": 811,
+      "farmington_days_available": 0
+    }
+  },
+  "metrics": {
+    "all_overlap": {
+      "n_days": 25085,
+      "start": "1954-12-01",
+      "end": "2025-11-07",
+      "corr": 0.9905788093754125,
+      "r2": 0.9797858508860747,
+      "mean_obs_cfs": 1776.7100657763604,
+      "mean_proxy_cfs": 1823.3900865058804,
+      "mean_bias_cfs": 46.68002072951963,
+      "median_bias_cfs": 35.0,
+      "mae_cfs": 163.05188279848517,
+      "rmse_cfs": 267.86113681403646,
+      "mape_pct": 12.757295063113952
+    },
+    "pre_gap_overlap": {
+      "n_days": 24003,
+      "start": "1954-12-01",
+      "end": "2020-08-19",
+      "corr": 0.9906098057899334,
+      "r2": 0.9797875978951491,
+      "mean_obs_cfs": 1805.0215389742948,
+      "mean_proxy_cfs": 1851.6905003541224,
+      "mean_bias_cfs": 46.668961379827515,
+      "median_bias_cfs": 35.0,
+      "mae_cfs": 164.06370203724538,
+      "rmse_cfs": 270.1929859025233,
+      "mape_pct": 12.5838810304833
+    },
+    "post_gap_overlap": {
+      "n_days": 1082,
+      "start": "2022-11-09",
+      "end": "2025-11-07",
+      "corr": 0.988256174639445,
+      "r2": 0.9749534567510107,
+      "mean_obs_cfs": 1148.6506469500923,
+      "mean_proxy_cfs": 1195.5760073937156,
+      "mean_bias_cfs": 46.92536044362292,
+      "median_bias_cfs": 23.5,
+      "mae_cfs": 140.60576709796672,
+      "rmse_cfs": 209.56214039662683,
+      "mape_pct": 16.60429785907843
+    },
+    "annual_complete_calendar_years": {
+      "n_years": 65,
+      "start_year": 1955,
+      "end_year": 2023,
+      "corr": 0.9976930541693744,
+      "r2": 0.9927224046499665,
+      "mean_obs_af": 1316683.2089021173,
+      "mean_proxy_af": 1348194.6712228418,
+      "mean_bias_af": 31511.46232072447,
+      "median_bias_af": 32316.89255578944,
+      "mae_af": 42770.11894920864,
+      "rmse_af": 52259.714354194555
+    }
+  }
+}

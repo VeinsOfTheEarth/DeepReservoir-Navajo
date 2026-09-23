@@ -1,0 +1,129 @@
+{
+  "submission_name": "reward_jon_phase95_corrected_recovery",
+  "runs_root": "./runs/phase95-recovery/corrected-seed-hunt",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "slurm": {
+    "python_executable": "python",
+    "partition": "scaling",
+    "array_parallelism": 16,
+    "packed_tasks_per_node": 16,
+    "packed_thread_count": 1,
+    "time": "10:00:00",
+    "job_name": "p95_recovery",
+    "extra_sbatch_lines": [
+      "--nodes=1"
+    ],
+    "setup_commands": [
+      "export MPLBACKEND=Agg",
+      "export PYTHONDONTWRITEBYTECODE=1"
+    ]
+  },
+  "base_train": {
+    "train_start": "1967-06-07",
+    "train_end": "2013-12-31",
+    "train_timesteps": 3159000,
+    "episode_length": 3600,
+    "batch_size": 60,
+    "n_epochs": 10,
+    "gamma": 0.999,
+    "policy_type": "split_action_heads_sj_no_spr",
+    "policy_net_arch": "default64",
+    "obs_context": "storage_niiphist_esa_req_sprall_advice_budget_spill",
+    "action_scaling": "linear",
+    "action_mode": "esa_base_spr_proxy_4d_max",
+    "spr_advice_mode": "days_remaining",
+    "train_hydrology_transform": "match_holdout_annual_mean",
+    "reward_balancing": "none",
+    "esa_min_flow_floor": false,
+    "esa_baseflow_max_multiplier": 1.5,
+    "spr_proxy_priority_release": true,
+    "spr_proxy_owns_sj_window": false,
+    "decision_hydrology_timing": "previous_day",
+    "niip_fallback_mode": "training_only",
+    "storage_datum_mode": "elevation_2019",
+    "storage_normalization": "train_window",
+    "storage_budget_target_frac_of_max": 0.875,
+    "mask_incomplete_initial_spr": true,
+    "max_release_sj_main_cfs": 5000.0,
+    "max_release_niip_cfs": 2500.0
+  },
+  "base_eval": {
+    "which_metrics": "all",
+    "save_plots": true,
+    "save_rollout": true,
+    "save_metrics": true,
+    "run_stress_tests": false,
+    "windows": [
+      {
+        "name": "holdout_2014_2024_08_17",
+        "start": "2014-01-01",
+        "end": "2024-08-17"
+      }
+    ]
+  },
+  "notes": [
+    "Corrected recovery of the complete Phase 95 final-policy seed hunt: the same eight reward families and seeds 0-15.",
+    "The automatic SPR bridge and scarce-water SPR allocation remain at their original full authority; this experiment does not test bridge relaxation.",
+    "Approved corrections are explicit: previous-day decision hydrology, training-only NIIP fallback, common 2019 storage datum, training-window storage normalization, an 87.5% storage budget target, masking of incomplete initial SPR seasons, the Archuleta/Bluff flood reward, and the calendar-feasible SPR reward.",
+    "All other Phase 95 architecture, reward weights, hydrology transform, training budget, seed set, and evaluation window are retained."
+  ],
+  "experiments": [
+    {
+      "name": "reward_jon_p95_oishift875to90_hsoft",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_soft@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: OI-shifted 87.5% to 90% storage target with positive-soft hydropower shaping."
+    },
+    {
+      "name": "reward_jon_p95_oishift875to90_heff",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: OI-shifted 87.5% to 90% storage target with full hydropower-efficiency shaping."
+    },
+    {
+      "name": "reward_jon_p95_oishift875to90_hdisceff",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_discretionary_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: OI-shifted 87.5% to 90% storage target with discretionary hydropower-efficiency shaping."
+    },
+    {
+      "name": "reward_jon_p95_peak875_heff",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_peak875_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: fixed 87.5% peak-storage target with full hydropower-efficiency shaping."
+    },
+    {
+      "name": "reward_jon_p95_peak875_hdisceff",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_peak875_concave0_softupper98@2.50,hydropower:positive_discretionary_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery of the selected-policy family: fixed 87.5% peak-storage target with discretionary hydropower-efficiency shaping."
+    },
+    {
+      "name": "reward_jon_p95_plateau90_96_hsoft",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:plateau90to96_concave0_softupper98@2.50,hydropower:positive_soft@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: 90-96% storage plateau with positive-soft hydropower shaping."
+    },
+    {
+      "name": "reward_jon_p95_plateau90_96_heff",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:plateau90to96_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@3.00,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: 90-96% storage plateau with full hydropower-efficiency shaping."
+    },
+    {
+      "name": "reward_jon_p95_oishift875to90_heff_niip275",
+      "reward_spec": "dam_safety:spill_guard_warn98@1.00,storage_control:target_oishift875to90_concave0_softupper98@2.50,hydropower:positive_efficiency@1.50,flooding:penalty_caps_archuleta_bluff@0.25,niip:delivery_match_historic_hardmeet_b10oversoft_neg1_logoff025_jon@2.75,esa_min_flow:green_logistic_jon@2.50,esa_spring_peak_release:farmington_thresholds_actionproxy_smart_ledger_hammer_histfreq_stop_excess_strong_calendar@2.00",
+      "description": "Corrected Phase 95 recovery: OI-shifted storage and full hydropower efficiency with NIIP alpha 2.75."
+    }
+  ]
+}

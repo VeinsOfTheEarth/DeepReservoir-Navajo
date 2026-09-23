@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="240" viewBox="0 0 160 240">
+  <title>North arrow</title>
+  <g fill="white" stroke="#222" stroke-width="4" stroke-linejoin="round">
+    <path d="M80 20 L137 178 L80 148 L23 178 Z"/>
+    <path d="M80 20 L80 148 L23 178 Z" fill="#222"/>
+  </g>
+  <text x="80" y="225" text-anchor="middle" fill="white" stroke="#222" stroke-width="1" paint-order="stroke" font-family="sans-serif" font-size="42" font-weight="700">N</text>
+</svg>

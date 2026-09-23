@@ -1,0 +1,265 @@
+EIA_ID,plant,state,year,month,EIA_obs_freq,RectifHyd_method,EIA_fraction,EIA_MWh,RectifHyd_fraction,RectifHyd_MWh,recommended_data,smoothed,scaled,imputed
+584,Navajo Dam,NM,2001,Jan,not noted,release,0.0865,12135.446,0.0391,5481.9748,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Feb,not noted,release,0.08,11223.781,0.0476,6671.0319,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Mar,not noted,release,0.0771,10815.249,0.0797,11182.0693,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Apr,not noted,release,0.068,9538.111,0.1146,16077.9039,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,May,not noted,release,0.0934,13094.592,0.139,19499.7506,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Jun,not noted,release,0.0909,12751.364,0.1505,21106.529,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Jul,not noted,release,0.0993,13932.819,0.1278,17929.8734,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Aug,not noted,release,0.0864,12120.294,0.0967,13563.2002,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Sep,not noted,release,0.0778,10914.611,0.0683,9584.9373,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Oct,not noted,release,0.0819,11487.703,0.0539,7554.9394,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Nov,not noted,release,0.074,10378.994,0.0452,6337.357,RectifHyd,True,False,False
+584,Navajo Dam,NM,2001,Dec,not noted,release,0.0846,11859.037,0.0375,5262.4342,RectifHyd,True,False,False
+584,Navajo Dam,NM,2002,Jan,not noted,release,0.0763,9233.277,0.0682,8252.3809,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Feb,not noted,release,0.0704,8509.773,0.0682,8252.3809,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Mar,not noted,release,0.0826,9991.173,0.0706,8540.4097,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Apr,not noted,release,0.0833,10070.447,0.1014,12267.7069,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,May,not noted,release,0.0869,10511.285,0.1136,13744.1962,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Jun,not noted,release,0.0961,11622.864,0.1093,13224.1228,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Jul,not noted,release,0.0963,11647.483,0.116,14029.0147,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Aug,not noted,release,0.0718,8689.614,0.1111,13443.3735,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Sep,not noted,release,0.0902,10904.109,0.0783,9468.2386,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Oct,not noted,release,0.0867,10485.511,0.0676,8178.9071,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Nov,not noted,release,0.0809,9783.892,0.0478,5776.6339,RectifHyd,False,False,False
+584,Navajo Dam,NM,2002,Dec,not noted,release,0.0786,9504.571,0.0478,5776.6339,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Jan,not noted,release,0.0856,5726.174,0.0665,4447.0129,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Feb,not noted,release,0.0734,4912.749,0.0665,4447.0129,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Mar,not noted,release,0.0792,5298.953,0.0665,4447.0129,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Apr,not noted,release,0.0803,5373.585,0.0674,4511.1813,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,May,not noted,release,0.0889,5949.157,0.0775,5184.7558,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Jun,not noted,release,0.0873,5843.756,0.0918,6145.1466,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Jul,not noted,release,0.095,6354.74,0.1779,11906.7583,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Aug,not noted,release,0.0982,6569.511,0.1318,8821.5214,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Sep,not noted,release,0.0751,5028.884,0.0759,5082.0899,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Oct,not noted,release,0.0756,5055.829,0.0813,5441.6045,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Nov,not noted,release,0.0737,4934.115,0.0495,3309.4466,RectifHyd,False,False,False
+584,Navajo Dam,NM,2003,Dec,not noted,release,0.0878,5872.546,0.0475,3176.4558,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Jan,not noted,release,0.0833,5442.0,0.0551,3597.4317,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Feb,not noted,release,0.0833,5442.0,0.0551,3597.4317,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Mar,not noted,release,0.0833,5442.0,0.0552,3603.002,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Apr,not noted,release,0.0833,5442.0,0.0771,5036.3759,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,May,not noted,release,0.0833,5442.0,0.0771,5036.3759,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Jun,not noted,release,0.0833,5442.0,0.0795,5189.1516,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Jul,not noted,release,0.0833,5442.0,0.1188,7759.5298,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Aug,not noted,release,0.0833,5442.0,0.1594,10409.05,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Sep,not noted,release,0.0833,5442.0,0.1332,8697.3611,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Oct,not noted,release,0.0833,5442.0,0.0793,5179.5876,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Nov,not noted,release,0.0833,5442.0,0.0551,3601.2706,RectifHyd,False,False,False
+584,Navajo Dam,NM,2004,Dec,not noted,release,0.0833,5442.0,0.0551,3597.4317,RectifHyd,False,False,False
+584,Navajo Dam,NM,2005,Jan,not noted,release,0.083,5403.597,0.0188,1222.3417,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Feb,not noted,release,0.0761,4951.121,0.016,1039.9203,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Mar,not noted,release,0.0793,5159.192,0.0784,5105.1775,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Apr,not noted,release,0.0792,5155.469,0.1453,9458.2276,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,May,not noted,release,0.1117,7271.344,0.179,11649.7761,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Jun,not noted,release,0.1042,6779.647,0.1904,12392.82,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Jul,not noted,release,0.0968,6302.163,0.1383,9001.164,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Aug,not noted,release,0.0804,5229.918,0.0743,4834.4046,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Sep,not noted,release,0.0637,4145.071,0.0406,2642.273,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Oct,not noted,release,0.0687,4473.35,0.0402,2615.2477,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Nov,not noted,release,0.0741,4820.571,0.0477,3103.8712,RectifHyd,True,False,False
+584,Navajo Dam,NM,2005,Dec,not noted,release,0.0829,5396.557,0.0311,2022.7762,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Jan,not noted,release,0.0911,10134.449,0.0444,4938.652,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Feb,not noted,release,0.0799,8891.354,0.0394,4384.1028,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Mar,not noted,release,0.0859,9556.325,0.0599,6666.5239,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Apr,not noted,release,0.1037,11536.905,0.0892,9924.008,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,May,not noted,release,0.1119,12449.859,0.1263,14051.7958,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Jun,not noted,release,0.1155,12858.934,0.1535,17077.8071,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Jul,not noted,release,0.0944,10507.365,0.1378,15335.5107,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Aug,not noted,release,0.0774,8615.567,0.1091,12147.0507,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Sep,not noted,release,0.0568,6316.061,0.0692,7700.4534,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Oct,not noted,release,0.0537,5973.379,0.0599,6664.1712,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Nov,not noted,release,0.0623,6931.077,0.0583,6490.5556,RectifHyd,True,False,False
+584,Navajo Dam,NM,2006,Dec,not noted,release,0.0676,7518.725,0.0531,5909.3689,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Jan,not noted,release,0.083,13465.943,0.0532,8628.9711,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Feb,not noted,release,0.0625,10143.607,0.067,10877.5675,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Mar,not noted,release,0.08,12986.942,0.0918,14901.6767,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Apr,not noted,release,0.0988,16023.657,0.1155,18743.6931,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,May,not noted,release,0.1193,19352.152,0.1261,20454.9821,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Jun,not noted,release,0.1079,17511.558,0.1273,20652.2896,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Jul,not noted,release,0.1108,17978.451,0.1105,17934.0509,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Aug,not noted,release,0.0921,14938.031,0.0889,14420.324,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Sep,not noted,release,0.0677,10978.29,0.0692,11228.4069,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Oct,not noted,release,0.056,9085.756,0.0561,9109.5563,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Nov,not noted,release,0.053,8595.139,0.0481,7800.1778,RectifHyd,True,False,False
+584,Navajo Dam,NM,2007,Dec,not noted,release,0.0689,11183.475,0.0462,7491.305,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Jan,not noted,release,0.0638,9857.523,0.0806,12469.814,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Feb,not noted,release,0.0593,9176.463,0.1072,16580.1636,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Mar,not noted,release,0.075,11598.905,0.1259,19471.722,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Apr,not noted,release,0.0885,13689.207,0.1363,21073.0166,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,May,not noted,release,0.1049,16215.287,0.1288,19918.0205,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Jun,not noted,release,0.1319,20394.339,0.1124,17375.5992,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Jul,not noted,release,0.1195,18472.038,0.086,13300.9486,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Aug,not noted,release,0.0974,15057.16,0.0592,9148.9586,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Sep,not noted,release,0.0719,11112.164,0.0388,6002.1902,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Oct,not noted,release,0.0587,9077.754,0.0326,5041.5551,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Nov,not noted,release,0.0584,9026.281,0.0364,5624.093,RectifHyd,True,False,False
+584,Navajo Dam,NM,2008,Dec,not noted,release,0.0708,10941.879,0.0557,8612.9186,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Jan,not noted,release,0.0776,10149.049,0.0523,6843.9849,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Feb,not noted,release,0.0631,8250.662,0.0509,6660.4927,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Mar,not noted,release,0.0731,9564.94,0.0684,8943.431,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Apr,not noted,release,0.0982,12849.879,0.0914,11962.3331,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,May,not noted,release,0.1111,14530.136,0.118,15440.4081,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Jun,not noted,release,0.1198,15666.347,0.1369,17911.2708,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Jul,not noted,release,0.106,13861.896,0.1246,16294.9418,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Aug,not noted,release,0.0856,11193.891,0.1025,13405.5112,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Sep,not noted,release,0.065,8506.537,0.0728,9526.3374,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Oct,not noted,release,0.0612,8004.621,0.0639,8363.3066,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Nov,not noted,release,0.0613,8017.074,0.0609,7966.9599,RectifHyd,True,False,False
+584,Navajo Dam,NM,2009,Dec,not noted,release,0.0781,10216.968,0.0573,7493.0225,RectifHyd,True,False,False
+584,Navajo Dam,NM,2010,Jan,not noted,release,0.0715,5226.795,0.0728,5326.3531,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Feb,not noted,release,0.0573,4192.278,0.0715,5228.2552,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Mar,not noted,release,0.066,4829.857,0.0721,5277.2372,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Apr,not noted,release,0.0685,5012.228,0.067,4901.5569,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,May,not noted,release,0.0988,7227.982,0.0678,4961.7353,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Jun,not noted,release,0.1357,9922.434,0.0818,5986.7581,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Jul,not noted,release,0.1193,8725.783,0.1357,9928.5869,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Aug,not noted,release,0.0955,6986.15,0.0958,7006.5283,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Sep,not noted,release,0.079,5779.438,0.1091,7977.4099,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Oct,not noted,release,0.0589,4304.919,0.0856,6264.6726,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Nov,not noted,release,0.069,5049.353,0.07,5122.5446,RectifHyd,False,False,False
+584,Navajo Dam,NM,2010,Dec,not noted,release,0.0805,5889.783,0.0706,5165.3619,RectifHyd,False,False,False
+584,Navajo Dam,NM,2011,Jan,A,release,0.0653,5930.672,0.0565,5135.286,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Feb,A,release,0.0763,6929.15,0.0585,5311.862,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Mar,A,release,0.0897,8151.374,0.0713,6478.8265,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Apr,A,release,0.0941,8550.317,0.0887,8059.4403,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,May,A,release,0.1013,9206.976,0.1101,9999.7883,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Jun,A,release,0.1108,10063.892,0.1259,11436.6253,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Jul,A,release,0.1188,10792.843,0.1197,10877.1238,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Aug,A,release,0.0972,8829.049,0.1046,9505.5597,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Sep,A,release,0.0705,6405.368,0.0755,6863.1062,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Oct,A,release,0.055,4996.973,0.0663,6021.9729,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Nov,A,release,0.0578,5247.85,0.0625,5675.7275,RectifHyd,True,False,False
+584,Navajo Dam,NM,2011,Dec,A,release,0.0633,5754.536,0.0605,5493.6815,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Jan,A,release,0.0686,8477.599,0.0451,5574.6727,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Feb,A,release,0.0629,7777.994,0.0511,6323.257,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Mar,A,release,0.0851,10523.802,0.0757,9354.4159,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Apr,A,release,0.11,13600.387,0.1004,12416.4452,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,May,A,release,0.1092,13506.013,0.1142,14116.5464,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Jun,A,release,0.1176,14542.707,0.1226,15156.6309,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Jul,A,release,0.1158,14322.615,0.1161,14360.2949,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Aug,A,release,0.0884,10929.182,0.1025,12672.2457,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Sep,A,release,0.0593,7326.607,0.091,11257.0647,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Oct,A,release,0.0466,5758.13,0.0745,9215.0741,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Nov,A,release,0.0643,7946.449,0.0588,7274.2707,RectifHyd,True,False,False
+584,Navajo Dam,NM,2012,Dec,A,release,0.0722,8925.515,0.0479,5916.0818,RectifHyd,True,False,False
+584,Navajo Dam,NM,2013,Jan,A,release,0.0797,3353.704,0.0624,2626.5765,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Feb,A,release,0.0632,2660.609,0.0671,2821.8393,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Mar,A,release,0.0712,2993.881,0.0708,2980.0425,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Apr,A,release,0.102,4291.792,0.1167,4907.2545,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,May,A,release,0.1173,4936.221,0.0536,2255.1601,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Jun,A,release,0.1229,5170.389,0.1072,4508.7276,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Jul,A,release,0.1126,4734.694,0.161,6773.6637,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Aug,A,release,0.0865,3637.707,0.1296,5451.1363,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Sep,A,release,0.0594,2496.84,0.0825,3471.1529,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Oct,A,release,0.0604,2539.572,0.0486,2045.826,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Nov,A,release,0.062,2606.398,0.0509,2139.9339,RectifHyd,False,False,False
+584,Navajo Dam,NM,2013,Dec,A,release,0.0629,2645.193,0.0496,2085.6866,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Jan,A,release,0.0604,3663.699,0.0633,3839.6041,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Feb,A,release,0.0581,3525.678,0.071,4309.2829,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Mar,A,release,0.0927,5624.336,0.0651,3949.2946,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Apr,A,release,0.1187,7204.957,0.0691,4195.1913,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,May,A,release,0.108,6554.599,0.062,3761.0658,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Jun,A,release,0.1071,6499.158,0.0762,4623.1887,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Jul,A,release,0.1155,7007.925,0.1043,6330.0158,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Aug,A,release,0.0796,4829.554,0.1412,8565.0682,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Sep,A,release,0.0661,4009.068,0.115,6976.7214,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Oct,A,release,0.0543,3292.892,0.078,4731.6068,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Nov,A,release,0.0636,3857.688,0.0776,4706.1586,RectifHyd,False,False,False
+584,Navajo Dam,NM,2014,Dec,A,release,0.0759,4608.446,0.0773,4690.8019,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Jan,A,release,0.0845,4065.321,0.0688,3306.5116,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Feb,A,release,0.0807,3881.655,0.0683,3286.1957,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Mar,A,release,0.0899,4320.971,0.0659,3168.6481,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Apr,A,release,0.1034,4972.733,0.0723,3475.542,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,May,A,release,0.1034,4970.275,0.0711,3419.0791,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Jun,A,release,0.1054,5067.921,0.0734,3531.4147,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Jul,A,release,0.0961,4620.561,0.0899,4323.7295,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Aug,A,release,0.0768,3691.992,0.1407,6765.432,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Sep,A,release,0.068,3267.883,0.114,5484.3445,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Oct,A,release,0.0558,2685.294,0.0946,4550.1293,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Nov,A,release,0.0592,2844.613,0.0716,3445.4819,RectifHyd,False,False,False
+584,Navajo Dam,NM,2015,Dec,A,release,0.0769,3698.781,0.0693,3331.4915,RectifHyd,False,False,False
+584,Navajo Dam,NM,2016,Jan,A,release,0.0687,7175.015,0.0246,2569.4122,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Feb,A,release,0.0635,6639.65,0.0227,2371.1233,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Mar,A,release,0.086,8983.584,0.0601,6280.4487,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Apr,A,release,0.1038,10844.636,0.1089,11381.5456,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,May,A,release,0.1172,12240.69,0.1641,17142.8826,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Jun,A,release,0.1046,10924.266,0.2006,20963.6909,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Jul,A,release,0.0969,10127.316,0.1661,17356.2483,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Aug,A,release,0.0782,8165.44,0.1119,11693.7917,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Sep,A,release,0.0641,6695.691,0.0452,4724.9145,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Oct,A,release,0.0573,5989.714,0.0315,3288.0348,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Nov,A,release,0.0768,8024.57,0.0331,3453.5319,RectifHyd,True,False,False
+584,Navajo Dam,NM,2016,Dec,A,release,0.083,8670.428,0.0312,3255.3756,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Jan,A,release,0.0776,6147.08,0.0179,1416.4464,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Feb,A,release,0.067,5310.336,0.0183,1450.5599,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Mar,A,release,0.0908,7191.792,0.0787,6236.5254,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Apr,A,release,0.088,6974.877,0.1448,11468.1857,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,May,A,release,0.0889,7039.863,0.1856,14703.2107,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Jun,A,release,0.0932,7380.447,0.2032,16100.5829,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Jul,A,release,0.1012,8015.649,0.1499,11874.0476,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Aug,A,release,0.0932,7387.502,0.0811,6424.3318,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Sep,A,release,0.0738,5847.831,0.0315,2496.8755,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Oct,A,release,0.0711,5636.303,0.0273,2160.7981,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Nov,A,release,0.0777,6153.146,0.0354,2808.3966,RectifHyd,True,False,False
+584,Navajo Dam,NM,2017,Dec,A,release,0.0775,6140.174,0.0263,2085.0394,RectifHyd,True,False,False
+584,Navajo Dam,NM,2018,Jan,A,release,0.0755,6036.493,0.0591,4728.1509,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Feb,A,release,0.0815,6518.424,0.0489,3908.7526,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Mar,A,release,0.0934,7473.929,0.0535,4277.3738,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Apr,A,release,0.0967,7738.933,0.0987,7894.3738,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,May,A,release,0.0983,7867.232,0.0805,6437.5425,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Jun,A,release,0.0967,7735.372,0.1098,8784.3805,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Jul,A,release,0.0927,7414.368,0.1299,10389.1463,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Aug,A,release,0.091,7283.368,0.1296,10369.1386,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Sep,A,release,0.0746,5966.886,0.1196,9571.5076,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Oct,A,release,0.0688,5506.076,0.0791,6325.3042,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Nov,A,release,0.0661,5284.239,0.0457,3655.6219,RectifHyd,False,False,False
+584,Navajo Dam,NM,2018,Dec,A,release,0.0647,5174.68,0.0457,3658.7073,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Jan,A,release,0.0721,4160.469,0.0365,2108.8302,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Feb,A,release,0.0757,4367.364,0.0336,1941.0028,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Mar,A,release,0.0843,4864.91,0.0341,1965.3273,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Apr,A,release,0.0913,5269.028,0.0407,2347.2584,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,May,A,release,0.0965,5570.54,0.0476,2746.4246,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Jun,A,release,0.0961,5544.147,0.2268,13088.2071,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Jul,A,release,0.106,6116.649,0.1148,6627.6259,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Aug,A,release,0.1011,5832.591,0.1511,8722.7682,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Sep,A,release,0.0809,4669.189,0.1333,7692.8663,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Oct,A,release,0.0717,4139.289,0.0623,3592.8709,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Nov,A,release,0.0669,3862.08,0.0497,2866.945,RectifHyd,False,False,False
+584,Navajo Dam,NM,2019,Dec,A,release,0.0575,3319.744,0.0696,4015.8733,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Jan,A,release,0.0708,8034.2,0.0746,8468.9425,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Feb,A,release,0.0745,8462.008,0.0637,7227.2304,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Mar,A,release,0.0776,8803.623,0.0626,7101.0137,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Apr,A,release,0.0873,9904.171,0.073,8281.0127,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,May,A,release,0.0993,11266.095,0.0771,8747.3704,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Jun,A,release,0.0967,10974.066,0.0791,8984.3644,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Jul,A,release,0.098,11119.343,0.114,12936.4458,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Aug,A,release,0.0986,11194.791,0.1264,14343.9927,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Sep,A,release,0.0716,8131.7,0.1196,13571.7861,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Oct,A,release,0.0784,8896.174,0.1018,11553.11,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Nov,A,release,0.0764,8671.733,0.0548,6219.2885,RectifHyd,False,False,False
+584,Navajo Dam,NM,2020,Dec,A,release,0.0709,8053.096,0.0535,6076.4428,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Jan,A,release,0.0844,6773.346,0.0694,5575.7852,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Feb,A,release,0.0766,6153.55,0.07,5623.6881,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Mar,A,release,0.0995,7986.249,0.0693,5561.4326,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Apr,A,release,0.1003,8053.906,0.0956,7673.4219,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,May,A,release,0.1025,8231.98,0.0765,6141.5587,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Jun,A,release,0.0948,7609.562,0.063,5057.4065,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Jul,A,release,0.095,7627.775,0.1025,8231.4943,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Aug,A,release,0.09,7228.389,0.12,9632.0382,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Sep,A,release,0.0713,5729.038,0.1448,11628.5425,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Oct,A,release,0.0606,4863.482,0.0828,6651.9271,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Nov,A,release,0.0625,5022.218,0.0541,4341.6857,RectifHyd,False,False,False
+584,Navajo Dam,NM,2021,Dec,A,release,0.0625,5017.505,0.052,4178.0193,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Jan,A,release,0.0868,6715.565,0.0717,5548.3351,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Feb,A,release,0.0752,5813.442,0.0706,5462.3335,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Mar,A,release,0.1001,7744.06,0.0709,5484.3282,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Apr,A,release,0.0945,7310.138,0.0678,5241.3442,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,May,A,release,0.1067,8253.874,0.0579,4479.4941,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Jun,A,release,0.0951,7353.967,0.0809,6253.8908,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Jul,A,release,0.1008,7794.09,0.1124,8689.4302,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Aug,A,release,0.0835,6461.66,0.0957,7398.9197,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Sep,A,release,0.0677,5232.389,0.1342,10375.3979,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Oct,A,release,0.0553,4275.284,0.1051,8131.2648,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Nov,A,release,0.0734,5673.294,0.062,4797.8645,RectifHyd,False,False,False
+584,Navajo Dam,NM,2022,Dec,A,release,0.0609,4713.237,0.0708,5478.397,RectifHyd,False,False,False

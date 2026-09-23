@@ -1,0 +1,19 @@
+* text=auto
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.pptx binary
+*.zip binary
+*.parquet binary
+*.pkl binary
+*.ttf binary
+
+# Preserve spacing in the original Bureau of Reclamation CSV export.
+data/navajo_reservoir_historic/*.csv -whitespace

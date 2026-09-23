@@ -1,0 +1,2681 @@
+{
+  "description": "Input metrics for pre-95 experiments, frozen during paper figure cleanup.",
+  "source_count": 445,
+  "raw_rows": 3320,
+  "original_plotted_archive_rows": 3320,
+  "current_comparable_archive_rows": 2740,
+  "comparison_inclusion_note": "Current plotting excludes non-holdout Phase-78 windows, repeated Phase-79 historic rows, and records missing a nonspill metric or spill-screen result. Synthetic infinity is a recorded no-spill failure and remains eligible.",
+  "spill_column_note": "For source tables without total_spill_af, the original zero-spill pass test is encoded as 0 (pass) or infinity (fail); this synthetic value is not a measured spill volume.",
+  "sources": [
+    {
+      "source": "jon/phase58/phase58_seed_metrics.csv",
+      "phase": 58,
+      "sha256": "99fb332062bd8af9d966b69f32ed52bc7564b4a86220cfde45487468a7a38262",
+      "rows": 84
+    },
+    {
+      "source": "jon/phase64/phase64_seed_metrics.csv",
+      "phase": 64,
+      "sha256": "b48ca388d12b5512a132eab5e127bda50e25a827bc150a5f8638358027bcc79a",
+      "rows": 512
+    },
+    {
+      "source": "jon/phase65/phase65_seed_metrics.csv",
+      "phase": 65,
+      "sha256": "7150ddf0ace3034cac7ca2c7e74a4185e5727423bd637af1a75afdb44cadd95a",
+      "rows": 256
+    },
+    {
+      "source": "jon/phase66/phase66_seed_metrics.csv",
+      "phase": 66,
+      "sha256": "786daadf324d9f4569ed947ad3d9f83e76005d68328cb378fce97c5c26e89bc3",
+      "rows": 512
+    },
+    {
+      "source": "jon/phase67/phase67_seed_metrics_partial.csv",
+      "phase": 67,
+      "sha256": "0203e5c096d854c06fe3b8968f306da22d9af87e2c550d9fcd1ff8d001748c60",
+      "rows": 512
+    },
+    {
+      "source": "jon/phase69/phase69_run_metrics.csv",
+      "phase": 69,
+      "sha256": "446c1eb5ec7688c8b82ccb46de71e652eb3a98125856ed350af921c7846cc45c",
+      "rows": 100
+    },
+    {
+      "source": "jon/phase70/phase70_run_metrics.csv",
+      "phase": 70,
+      "sha256": "8a043e219070a1ed216c1341cc15d86a1ac39fb3198f444cedd694988310d776",
+      "rows": 128
+    },
+    {
+      "source": "jon/phase71/phase71_run_metrics.csv",
+      "phase": 71,
+      "sha256": "f175203122c40b514e3795896ebe4c2f82cb262d053f1fa55ab09b1083233114",
+      "rows": 48
+    },
+    {
+      "source": "jon/phase72/phase72_run_metrics.csv",
+      "phase": 72,
+      "sha256": "42b1b1260e59fda77317da4a9b648f7f705a7432ef8f63c32f01fdbef52d0651",
+      "rows": 96
+    },
+    {
+      "source": "jon/phase73/phase73_run_metrics.csv",
+      "phase": 73,
+      "sha256": "0461c9ec016a08d76e80274256ac1391e74f2d357da74b3c151c08bc77136877",
+      "rows": 128
+    },
+    {
+      "source": "jon/phase75/phase75_run_metrics.csv",
+      "phase": 75,
+      "sha256": "8cb931ff231ce8ba53b3c4457e13975bbefc7e3b23fc8b5094015b5dd02718a6",
+      "rows": 64
+    },
+    {
+      "source": "jon/phase76/phase76_run_metrics.csv",
+      "phase": 76,
+      "sha256": "b0ab8b5d41ebc61299d072e7900a8d906b20d6b1386b9a2ef11d50edba3f8438",
+      "rows": 64
+    },
+    {
+      "source": "jon/phase77/phase77_run_metrics.csv",
+      "phase": 77,
+      "sha256": "50e833d56706ab2aca1f60bd7f4441b5d411e77296af7d176d654b1d14859c65",
+      "rows": 68
+    },
+    {
+      "source": "jon/phase78/interval_nonstationarity/interval_policy_metrics_by_seed.csv",
+      "phase": 78,
+      "sha256": "d5159d65850800895a14eaa02e3f08a278bba0028b788b4af6142a30af35e4b0",
+      "rows": 64
+    },
+    {
+      "source": "jon/phase79/continued_training_comparison/phase79_continued_comparison_by_seed.csv",
+      "phase": 79,
+      "sha256": "9a61158231d4f1e5c5f784484d42af01c2375114bd684c0b75d61e28203d800b",
+      "rows": 128
+    },
+    {
+      "source": "jon/phase84/phase84_seed_metrics.csv",
+      "phase": 84,
+      "sha256": "5b78aec639c8497e2a65e64563165c603e5f7a4f2fd2bd89003d79d7740c3bbe",
+      "rows": 64
+    },
+    {
+      "source": "jon/phase85/diagnostics/phase85_seed_summary.csv",
+      "phase": 85,
+      "sha256": "924829fdd68ebfb4cb759fbc2d3b2625271717938d85d7fbd9a8e5d5d2c37451",
+      "rows": 64
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_4d_nospillobs_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "55f837508b2751af80c61828e4850d52e4e5400b4d5e65f364dd59628d7ca4d8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_4d_nospillobs_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "27f609acb14c914847d2b1c5658cb2a9c02bdef8f5643df0ec53e8333b8de768",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_4d_nospillobs_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "35648018b931bf050070daaa6a40c7795d27127e7af220fcd9952542d8a278e9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_4d_nospillobs_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "2dffefa9b96fe3dd8c69aa194ede059da4fdfe2f0da133b0ad3f787c01283d91",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_costoi200_4d_nospillobs_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "b3d876c7aed9667346c9cf9383b55ea203fabd70530adc4a552544602de30e79",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_costoi200_4d_nospillobs_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "a10c5775079c02b3b6e183d7d5d47c3145e8a609c402ba83fbe9e65d717566a7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_costoi200_4d_nospillobs_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "de13cfa8e844824546ca36022c58297975b666b0571e95f189d46026c3538bc7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_costoi200_4d_nospillobs_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "0bf7a04228a6ddb8784ee8f89129c132fb44223b77687e2f110fe78ac529d72d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrolow_4d_nospillobs_h05/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "a0e96e5ae0052e2332030a7afe64e1f12fb17970587150e00380f68d95c76de9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrolow_4d_nospillobs_h05/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "2e07ffc9702f30bedac2dd2ff67e9105a4762f91e47e0af3c855b8632bdb267d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrolow_4d_nospillobs_h05/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "a813c57c32af870663bc3c999715f549004dadce96fa7229c637bfe4192d4963",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrolow_4d_nospillobs_h05/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "be95cb1601ef1f231a0c3b7c32b11bd3e3bf291ca0d63f09bba7203c7a356d6d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrooff_4d_nospillobs_h00/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "db1a62bf44fb8c92aff5ea8ebe9056f0406d2a40285418d7bfcc85bae81b7788",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrooff_4d_nospillobs_h00/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "2c93b2b355466c97035cc214ac0359976919d38dec24804c0200c9b3decfd5fb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrooff_4d_nospillobs_h00/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "03bd952fa1bae94ef9a017041e361ee2736d85ca7dac1a15b9cc4c567c10ddbb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_clean_hydrooff_4d_nospillobs_h00/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "52e71efc7078b83b3eebd4ab8c67fecef45904c7e1565bf3d5fc8ad048671e48",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_costoi200_4d_spillon_peak_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "206eac652169c0c18bfc6661dcc0010ca69fdcc3c23cf587e7b3886b4ede6d01",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_costoi200_4d_spillon_peak_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "b09264d2cc3d76b5ec6e553985780fba364df065bd8f687c94bf6dc0f85c4551",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_costoi200_4d_spillon_peak_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "483bb3b369c52c44140f924e7a56d5e760760d262d2cb4f39770c1fddf47c7d2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_costoi200_4d_spillon_peak_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "5b61c68abcf87e57d65a82d415832592151c856f1ab91eed7e7cf13d893f303e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_ctrl_4d_spillon_peak_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "0da8c5b5cacb757cdb5f7a000262f77ebb32f1bf62310972021cbbd1ccda71b6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_ctrl_4d_spillon_peak_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "65424d1d9a5d2f7195d70b307abb5367659efc055ba060df6c9d02b5af44ccf0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_ctrl_4d_spillon_peak_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "8480897c02a2c1a26d94b4d1c77e5703dac304a2553a7f9eb73b34b344e5f4fb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_ctrl_4d_spillon_peak_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "afb3b06d7c467a9a85bc78db7f3d222f4bc01da43601e4539a5c6ec5b080087c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h05/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "3fcc5c312fc595714e62b5e3edb0ef9203e764328adb57d30e99919a40b6cca6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h05/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "50d527a598f42087e14a2b16808c0f243e33324c75f65e813b504297362a04c4",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h05/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "a136fcd376dfc592b3dca8e3fe7dd25efd29bfb759df6a2f762fb9a72b646bec",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h05/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "c3a1ed17bd283f570c608543a97f1f7a8ba20d295bca67000e9bb99594eeaeae",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "8ace698ac9a3479336afdc4dd84c26419b49a0ea3a5f5e10bc32812dfba3924b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "11a2104e02fcb6f553127bd267ca7e3ea25a56f67ab8221a241120b3be25b3e0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "98da97fd1fe568598b5f5336afd11f52937b00525cf9f3025f69bd338748e1b6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_clean_costoi200_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "5d032c56d84ce85aced2e016b352d1e992338c8256bab1dde3cf868187c21521",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h05/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "51383088b1730d4c96bcd6170bb6982e6239f212611b393ca284d8a450dbbfa7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h05/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "e7afeae49c1e2f81d8aae54b26c54749837ccc90f19faaa3027f4a30d4fa122c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h05/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "ca1e0274cb577427793943ee11287f0421d75a600372c4463d9963ced1b64c31",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h05/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "b3318bbe3f7f46ce9c7b3b0c6db90dd59a2e5281eb1dd1713d27adc4bbe22640",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "8524aa315f0e2515740d52e733474aebd8bd10ac313f0bf95d616eed83e4c4a7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "5e4e7fa0fb7fbbf73d9d3931488a53ff80bfbafc5af7b669cf9d285070896e99",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "6d799a60aff3e70071eab5ea533385d2a18349633d3fc907b761af31ab5b2658",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_costoi200_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "2fd6503c5897bac28546b6080a06d768656fb9727f2ce0f18e0d3132b8524aa2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_hydrooff_h00/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "768acce49d0fa906c822e5dd8084a0cf6a8e1eca6f87e89b5a612b3e2a21d6b4",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_hydrooff_h00/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "787ab7656d653c87ff0f52f1e1b56b1a4bfbdbc355d9f8ad7a2d5c8784847acb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_hydrooff_h00/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "7ef4adf4bcb9a3fae7667eaf8f435fe7791d456b2b28053c26b39a8d0fb2267f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_hydrooff_h00/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "0972b2c31ee40038064eb640008f5430bf7d1c3c4d51d6f47a523c2ea2378843",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_nocost_h05/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "d80a85236429c53ea327a683ae5b550a0151f80151d98b623025cbc79141edb0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_nocost_h05/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "66da5088af1fe2e8704a36d316896e871270b6783637b4f7e6b6fd79a23c86f2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_nocost_h05/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "dc026ac80a2dd7814830d304062adf6644146797dd25888fbe5cda7e3021b1e5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_hydro5dmax_nocost_h05/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "127395c48ebeb58255e9ff9d16c2e23b26151185cd214347dc329fed54c1412c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_4d_spillobs_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "38fad6bde1033fe8eb0ee32c652c1219f6f8866648b83bbca539be5e319d5a6d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_4d_spillobs_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "42487c32a81f325eb4df161e27d7ac72e0936a75e22824f78f53acf9047379bf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_4d_spillobs_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "d2d51e43c29f0456d56ecf89036e9cb4d2b19eabfca2a567c7bca1c405ea4e42",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_4d_spillobs_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "c85e2ad21bab7e5a34e6997de7b0a8e7c71fb3ba28d10a150fbd1f505cc2a96e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_costoi200_4d_spillobs_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "c9556bda5d7d4a28d386877b6af9a5bd23f2d87753809fbb9d3bb692ec79d5dc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_costoi200_4d_spillobs_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "d6152e44b437a317417d554b78fe7ae76c0803f66a7624b75609ec48df7dc615",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_costoi200_4d_spillobs_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "7fe1c906ddb7e48c36bed0094dff35e00d7d827a0c1dfdb68241f29d1b28e43d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_noupper_costoi200_4d_spillobs_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "01e49a824fece22fa58efbb81f53c50c9f2e911fcba57a7e868c5522e67e456c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_4d_peak_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "3761fb1e8d2fc0bd2fe42cc42aaaa3368f10128586cd9fe0804f505dc3f7718c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_4d_peak_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "14447e33c775222393df0e80ebef735230704550a786f7c160b3adf2517d938a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_4d_peak_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "76124b73fa8c2eb691858eb6156a8cb011c59c50765617fc5910adbce95df93d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_4d_peak_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "6903f7b0d22add6908a3491294266321296681ac0422bd01067cd410921a4bcf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_costoi200_4d_peak_h15/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "4e6f19c9677318a1f06ace8e4b0b80e0a594796760adc2218d2fc3d80f2406c2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_costoi200_4d_peak_h15/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "f26709d99dfdcfe1417e23905c857bf7d91f88a42bf28c9dfeb5bb9fe6ad7636",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_costoi200_4d_peak_h15/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "9a16130e9c4b6bb30b139651134db5382746880ad4940d7b5ebbecc33b78c416",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p86_spillpen0_costoi200_4d_peak_h15/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 86,
+      "sha256": "a0ba504d6d16b79f68158e6fbfa288ed007683853228cf4e85292cfbfffab615",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "b6b52d7f0e395c6fb9a2a95a7c7b24f37fe43183aa66854b504767d6d42a3c90",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "1e7564e6e73765a13fa35eeef0f16c441ed6b2b47bd78c42c5903a8d6d187d80",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "3765863c495fe4d52dab896ebc2b2e29c637fac69904d34067d6f13de77cf771",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "9bf81e277b2771b5ecc07d1093cd7ba230a0f1a37846c60cabece84f9825b497",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "e7ee555734d3167daeee8c447687e61327728c50f1f6a7c6b5caa71f721f68d8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "02987674af9414d4638a7c9a6b88ac3f475716cf68b250f0a7fa3247d0cd7ac2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "58a95a319314b22e4501ee384ecfa8ecdf17375984f73ce3586bd7a5ec930d54",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actnomask_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "65d5b39e4b5a87cd20eb4c8453568387d685a94ba925a3c54c841b155f02540b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "cee8fb435696b0151c4f98d170c1617d724319aee86884253a84629ac8065ed6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "f3c530f51136dd2d25e50ea807660f651a3760665182b71c6810b79d4728c7d8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "bf4793001f076e3c8adf104ddcbfa5e5db2c8a7ddb0e533630a246f211be2ab1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "7a38bc95c3154a3cf5becf5a1a1b2e4ce013851f1c238bf5d18b37974f5e9e0b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "91108776510694b003ac3f545b43407153cad9abdb8ad2b30b2d3d7c0ec67848",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "685c6284ea9d2950be15025601a35add9cccba8a1bdedcfc55d67520737fcf69",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "ec7c469b26d90d1a64cb4354eb3411364fc8930dcfdc16ff493d736241b07367",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_noexcess_actperfect_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "5c4646fff79ba505e9d17e9b153cfd9b64035f199ac9bab09f59b6cdf36928a5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "79c9b58a5b3e987db63b026859802d4fc0fe6acf3bf20098f7947bcef3d64542",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "b34a9197aacc63e0cfbb592f23c1abef7648e9c843a0fefd927cafa8d00b7322",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "46a7040aec0ff256efd9d3be66cc5287449cc62e487a474d5eca45dee9ea6072",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "89439985d8eef18cf3a6db6c11b6992bf0a88fcab29d3a418536598e50048dab",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "f8c5dd51650c18604072ecbdf1141ac56cec20c8d0d845f20fbf9529fd9594d2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "c5fbcaea5c8966d659d21b0e4b137f5ad03c29c1047df3490e6d66d4c60f8614",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "549b700eca243df7ccba8a992cbb6c4cfefed96171836db6b199ac5e68d5d91b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actnomask_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "49327ce21785a7e1975d8793425161ccffefd7706dae2831cda67c34137e4bfe",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "d2143d5a39298d5811882b3c61e7fa2cb0a2f09fe8fbcf1445290c61bea4852e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "a8405f334a5a6a17c7f251d2143545fcd3080d88a991df5cfc784421f305b8a5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "f1aec0d4c609801d7267740bdf8a8482a3a6d91bacf33b112f1318db8d17d2d5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "ae8508755ee9796451f03555e2d0369273cb0a776f14d01200ef48b8905c4c1e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "fb44cb842d51567d3d1cdf797a6e30e46d80d666ac38df26ef5b8c1bbdaff228",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "1620e962af6fcf445f952612d5367a0c510dc97cb6121ae8fadee77084598f18",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "c2529c29c3f277c07f2acbfdbb3bfa1b227c56133dd7242dc2cb8f8f23a9345f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_nofuture_sprx_actperfect_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "3ed62255fb66a279c6763b257eb2001dc69a2934d203932db6c9e14e8b081ba2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "bfddc792258b5da07706c6359460d8c1f5a4ad4b32bd3ca4c5590e49a9c38421",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "e42f9a2de0edc514b19a9998d6de395c0226b4b73139105a48e6bed68498169e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "e62d435000d8569940213bc9d124c5831811d4a7d369cade57af21fc4678620b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "393c967064c74198aab1f28453c11f3e8b95709dfb0a22c8d05e2841722639ae",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "cfc35c3c8671660101227c45d573cfd9ee1876b4e326974b4d1bbe8cbc594364",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "73a0995b0398152df6ca654cd8a7ebd7463121e0af84f62328639183ed797a39",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "f69f590241a7b9ea50d8dfb1deea5f01a3d2ca330dddba7125241579c4badb82",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actnomask_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "110342f3a507bbebcd144c8c567f75857d65b92d1ea084a135d365f2271715a0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "d06718e580c6013a185a2c90f4b202087a0d457cb66050b1aab30798f17c6ab8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "017fc7bec52fe72b963c32415479083e9508eeb169050ae9f7bbb16444d8b36b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "45b18eede45f44f55c5957576cb2dbd7bccda2702d9153e765a5e8d398429429",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "5610bef8e4738691520af059b85166781fab49d8a050224edcdf9cd44072f193",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "38675004e66041805468cc77301c8d0106ceb6a010a966fbf72ed171942fedd2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "8f715ad145ec6bc98ac104881d11e084ec8adf24c727a902a44dcbfd0c6d0821",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "14d408e26c254df8093e4054c572a298c6f3c5fed4a6cc7e93263107a3191976",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_oihard_sprx_actperfect_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "e074a63ecd5a90b1dc0037cb1e91520b6ccbf8dc91cdbb2c367adacb0d2f32bf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "efaf28f66734a4d01034bb73afb582b27aad66e6152a230cede4c96fcabab67c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "2474a51cf278562fb4105f35042c21bab398664844097d641da3c068897ffd3b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "5ea2757984b00629bb85f78573ab6f802babffe6ea907af1debde1c1157118bb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "dde010c75ba9b2057fcd4e37eff1f76caf849304972287ac8c2abb0df2a9142c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "7efaa23de434339af3fc4bc8cd076bd8384ef04ca652f8e983a905726e872cc5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "91644f522de1522abd4ac876f7019b3a89a0445b3274c3573cbed39147ac1f05",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "8ddeae3c7e793e53e2afc2138195fb198656ea0d51ee047ff6e850b805643fb9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actnomask_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "5322dab45f8979eca5b01b5b824a0a934ef3d8f7106b3442c27fe412c5268e63",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "cdce36f17e7307ac99482a6ad2c9c8e7411f2b30ccf64c7e1fd5090359c7131a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "5b239cb805c243a4e860aaca7e997c67aea1f370fe7f60557854a26a661e9683",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "279a208dd9771388cf94aa8c21b2fbe122c47e4fac1ae1e2734187a2787c5b67",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "0fe842b620b73358ac9cf1d18c836215fef422f5ed05bcbcbb02453550409628",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_nocost/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "a93a83818074ceda983992c1e675b57f7b1d9d115e32675150dfe8d941460846",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_nocost/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "8d291e2310d0d42a9f8a0ca6b813e3093944a261f4b8cdfd3f5f6a5c2e69900a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_nocost/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "54cb8337d7da7b56e3a710227eb148a54e3f94bb56e3dbbd63d18e3008e79a30",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p87_perfect_sprx_actperfect_nocost/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 87,
+      "sha256": "60fe604ba1ddf43104175b451e01501e2bb4bde7e0725ef6503a699e98debcd7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle_nofuture/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "f026223927b5c8ef9513b3e502ae6a26b1be3d137f1a093dde11b52fe9be3d2e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle_nofuture/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "569dce642f1ed7e9df9e776c61ad87cd74f2f4de6db67eab10066c5fd6dbef01",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle_nofuture/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "1f78e2682b07d6c8ada4cde425c993b9dec1948e5811bd60d51a7ae4016f0b0f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle_nofuture/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "9a0feece689a77bbd5564201ed15f6e924cfea2d2bf9dae9f94722df9f884333",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "e1ec09b02285cebd833a545ad7fb8b86550a62771bcdd456eb9973b79f8f6911",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "64bdd9007b4c10645fa120d5f464f2d5d3f3cc690441bef83880ba0cf4a08bb1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "2626bbbee876261320f484cc47ae89bfb2bfa695d0d97606b6fca1750494e54c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_advice_oracle/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "07ffa1940c5a07ee9db9c955a5ab5dc40338fdbeced655358dec71c9fb9de5e0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_ceiling_actperfect/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "b8b8066cb059a131d725fa2e85d38bb244c23c42e4b4dd4a4ebc249dec1775ea",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_ceiling_actperfect/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "df126f4b9f86f57bd44b7b0a9d2c87a705d4b576fb6cc73bd7bf1ab4cdcc708a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_ceiling_actperfect/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "b1ce93282453f35e6f9f5c23def2826a32e04ef8b43334aba3acc02ce99e3c45",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_ceiling_actperfect/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "d58bde8c393b2254de73c78e5aeaf6bc771495b2345d5021d48136b5c4089fd1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_nomask_noadvice/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "c9e78d0f788327dbb6dafcc03db93015bee12b9492e0f0e7b44e91669af38127",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_nomask_noadvice/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "388f7af160bd06d57a4f0825d51335eadec1fb6a9c88c3908b1c6609b829f0a5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_nomask_noadvice/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "3206e9aca8ef5be99b4a9cd1ec152e4c26d946783f7a6bab07117b87edb7e020",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p88_nomask_noadvice/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 88,
+      "sha256": "a49cf43aaf072be276c28e4abf8edb09af22566ba22b2ea9704839b5f0f8d186",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_days_advice/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "4d9f78926b70954ccddf0ddf9cbd020b088f2cec1b4753f7da9961c40e2d3543",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_days_advice/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "a3b079484bb376b8a177cce965b5cc8204a23e5b9deff94cbce22bda42100473",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_days_advice/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "c44a3f2ff6ef014798f7d06dab486e15eb4569fa117b2afb5b3fedb2c90cb66f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_days_advice/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "11b88b275d841e98133dbf3620ba816f404f036a2b25bc11bf919de6f4b7dec0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_noadvice_nofuture/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "f002ffebde5f129a3c182d395d5bdd6c7b54d5baa17b40248be031677c087f52",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_noadvice_nofuture/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "305fd4fb2c27e2ff5d69aead55cbbbb9041ad55450f746efc31e19c1aff80f2b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_noadvice_nofuture/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "4de5f579a28759fd84950f25f177c427939f390dc317d06893d6a769047eb78c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_noadvice_nofuture/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "eb0d13863094814fc03dc1d432d797ac9f562835ea6ebf121c30752793618e64",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_oracle_advice_control/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "f026223927b5c8ef9513b3e502ae6a26b1be3d137f1a093dde11b52fe9be3d2e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_oracle_advice_control/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "569dce642f1ed7e9df9e776c61ad87cd74f2f4de6db67eab10066c5fd6dbef01",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_oracle_advice_control/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "1f78e2682b07d6c8ada4cde425c993b9dec1948e5811bd60d51a7ae4016f0b0f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_oracle_advice_control/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "9a0feece689a77bbd5564201ed15f6e924cfea2d2bf9dae9f94722df9f884333",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_reach_advice/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "41191364ab129807e6ce87146b8f73f18e76b40d77f5975f397c1051e0dc8fe7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_reach_advice/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "0655ce511861538345dec19b037e76addadd5462ffa4441fd37179d2fb2d00f0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_reach_advice/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "463448758970e5f252531609414c988c69adcbb76fb229d7f3ebc31ac39cce70",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_reach_advice/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "11e6bee9a8136afe486263572cfccaa8925ac8fa16b5d47ab80b95f4025997a7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_thresholdoi_advice/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "3f823f5d6932ac461a3459cf31f170e19781143d8c80c2d35b3edc92e5f7726f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_thresholdoi_advice/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "02e900efe63b01537ab624308d0b73efaf0328ae0732509ee1c0040e6dcf5126",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_thresholdoi_advice/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "5fbec1510683cea4132f8847ae4cf5dd5c131a13f6843a421fd9c565b7ca8ca9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p89_thresholdoi_advice/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 89,
+      "sha256": "8e21062b94e9d81ff9742886eba2c681b157677ff162d26680bf7bd5f2ce2c0c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "4d9f78926b70954ccddf0ddf9cbd020b088f2cec1b4753f7da9961c40e2d3543",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "a3b079484bb376b8a177cce965b5cc8204a23e5b9deff94cbce22bda42100473",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "c44a3f2ff6ef014798f7d06dab486e15eb4569fa117b2afb5b3fedb2c90cb66f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "11b88b275d841e98133dbf3620ba816f404f036a2b25bc11bf919de6f4b7dec0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_costoi200_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "e9f8334ac72865aa307a9ab3ff52934c34a741c604d04ab9edb808730af2c69c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_costoi200_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "11884e4f172d66c8998fd02a107a71e50037783a17e58aae83bdf7234423c6c3",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_costoi200_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "97974513e1ac87da38b49225658fdfd4f7c8964b33ca3d64c73bb41aeeb27f23",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor25_costoi200_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "88341be864dde8eeb9cf7b7f3f8a744e79dc5f417449d2db8dcc7929c5450066",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "611d415df0cae7a9d7e7405f6a6029afdd1c297aae9fb21dde7e7b20321bc79a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "e3bd12019f5456b47b3709cda201508c48ab20cda5a6cb698934a1db8244dd03",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "b94d70d93f1e2d14d790db9dad3647e658376d9c5621505bb6ac3e97c810b4b0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "a10ab72fd8b284f1c1636ce5d8bad98919894000b0c240ca1f12046e88b7ec2b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_costoi200_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "1696b71e45fab0cf3e2d5852ccdf45da8088989c69199d4726e511c56e8ac6c9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_costoi200_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "30ee284f427a5d9df2bbcfdcc7e39b29a789a7c6b779eb76916d4659265f4b41",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_costoi200_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "ac4af0eecc02af98377d78ef4ed1ff484ca1c21873d7147b9633140f359e27cc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_biashydro_stor60_costoi200_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "1b0ebc24f49d602392a8c6ec51c3cec19b23a4d841fc0c88de28813a74efbec9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "77b98519d13b4b415271df307a4464207232db3ae0df569a32e374af8a705de2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "008167552dcc67522762af19afe28448a3c454204936232dbf743e532ba024bd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "800d95408b3785376254a358087e72cb7dc6c728166391c3703e82a7f6028169",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "688aa17290a57391f63bdbb0b4472ecf52e2ca75db4d3c53c0a49ac19a8942c5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_costoi200_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "fe690ee5bf738da58cd36e61e28923238d84713ae1bcc1a8c6ccb522a4e87e9b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_costoi200_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "0b93ed3a8cea0579b0c53df720d0f46a2b77d1011e45f6ecc4c97b706b35b0ec",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_costoi200_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "6b8d27f0e024740bfc8f4460bbbfac7115d5e0e42cd2b801f88d97fe22e010bd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor25_costoi200_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "4b04f6a4d7d9a13cd474db4107d8e8fc0343c4ca59abbc3dc2216fa49674c2aa",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "e347cee7ec96eb6d2574cfaec877603ee1fee29780830e18fd63508cbb8a0eea",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "2c3a8dde48898d17fde36f7130be6fc7601df94409973353c2f61a4389be04bb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "e1b1d8d80dc8cf5a2ea8d3187d85ac17435a447f17d88c56500f869e202cea06",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "48b808491cb2d872088488fcca1804f935303f8836b85aa3919c419d2c2ce124",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_costoi200_001/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "8093d6e570c9f3d1b5292c2565fba0475a37077bdd888277c80d64df85c51b54",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_costoi200_001/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "21e2da2706d476200c1875ed0b53a875a5933d894732e9eccbb05aa7b0e205fb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_costoi200_001/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "39d918caad98b36c5ceddd3c68cd1fecfcd1e499698e808b733fcbd004075d4f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p90_rawhydro_stor60_costoi200_001/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 90,
+      "sha256": "990ac0c50b4c935b825d69e9694f83c28edbea0031f35cce0ed1cb1c5309f720",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_ctrl_peak85_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "4d9f78926b70954ccddf0ddf9cbd020b088f2cec1b4753f7da9961c40e2d3543",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_ctrl_peak85_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "a3b079484bb376b8a177cce965b5cc8204a23e5b9deff94cbce22bda42100473",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_ctrl_peak85_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "c44a3f2ff6ef014798f7d06dab486e15eb4569fa117b2afb5b3fedb2c90cb66f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_ctrl_peak85_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "11b88b275d841e98133dbf3620ba816f404f036a2b25bc11bf919de6f4b7dec0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "6256203212626f6a2327c20577a037a9bfada41c71a3e2bfef14d338e2e2b248",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "1f40767cba1e4c7baefe8fe72c57fe2bb5be869be17341180e430973b2677787",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "fb0fe913dcec9a38ef5f983f8d3e5ab75245414ad66a570056f6caaf162bded1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "2cc5da0b8c8db0842accffabef2f11fe36c09967c2a0527047c298e0c82e4bd1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "544b63896e8a2d72eeed3854db05db08ec7d508657a12dc1b2ed2d90be1fa81e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "69c47804d74673d6ac8c4d345859980e2d72ce8fb438a4e31752be3928686165",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "c188e865413b9b8c3f962c6f00d186bfea8f654f9b837ffe24a4f2c69a1d5662",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "3dd4d5ff57ffb6e5975f2c2259314528ed81ae69eb2b99f579e5b3a144e440fd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a35/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "0ee4fbfc098239d6563aeb1cb4060e007528047c2809d55cb8e635c0cc76b262",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a35/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "0423f7484c8dada5853aa1a99b6766cacfde6e9a9f0fa65d0f5934c7e6b61a91",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a35/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "eb9b5c1e3c8f120db5dd74babe3e56d4e4832e727a3a85596dcf1f2f0e3ab049",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak875_a35/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "fa796df600edf6263d136ff75a447278d197f87c1bf4753bd7a2bc5eb16ae8ee",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25_costoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "ce375e52f316462d5c9eaf2522bfb9b04c924b7eda14b4ea8370f78ded3004be",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25_costoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "46fc6773fe1c5e440cf53c84c3dba392099a669be272ef64188609a2fdd5fbb1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25_costoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "c52ea6fc65dab06ed68d541f0ae7d74998245ffd4a6b085b41ba421e9822535a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25_costoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "6fa2cb57db7af741da592aebc90434551ca418ec9f23831946208141e023909a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "ae2ba1870448a8adbdae3f5ad1c442c29f25fb026afa1b39d6c68068573ce9ba",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "a11c8a95c5b54dc5cf7a4dc3e475d4781a4ab82f4f1878e33d9387db5c6da728",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "f184c951c204c8af23cef3d3e5304ea1cf61f6ffee0d01112bb8a7ac09b931bf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "921940480a90fd5a16b8dc72a6bb9743148c1107ab6f5f2a92b2aae9f811afe3",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a35/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "91b784332a0780fb8b3422f93877b3c62e7f07d0e92eca6d8e8012e1da22eb1a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a35/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "42a24ee4c36727adbf2cc5d1d4b148685800a4584e54e07bd6c51ae51225a77b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a35/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "0c9f9883c71df09b09d4c5637240370337ed56fb33db2b6ef15716207b81e8af",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak90_a35/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "8ba893c9df8ca045aaaf94c667658071b1b3809df6b173ba36fb6916737a5771",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak92_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "cf5a24da38955ae0e524e8275bcc20f7495ca7eb286a3412542dd1e99428cf0f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak92_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "0c3ca1ba4cc3a81ad86a3b12ec901ae5dd35948e3fc1f4fcdd72fc3e878eb3d5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak92_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "b35bbc25fc91901b6de17c1b12de3f750f264816e57743843c6c473d66cc1a20",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p91_peak92_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 91,
+      "sha256": "d970b50d2c968fffac19d874152db8e9f51938fa6b5f16720b746fa713e09be9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "544b63896e8a2d72eeed3854db05db08ec7d508657a12dc1b2ed2d90be1fa81e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "69c47804d74673d6ac8c4d345859980e2d72ce8fb438a4e31752be3928686165",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "c188e865413b9b8c3f962c6f00d186bfea8f654f9b837ffe24a4f2c69a1d5662",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3dd4d5ff57ffb6e5975f2c2259314528ed81ae69eb2b99f579e5b3a144e440fd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "2dedd325039887e28290d727ed3c6da3473a7bcd298bcf30aaed3c4d70fd4610",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "0cf13daf10625c38f1eedf3f027c2e7e0e03ea8e84052e795b9ea8cd78648623",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "5c57677c0372322a854416c3aa18be83cf86cca33c9ac7990ffe000fdb80aa9c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak875_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "5c0c34e997e9c2e9b5545ac40b926e7742319d27ae3225188a0ef497369b7352",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "ae2ba1870448a8adbdae3f5ad1c442c29f25fb026afa1b39d6c68068573ce9ba",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "a11c8a95c5b54dc5cf7a4dc3e475d4781a4ab82f4f1878e33d9387db5c6da728",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "f184c951c204c8af23cef3d3e5304ea1cf61f6ffee0d01112bb8a7ac09b931bf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "921940480a90fd5a16b8dc72a6bb9743148c1107ab6f5f2a92b2aae9f811afe3",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "cdadfb9a2a6f5ed842499a38330921428431839217cf9d1fb1393ab1105cfffb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "d9b16fc89c40c57e8bf12362d7aa756e3b2c379e98b20f3a481e7cb4aab0efe4",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3df416d58fdc398b8fb21e49dc70592bb4612120c0bb88a11b8aa97004593464",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_ctrl_peak90_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "c25a51e7eadb5f5d9b01a656be063574998041935bf91ff13755422387e4b8da",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "cf9dde84908bc1825de10608ab816fcf331e07bd6cbef2f1fecb57bf514e5e24",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b1057c95983250b456453f860b3729484b08ebe448fcfa465be5848603c6cee4",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "8b0265098ea15a1026bec72eef98b4d6544eaa41f3e0909e01b0b543b811fe37",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "26856d70ec23d95867ebe595032e3c85295287fc636c316062c41ed3aa41cd7a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "1f104ec432cd802e9019dc7be15a29765c3a2d5654e9f7e06a6a0414ff621cc1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b942bf8b7d7208aea3d482a0405708713d6d5e7335ee3fbbba5fb8067a99dede",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "9cacdf0b6974eef1f80048463f098efe1156f1e7a00bc529107944cb66e65e64",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift85to90_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "758900fd27ab9dec6d16e76b950a9c0b68773d314228fb22bbbf5cd3b6b4e1cd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "9b721115e258603d62e72e1754e1f4af17503b688468386f0e272fe9b46de624",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "978d0756a056daa5b02cf68d51309f6cfd058bc076dee338a96cd6e7e81a415b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "17d22d858a0274c3b512949c6d4a00f54a2031f273c27cc4e2ed5f4d4ea76ce0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3e6c76c276e6e93507e7a57211f8a3abf7407e290e1abc0a8db4a37016496cf6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "f3fbda6eae1f9aec5ac048cf249b06b54788f150cc8a8f9b2cbfe370354afd49",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "81163eb91bc1a5023f5502c86f839acb6ef2da2dd916af2e83cecec7663243e7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "019c16b67be42c69236a2871eb083c2b1da7505630aef800f9735ad7e881cf86",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_oishift875to90_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "23be9a425404126c5d4c43583bb5c7c3f9b765cdddeb1e722cd3a01096368b91",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "2618fba8ca41eaba2386daaa3af6aef6012308ae414531b1c74864d200cb88b5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b53b763dbcf8fa8000d7f7ccb907c3be48a4ae6e7367c19dcabc2aa4af247cf2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "8a6bd1fa98384e70475b105cea7855bda245382a17b003e6ae162b1850f52ae6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "6a2bf89d507e4613d66c51ede692f128570e58e72e7066b5d7140d17efe3cfbb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "e0c8ebb2f9dcff89af83b77bfd49186506b7519c1b23a7403312d1cb9bbc3f3f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "51b7d03ea7fc7e617fd38cce3d9251bfee01140ca488a8be899bd9167c8cb3d1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b61d1eab2538bf4864dbf4f855faa8574bd2f08494b99968a67501d5f449d57c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost050/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3f858a4280178d200b1caeee13fc215672892e97fd7a560560c9b174ad68535a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "8635b5185f8dac5a5c5a2c4b30b36057412547b0939fcccbcc69668eb51bb74a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "137694b3613d7dc8ff8e04506a2bddabdca09440465771e98929ab27175c3964",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "222c388e7b2aef5ff5ce0eb343ffcbc1c7039f7e5f087a0cd25c80ada4cd4219",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "baad5ec209f47f73153c31f84f9ffc4d206f4addc37a40c3cfb16b7cd2f2d8d7",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "942047e4b3d9743ef699c039ac102ee6cd8767bf02792777877a40b5fd5e8c93",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "d18f79278b51dd2fe5a41b8209d8771604eabe69dbd6ba23d8f41de145d26350",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "ae86d1e2f065f4ad4c4b4480801d4b5fd555b9da208461f69f81a63b3000adba",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcost100/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "ac7165e1446568b1ad2e9636362bf0e2dba96c4a6e98f205af15e41c69e86fbf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "17e2e74c046feb75e53e23334269e9dc0e2a2448e87c9b9b56ed092bd0094659",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "79654d58f43392bac03dca46a5f75be076212e0990a6c7a3c867cf2030ec0850",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "afd2cbb5bbf9bf0beaf658fe022a1cf383b9b3321c10e312a9bba88a3366e5e9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "bcfc4c5deca456bff4de640c5e8af5469dfd052eee00efe660413d40296e89da",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3d226a3748b7d92c30285f8bfb3b8f9a4380635f75f27ae93733626fdc1ad8be",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "4aa1dadd71af39d6f8289a947324cd4ca95076570cbb6104ae8e2c9c2f42a553",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "6e1a3e1c45255cbe8aaeb6dea1e4532ea497cdb9f5f948ecab30b7339a24c385",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprcostoi100/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "f1410d707e73776e5fbdb1de01f2cc1d2940cdf1777ad29754f2975d72133f32",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "2c305fedd18088a69bbf3fa4ed3a6b80b69ecfe207bcd7c157ebb035a31cea95",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "353a04120067877295c70dabf559c73fc0305f36fb870f890240051c4b6c8d75",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "cfedb545700a2b36d42f49c53de2a0f03c9b3b5d41608222a82757554dd68407",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b6ca692fc700d5422ba0dbf64d9a054bcc8937f95fedf7c0395ab0fa8dbfa80b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "aa724e328e76c7d86dc02d032a1dfa0e83a766588b1a641eb82873dcc2bbd8f9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "06e089c35a39f3c562d0e19c8fd9eadbb6cbbc1ccc6caf1a35ce86abcd7b33e6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "736584047bf63585ca337d0ba81d26931f197610edf08b645ca3c4512c01ae01",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak875_sprdraw050/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "338624ab816fd0f8025284c1bd0d21f61f0ab210c07748addd4d4f0b9fc4de4f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "f673d69a6e97114e57c1a565c79ed83e81be5760b893d3e1802ccb75883d984e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "8969382462c9915a647d989ecf12e1024cb13f5cb831dd9e5a6ea8274f8f6337",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "c295fd31f618bb587401721ce9434e6fc0e515230e084273fd97351dae18ed34",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "7a123fd5ba10cbffad2b444906c679a9dd1f22b30ab59a6cdf02c49a95b30fd8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "3123889502717e5f0bff7a4751f70ccdef37dbc0a70866218359f19d9548b85c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "b5ac80ce1f62836367826892eb4e262fb2515b9037b3d5dfde6ae887c8f50f2a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "325c0ef1a97fe88afd972bf3836a5e66e17eafa9c5a05addcfd372716acc698d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi100/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "8e8f4ae250f31cecb4ad0d9b198217a6993bcea02befed7b7ce1f783bb023ae1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "2b1fdc23e9e5680c8bffb600172501ade3febec96ad165b7a5c863170bafd2c0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "983e33e4218604161162485af5f028688a60b463c755cf1163cc9899c6052b15",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "e498b11e220250a6e27e253db057dcde57f8e02999c25eb64299512d685ed7a1",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "02aeb83531c1c2fb1ae1885e8a5e06ede155da118e84240f1a0c9f2b48ce09bc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "845b0f045d13bee623b4c139c754eda2f39f2fca5f554f3a0f2a13a2e36b497b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "f21ee849f4ed914e433a3de2e5d724c3e67733a3b0737599ba3aab798122b82b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "789a38edf3d7ad761e455c53338c3c92e6549f023401298d1213375ad32f3e07",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p92_peak90_sprcostoi200/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 92,
+      "sha256": "52d96b465fbf1c3a3ef6ab026cb7455379dd4a05911a2dea05d6a7639eb60798",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "eeee4c7a4756af5840df69135a7dcba58bc320e2a53532288eeddaec9de9cd4f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "e62cd5d4899bd338d2f570a08f3846e53ee0fa8b20f0510552059b62da9626f6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "b05c4740c7a9c5e56e77e85a7ebdd1f9a326af38275be1bf496e21fdd6a4c4d0",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "9b8655f5b3439e22e6963cee58a90ee79cb6f14cde22d0d53da0efd1d84aa680",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "9e5b5d3f942dbb1a41061f3b33484c303f1e6b74c8fd7d1ffe7d945675309646",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "c6eda6526a403f6cd6529f7003c181a0a9ed37938b69833dad73cdda823c8117",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "114e9717ca0c9c4bae2e171e855b7bb921968047cbcda8d4b2769c1519293acc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hdisceff/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "8e26acd39a3df56bbe2781874720d2d224a439832f8855d0962aeb2465d3e321",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "2644ac52f5a9c9d10e1a757030fff0d1962cf19e6bbb5fe38577ff641b077a27",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "20737d5b8d35f9e455bef4068b46fa913bd55a86bc7de0431a627ef58ea00248",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "2304d16538d0b05d5c125aebb234bcc5dbf5057f01f9b6c2a3fd5bff332f0b02",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "45029678a25eb751cf0fa15aa945103012bfc2f90d0464cbfa663a3d86c7a200",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "654bff57eb907a2d388d379abe5903000e961d75ac6277757af01bb0983069a8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "2e9c3f3fe9d50bf3e89f3f060fa40ba66794ae30e1d51205d6b5855ca3d44760",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "214b8e0d84ce65d3a6bd555414e2ff9b8488b9a3f92fd462d05688f15faf8365",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_heff/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "540523ea9430469c52cc4010dcf0d42020fc0513c750c933719f0dcc5e893747",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "544b63896e8a2d72eeed3854db05db08ec7d508657a12dc1b2ed2d90be1fa81e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "69c47804d74673d6ac8c4d345859980e2d72ce8fb438a4e31752be3928686165",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "c188e865413b9b8c3f962c6f00d186bfea8f654f9b837ffe24a4f2c69a1d5662",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "3dd4d5ff57ffb6e5975f2c2259314528ed81ae69eb2b99f579e5b3a144e440fd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "2dedd325039887e28290d727ed3c6da3473a7bcd298bcf30aaed3c4d70fd4610",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "0cf13daf10625c38f1eedf3f027c2e7e0e03ea8e84052e795b9ea8cd78648623",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "5c57677c0372322a854416c3aa18be83cf86cca33c9ac7990ffe000fdb80aa9c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hsoft/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "5c0c34e997e9c2e9b5545ac40b926e7742319d27ae3225188a0ef497369b7352",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "d8bcc171c5ef898bb9f9b08f30a0b3a6a08d836338691ec4f41df41441156d1b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "c45a99357e83fe957bde161c8ed9d53839944506f57c28c3c67cc0d8ea638e4a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "657246f0642bd8db4c20836177850e561cada76e3c8713028567c94fcbd00f86",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "cd3687ab1563e2ef23c49480f0c762eafdc769ebbb1df11b0848ebe031a8dddc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "a779241aa0273791e95af0ff85a531154be9f49c8cf920efc087e1c49ec7945c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "525a51ce79d969b6e4af039d028f8f40f3c65026556a53bbd2081c0ae5abe404",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "39398e1370e3f4c723a85fed5354c8d0b1fd2f5c3151dc24b1d761f41041cbaa",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hturb1300/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "8925f44c4502dffa56b2da0b932fc98196084b0cff690f86406161c0b23df63f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "88936b457439b9e064d2d2da96c46fa2b911c234e7e80162a855e7084ba7b0cb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "e4396ea46bda8a0fcef37684359bba80fd1a7d2f12671fe6e5f563758ba84796",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "ff1ef34002f201e8e5ac133cfa2d63ad3d8824f36629402137097459189f0054",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "a40c60f23aa2a9f5a18255cf0af2387a18fc92070a1488f8082b65fa536c9709",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "982758f5140fcd1765e3f679a2fd989cdf33f5b19959bbdfe65670b8ee90783e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "6436c7bdc82e745a2877ec414d3b02a1f4760989c81474eb153e3b674bd90a06",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "68b6c95c7372440410ab9a5fb9751b41231a11515aece5d4fb6b1c2b98e2b0a2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak875_hydrooff/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "cfe50c7ee37a24d490a00ef382c546b0f9d951fccf8623dd73ae6c2573325e6c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "c931766be38843b174e369a223dec20d27012d28384519f340280475772ff4ef",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "062e78a21a401c1561b5ce28a1e52b81591a2884f92323495bea01e30fdac762",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "97001f35140be0f6f4b725c1c5fd972a905ca58f5ec236a61845fe9e87d9179f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "ab0ee141ac0d15a81e2a4bd0bfb076c1dce6bffae9f646b341449cdc962af587",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "1ce59997087460b6195b97bbc50d02966a803b8187f63b33c93fd435f6460a9d",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "e4156aeadf2ad38306978cec0580fe3146dcc786f292f7a72cd3ba5f59fc4e5f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "7c4050a9c2fb22839968a33796da14d54d9bc58bdd1989da7c213f50db1f69e5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hdisceff/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "6bacb0d5f541213673de0ad07667be44c746d1e3e73ea615f95e58d01ece5ef5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "ae2ba1870448a8adbdae3f5ad1c442c29f25fb026afa1b39d6c68068573ce9ba",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "a11c8a95c5b54dc5cf7a4dc3e475d4781a4ab82f4f1878e33d9387db5c6da728",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "f184c951c204c8af23cef3d3e5304ea1cf61f6ffee0d01112bb8a7ac09b931bf",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "921940480a90fd5a16b8dc72a6bb9743148c1107ab6f5f2a92b2aae9f811afe3",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "cdadfb9a2a6f5ed842499a38330921428431839217cf9d1fb1393ab1105cfffb",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "d9b16fc89c40c57e8bf12362d7aa756e3b2c379e98b20f3a481e7cb4aab0efe4",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "3df416d58fdc398b8fb21e49dc70592bb4612120c0bb88a11b8aa97004593464",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hsoft/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "c25a51e7eadb5f5d9b01a656be063574998041935bf91ff13755422387e4b8da",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "29e43d977e766c2b2836985c2fbcb7e1989c96d1e1ee4a975a28e5298ba5f235",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "d4f8cc9505dd32b5cb71ee895eb202e79aaf44c1d20d097efd0bdd1dda4e15ad",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "41eec94877102dbaadc4cb78f7da5365b8ddfd294f2e70a790a856cf068c8366",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "46b9fc764f301430068c1f222868ddb1bb12bd0850abd65d9bc2a6fab9aeb70f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "d75a2db549a7b3a4d187264056fbbcaf1fd361df944c855ba023c93d1f16b045",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "330686d712b163e109f219cfce2757c3d3afd11e7755c3e2dca272c9bb2ad8a2",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "a535dc5fc49c5c8d7e280cda0cb18a94aef37355d794e4c6be4012960959bf11",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p93_peak90_hydrooff/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 93,
+      "sha256": "a8956629e28da4c3edd2f029d34d8821d4fa9228371a2c6ab07b6e2c02e494ab",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "e74d47800f590d822d9519a9d36634b704159762e24986ddfa81f3a85ca2ef7e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "0d095a13791365c2af7059f97edbf70e868a78b68f55ec91586bc9b0060394f3",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b5312ee90f910c225a59dfb89888319ed9a199400074e2d1487646ab3e55a378",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "1016884ab685b0ba3dcf63ea1568ec3c0a6d3afeb67ad0b896ba318f9d680c11",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "260a0d2f4fc6886acea9777737ab6e5ceff6f898a91e2a9783ad656e3e085707",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "7dd0ed4e4faeec68a6a0dcf522b9cd1c0606e3cb25a96b636c41a74892f2c555",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "76803bb1c59d02fe496b9bd684c2f1bc19a884e19442eb33a3f2ca1f441c9ec6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_carryover_augdec90_96_a35/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "74884fbea9e554fa25d61e338ef52ec69bff2a9306ca8953f2acc142d802797e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "544b63896e8a2d72eeed3854db05db08ec7d508657a12dc1b2ed2d90be1fa81e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "69c47804d74673d6ac8c4d345859980e2d72ce8fb438a4e31752be3928686165",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "c188e865413b9b8c3f962c6f00d186bfea8f654f9b837ffe24a4f2c69a1d5662",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "3dd4d5ff57ffb6e5975f2c2259314528ed81ae69eb2b99f579e5b3a144e440fd",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "2dedd325039887e28290d727ed3c6da3473a7bcd298bcf30aaed3c4d70fd4610",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "0cf13daf10625c38f1eedf3f027c2e7e0e03ea8e84052e795b9ea8cd78648623",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "5c57677c0372322a854416c3aa18be83cf86cca33c9ac7990ffe000fdb80aa9c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_ctrl_peak875_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "5c0c34e997e9c2e9b5545ac40b926e7742319d27ae3225188a0ef497369b7352",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "0aea4e9c083fffffa87ed68643a681369402657f0f6fff9bf18413f1eb19a733",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "87358dce632aadb84ed340db9096ebb71a7fa72293ec98939e0142ccce1c880e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b247777ec95ab85273db725756d35b143e659a328b0425368c5e5779e69ea26c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "3f9d96aee906f0365387a547f1372ad8a594ae5e97fdf60de48b9ee4ca96f20c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "4578f0ae4d484aeb4ba791fd6f3bdf387c589d2f458218dc7f33ecff642ea71e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "dac6d9e52f6ae0749ed42d6da8211564b1329477b994a9f29003f759ce4e1a48",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b929806d39e03251e87488384e45d3f67750c13ffc4f1048b443e6fb8252961a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_oiplateau85_90w06_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "99808b33174d14f00c9b89f69ea893354a1d7e9d73844400b0e484f9ce74a634",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "f6fb6ed7937a10b498f0875f7a7d897322b1e8ddc2da2a1b7ee280c8a89b1a82",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "efbf2d4f3c66d5b596d5e5fb6ace475c9eb255943d1873b974204fc24cfd7df9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "83ee62d6a8a25bfd74c5fc7ad4c777e81eb84a535e9e223af064a2ab6e7e2042",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "22361bc398ab80f10d19de252d0d4c02be9190f42f31dac5832b18d254f22dfc",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "9bcd35ab26bc8b96430189729efee5e5a92a5bab963de8a45a706394587b0f4c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "cf6014ca6cf2b8910e722a6a525931a7462a15a980bf915f4a1191b04f42c2ed",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "c6cebd3e92ea549605e584a8aedf55b991724461141ec4e7033c7b32c8ae884c",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau85_95_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b0b5dd6297bea1acd4a19d08c032813f92cc31d7ae9c749dab5ce40c42f706a5",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "9d0e4e808fa255392fbb4e6d4e59b47eda40784b5ba6d64ce1946561f39d4f24",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "164aaa605ee40d49081ef7882930d314f4251b47496faf22135648bfbfa72a65",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "56f7696b99358b6dcb0d65880e1a0846799f8de14eb79877bde4152679a1f9f6",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b47fa6ab68aeca1181aa83cc766dd60f078a54fbd6ff5f14285dd39140fcf757",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "4585c7cbd55c29a1037900d77e139d0c0e5f21d8e7ff2d7d015ddb8fd0265fd9",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "e0d596dc6481a93938894d5dea6fa60eb4cfb1ce992a4cb4ffd0083635878701",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "407a318b07dc19037d5e38c0f330488fd86de2936ae1726f7b99936c046e7b0a",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "1778e085c5ffb02e8e8d57c75591738485f0a28bb19967270aab1abf2b05463e",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "0175060ed5ec5b8c718dd9ec82c089dd9482e614dc42984336b448fc05579d51",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "8a7a3f88c8cd5327e5612f19746cb6994a540213713b25bd10e33164349b2161",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "b5fa2cfd9c2b1da5f229d7fb68010962793028ae6f5549d74dcd0999fd9d2817",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "d50b8e960a46024daa336a0f51fec024dd2cad2c3f6eeb44994e8fd2968e96de",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "832bee85f134f2d6ba4775a3aa79f56a912461c5880f6f06a600e2e38f667993",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "201ddf3b523245fdd74031677c88edaa4d1e6c5fffa6ed2d2243c6f10b70c321",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "da89afe5a29b1c9265d9c96ba6255ce22fc32a93d18547efd79e201f89542484",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau875_95_usefuldraw025/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "ff2a853b22dd3a630d4b2655ccf36b90e6a72df4873aee4d867261d53d306237",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_000/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "6dcaafebb71f202554fbb2182f75beb86859011d56e44b66669f26b993d0944f",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_001/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "53bddc3e045b7b494b1cdf9f1389a1526fa69573870ac453fd2eb8449dc29e66",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_002/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "1557e9d1a548ad24386d54f3e8fca8c54f0e016eaee3c23734c4fec84aab9637",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_003/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "3a90cc8d437272bc73b2432b56bb0a4d6a78bb4c7cca48077dbc95ba9e28d380",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_004/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "3ad9871b3a3efb61dab70f1aa9196140452cec72ec7b2bcc46a0238b99c8c97b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_005/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "2a8b5af1ab9f5ef9348045e5e1436ee2e0f7f2696b0e7e31782f7fcd52c920c8",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_006/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "f75e39bf6995f57ea7b6a42418c31faf448045ea46eb24b6f8980cba8e4f4c4b",
+      "rows": 1
+    },
+    {
+      "source": "runs/reward_jon_p94_plateau90_96_a25/seed_007/eval__holdout_2014_2024_08_17/eval_metrics.csv",
+      "phase": 94,
+      "sha256": "deddc132a9d31b7e5fdccf6da7b61ef870d7c87e17dfcb57128bd32a61d78664",
+      "rows": 1
+    }
+  ]
+}

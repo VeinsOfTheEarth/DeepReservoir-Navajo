@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepreservoir"
+version = "0.0.1"
+description = "Deep RL tools for Navajo Reservoir operation"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+# Project license will be added after approved ownership wording is confirmed.
+authors = [
+  { name = "Jon Schwenk" },
+  { name = "Shubhendu Singh" }
+
+]
+dependencies = [
+  "gymnasium==1.2.3",
+  "stable-baselines3==2.7.1",
+  "torch==2.5.1",
+  "matplotlib",
+  "numpy",
+  "openpyxl",
+  "pandas",
+  "pyarrow",
+  "PyYAML",
+  "scipy",
+  "tensorboard",
+  "tqdm",
+]
+
+[project.urls]
+Repository = "https://github.com/VeinsOfTheEarth/DeepReservoir-Navajo"
+Issues = "https://github.com/VeinsOfTheEarth/DeepReservoir-Navajo/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

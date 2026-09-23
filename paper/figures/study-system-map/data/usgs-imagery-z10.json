@@ -1,0 +1,23 @@
+{
+  "service_url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}",
+  "attribution": "Imagery: USDA, USGS The National Map",
+  "zoom": 10,
+  "requested_bounds_lonlat": [
+    -110.89125000006298,
+    35.39791666670939,
+    -106.44875000006292,
+    38.14125000004276
+  ],
+  "tile_range": {
+    "x_min": 196,
+    "x_max": 209,
+    "y_min": 394,
+    "y_max": 404
+  },
+  "extent_epsg3857": [
+    -12366899.680315236,
+    -11818999.061567092,
+    4187526.157575096,
+    4618019.500877209
+  ]
+}

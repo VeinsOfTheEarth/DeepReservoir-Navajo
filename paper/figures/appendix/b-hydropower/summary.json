@@ -1,0 +1,125 @@
+{
+  "model": {
+    "version": "single_eta_v1",
+    "eta_eff": 0.6635421508537132,
+    "exported_at": "2026-09-14T20:18:38+00:00",
+    "calibration_window_metadata": {
+      "start_period": "2000-01",
+      "end_period": "2022-12"
+    },
+    "turbine_limit_cfs": 1300.0,
+    "configured_power_cap_MW": 32.0,
+    "density_kg_m3": 1000.0,
+    "gravity_m_s2": 9.81,
+    "cfs_to_m3_s": 0.0283168,
+    "ft_to_m": 0.3048,
+    "tailwater_release_knots_cfs": [
+      0.0,
+      600.0,
+      2000.0,
+      4000.0,
+      8000.0,
+      16000.0,
+      24000.0,
+      32000.0,
+      40000.0
+    ],
+    "tailwater_elevation_knots_ft": [
+      5711.7,
+      5713.0,
+      5713.3,
+      5713.7,
+      5714.4,
+      5716.1,
+      5717.8,
+      5719.2,
+      5720.4
+    ]
+  },
+  "calibration_fit": {
+    "first_month": "2001-01-01",
+    "last_month": "2022-12-01",
+    "n_months": 264,
+    "r2": 0.6237472999592664,
+    "rmse_mwh": 2781.9318648103276,
+    "mae_mwh": 2034.6510755503223,
+    "mean_model_minus_rectifhyd_mwh": -5.421382978689287,
+    "reference_is_independent_monthly_observation": false,
+    "is_held_out_validation": false
+  },
+  "rectifhyd_navajo_flags": {
+    "recommended_data_counts": {
+      "RectifHyd": 264
+    },
+    "RectifHyd_method_counts": {
+      "release": 264
+    },
+    "EIA_obs_freq_counts": {
+      "A": 144,
+      "not noted": 120
+    },
+    "smoothed_months": 120,
+    "scaled_months": 0,
+    "imputed_months": 0
+  },
+  "historic_response": {
+    "historic_daily_days_with_release_and_elevation": 8401,
+    "historic_release_range_cfs": [
+      224.0,
+      5420.0
+    ],
+    "historic_elevation_quantiles_ft": {
+      "0.25": 6029.44,
+      "0.5": 6055.63,
+      "0.75": 6065.03
+    },
+    "response_figure_release_range_cfs": [
+      0,
+      5500
+    ]
+  },
+  "methods_and_limits": {
+    "tailwater": "Nine points approximately digitized from the slide-2 copy of USACE 2010 draft Navajo water control manual Plate 7-4 and joined by linear interpolation; not an exact tracing",
+    "tailwater_source_url": "https://water.usace.army.mil/cda/documents/wc/2560/Navajo_WCM_Draft_8-5-10Redacted.pdf",
+    "monthly_reference": "RectifHyd v1.3 monthly estimates; all Navajo rows use release-based disaggregation",
+    "runtime_elevation": "Runtime uses storage-derived end-of-step elevation; calibration reconstruction uses reported daily USBR elevation",
+    "power_ceiling": "32 MW is the configured model cap, matching historical 2000 EIA net seasonal capability; 30 MW is EIA nameplate and current Reclamation capacity"
+  },
+  "inputs": {
+    "usbr_daily": {
+      "path": "data/navajo_reservoir_historic/Clipped_NAVAJORESERVOIR08-18-2024T16.48.23.csv",
+      "sha256": "d162c791706116acdb77002a8dbc5080ba822b873d23af8414c3a21aafb8fd10"
+    },
+    "rectifhyd_navajo": {
+      "path": "data/hydropower/RectifYhd_v1.3_Navajo.csv",
+      "sha256": "53ebf5fd85b890dc5cb889d26efd64bcdd7391915e5e2ed7ba8c0e959cdfa410"
+    },
+    "runtime_parameters": {
+      "path": "data/hydropower/hydropower_parameters.pkl",
+      "sha256": "72d642e6cd8fc251c07289ad1eb547dd246bf610a254f4543b09b3cc0c30b59e"
+    },
+    "runtime_model": {
+      "path": "src/deepreservoir/define_env/hydropower_model.py",
+      "sha256": "e968e361527fc1aeff2a4d7d843b468ae129e4c32860f700c009a6b42cd463cc"
+    },
+    "digitized_knots": {
+      "path": "paper/figures/appendix/b-hydropower/tailwater-knots.csv",
+      "sha256": "e53be6df903276fe563e4122488dae279f9f9e533786f70420e9fa83a3c2f3be"
+    },
+    "figure_style": {
+      "path": "paper/figure-support/figurestyle.py",
+      "sha256": "fe1a3e8978197ef531ecc7cbb589b11c981cf9470d4974980b9e2bab6bff8211"
+    }
+  },
+  "optional_provenance": {
+    "original_parameter_pickle": {
+      "provided": false
+    },
+    "original_calibration_script": {
+      "provided": false
+    },
+    "original_analysis_deck": {
+      "provided": false
+    }
+  }
+}

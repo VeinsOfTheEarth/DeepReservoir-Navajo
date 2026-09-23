@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or its data products, please cite the repository and the associated paper when available."
+title: "DeepReservoir-Navajo"
+type: software
+version: "0.0.1-prepublication"
+authors:
+  - family-names: Schwenk
+    given-names: Jon
+  - family-names: Singh
+    given-names: Shubhendu
+repository-code: "https://github.com/VeinsOfTheEarth/DeepReservoir-Navajo"
+keywords:
+  - deep reinforcement learning
+  - reservoir operations
+  - water resources
+  - hydropower
+  - Navajo Reservoir

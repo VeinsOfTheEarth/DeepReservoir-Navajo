@@ -1,0 +1,61 @@
+{
+  "source_file": "data/patch_sanjuan_at_farmington/daily_sj_farmington_original_backup.csv",
+  "patched_file": "data/daily_flows/daily_sj_farmington.csv",
+  "n_overlap_days": 25085,
+  "proxy_total_overlap_af": 90723451.85699151,
+  "observed_total_overlap_af": 88400870.06570113,
+  "volume_bias_af": 2322581.7912903875,
+  "volume_bias_cfs_per_day": 46.68002072951987,
+  "n_patched_days": 822,
+  "patched_ranges": [
+    {
+      "start": "2020-08-20",
+      "end": "2022-11-08",
+      "n_days": 811
+    },
+    {
+      "start": "2024-01-30",
+      "end": "2024-01-31",
+      "n_days": 2
+    },
+    {
+      "start": "2024-05-31",
+      "end": "2024-06-01",
+      "n_days": 2
+    },
+    {
+      "start": "2024-06-04",
+      "end": "2024-06-04",
+      "n_days": 1
+    },
+    {
+      "start": "2024-06-07",
+      "end": "2024-06-07",
+      "n_days": 1
+    },
+    {
+      "start": "2024-06-09",
+      "end": "2024-06-10",
+      "n_days": 2
+    },
+    {
+      "start": "2025-01-22",
+      "end": "2025-01-22",
+      "n_days": 1
+    },
+    {
+      "start": "2025-02-17",
+      "end": "2025-02-17",
+      "n_days": 1
+    },
+    {
+      "start": "2025-03-05",
+      "end": "2025-03-05",
+      "n_days": 1
+    }
+  ],
+  "first_patched_date": "2020-08-20",
+  "last_patched_date": "2025-03-05",
+  "full_series_start": "1930-10-01",
+  "full_series_end": "2025-11-07"
+}

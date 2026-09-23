@@ -1,0 +1,84 @@
+{
+  "figure": "elevation-capacity-audit.pdf",
+  "purpose": "Verify the active elevation-capacity interpolation and document the abrupt shift in the historic Reclamation storage series.",
+  "official_sources": {
+    "reservoir_surveys_index": "https://www.usbr.gov/tsc/techreferences/reservoir.html",
+    "area_capacity_table": "https://www.usbr.gov/tsc/techreferences/reservoir/NavajoReservoir2019AreaCapacityTables_final508VI.pdf",
+    "sedimentation_survey": "https://www.usbr.gov/tsc/techreferences/reservoir/NavajoReservoir2019SedimentationSurvey_final508VI.pdf",
+    "historic_data_interface": "https://www.usbr.gov/rsvrWater/HistoricalApp.html"
+  },
+  "processed_relation_provenance": {
+    "official_report_range_ft": [
+      5775.0,
+      6110.0
+    ],
+    "processed_range_ft": [
+      5775.0,
+      6106.99
+    ],
+    "omitted_final_rows": 301,
+    "omitted_rows_position": "above the modeled 6085-ft spill elevation",
+    "verification_scope": "processed CSV against active interpolation; source-PDF extraction not repeated"
+  },
+  "verification": {
+    "table_rows": 33200,
+    "table_min_elevation_ft": 5775.0,
+    "table_max_elevation_ft": 6106.99,
+    "table_max_capacity_af": 2027401.62,
+    "deadpool_elevation_ft": 5775.0,
+    "deadpool_capacity_af": 0.0,
+    "spill_elevation_ft": 6085.0,
+    "spill_capacity_af": 1647936.17,
+    "max_table_to_interpolator_capacity_error_af": 0.0,
+    "max_table_to_interpolator_elevation_error_ft": 0.0
+  },
+  "historic_export": {
+    "first_date": "1967-06-07",
+    "last_date": "2024-08-17",
+    "rows": 20892,
+    "apparent_relation_shift_date": "2021-10-01",
+    "day_before": {
+      "elev_ft": 6024.1,
+      "reported_storage_af": 950561.0,
+      "curve_storage_af": 903523.27,
+      "reported_minus_curve_af": 47037.72999999998
+    },
+    "change_date": {
+      "elev_ft": 6024.05,
+      "reported_storage_af": 903061.0,
+      "curve_storage_af": 903060.07,
+      "reported_minus_curve_af": 0.9300000000512227
+    },
+    "median_reported_minus_curve_before_change_af": 50754.189999999944,
+    "median_reported_minus_curve_from_change_af": 0.5200000000186265,
+    "evaluation_start": {
+      "elev_ft": 6025.6,
+      "reported_storage_af": 965056.0,
+      "curve_storage_af": 917508.63,
+      "reported_minus_curve_af": 47547.369999999995
+    }
+  },
+  "inputs": {
+    "table": {
+      "path": "data/elevation_area_storage_relationships/elevation_storage_area_2019.csv",
+      "sha256": "272ef040867fe708f7a35bfcf52fdc804a23df6b2a09e6c16744c281027be40f"
+    },
+    "interpolators": {
+      "path": "data/elevation_area_storage_relationships/2019_elevation_area_capacity.pkl",
+      "sha256": "7944e8c4acc0bcb9b7afe7d84b45d929c8124c6850435799eac382651bf9d6dd"
+    },
+    "historic_reservoir_export": {
+      "path": "data/navajo_reservoir_historic/Clipped_NAVAJORESERVOIR08-18-2024T16.48.23.csv",
+      "sha256": "d162c791706116acdb77002a8dbc5080ba822b873d23af8414c3a21aafb8fd10"
+    },
+    "figure_style": {
+      "path": "paper/figure-support/figurestyle.py",
+      "sha256": "fe1a3e8978197ef531ecc7cbb589b11c981cf9470d4974980b9e2bab6bff8211"
+    }
+  },
+  "optional_provenance": {
+    "area_capacity_report": {
+      "provided": false
+    }
+  }
+}

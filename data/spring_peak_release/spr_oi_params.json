@@ -1,0 +1,13 @@
+{
+  "boundary": {
+    "x0": 1250407.0,
+    "s": 100000.0,
+    "y_low": 10.0,
+    "y_high": 200.0
+  },
+  "m0": 40.0,
+  "beta": 0.9162907318741553,
+  "omega_on_line": 0.75,
+  "storage_method": "feb_mean",
+  "swe_metric": "SWE_peak_by_Mar1_mm"
+}

@@ -1,0 +1,64 @@
+{
+  "description": "Threshold-specific SPR opportunity-index surfaces calibrated from WY>=2000 controlled historical Farmington successes.",
+  "generated_by": "deepreservoir.dev.phase26_threshold_oi_diagnostics",
+  "calibration_wy_min": 2000,
+  "storage_method": "feb_mean",
+  "swe_metric": "SWE_peak_by_Mar1_mm",
+  "omega_on_line": 0.75,
+  "m0": 40.0,
+  "beta": 0.9162907318741553,
+  "thresholds": {
+    "10000cfs_5d": {
+      "threshold_cfs": 10000.0,
+      "duration_days": 5,
+      "target_frequency": 0.2,
+      "label": "10,000 cfs / 5d",
+      "boundary": {
+        "x0": 1250407.0,
+        "s": 100000.0,
+        "y_low": 10.0,
+        "y_high": 200.0
+      },
+      "margin_shift_mm": 89.65624601184739
+    },
+    "8000cfs_10d": {
+      "threshold_cfs": 8000.0,
+      "duration_days": 10,
+      "target_frequency": 0.33,
+      "label": "8,000 cfs / 10d",
+      "boundary": {
+        "x0": 1250407.0,
+        "s": 100000.0,
+        "y_low": 10.0,
+        "y_high": 200.0
+      },
+      "margin_shift_mm": 74.88968131313719
+    },
+    "5000cfs_21d": {
+      "threshold_cfs": 5000.0,
+      "duration_days": 21,
+      "target_frequency": 0.5,
+      "label": "5,000 cfs / 21d",
+      "boundary": {
+        "x0": 1250407.0,
+        "s": 100000.0,
+        "y_low": 10.0,
+        "y_high": 200.0
+      },
+      "margin_shift_mm": 19.29068586939505
+    },
+    "2500cfs_10d": {
+      "threshold_cfs": 2500.0,
+      "duration_days": 10,
+      "target_frequency": 0.8,
+      "label": "2,500 cfs / 10d",
+      "boundary": {
+        "x0": 1250407.0,
+        "s": 100000.0,
+        "y_low": 10.0,
+        "y_high": 200.0
+      },
+      "margin_shift_mm": -48.50018385934612
+    }
+  }
+}
