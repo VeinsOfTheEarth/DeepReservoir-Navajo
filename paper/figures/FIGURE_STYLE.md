@@ -87,7 +87,7 @@ Accepted exceptions:
 - Selected-policy blue is a strategy color, distinct from royal-blue storage.
 - Training-path gradients encode training progress; retain the existing blue
   and purple sequential scales rather than replacing them with flat colors.
-- The flood-safety reward panel uses dark red for Farmington and light red for
+- The flood-safety reward panel uses dark red for Archuleta and light red for
   Bluff, with different line styles and matching threshold colors.
 - The historic SPR threshold bars use four purple shades to distinguish
   threshold levels within the same objective family.

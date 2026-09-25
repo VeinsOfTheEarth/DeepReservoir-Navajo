@@ -914,18 +914,6 @@ def _flooding_penalty_caps(q0: float, qlag2: object) -> float:
     return float(0.5 * (c1 + c2))
 
 
-@register_reward("flooding", "penalty_caps_jon")
-def flooding_penalty_caps_jon(ctx: RewardContext) -> float:
-    """Deprecated compatibility guardrail using Farmington for the 5,000-cfs term.
-
-    This variant is retained only to reproduce earlier internal experiments.
-    Training intended to represent the operating criteria should use
-    ``penalty_caps_archuleta_bluff``.
-    """
-    q0 = float(ctx.info.get("sj_at_farmington_cfs", 0.0))
-    qlag2 = ctx.info.get("sj_at_farmington_lag2_cfs", None)
-    return _flooding_penalty_caps(q0, qlag2)
-
 
 @register_reward("flooding", "penalty_caps_archuleta_bluff")
 def flooding_penalty_caps_archuleta_bluff(ctx: RewardContext) -> float:

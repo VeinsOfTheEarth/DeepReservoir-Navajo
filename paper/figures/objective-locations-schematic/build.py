@@ -415,7 +415,7 @@ def build() -> plt.Figure:
         title="Flood safety",
         lines=[
             "Keep discharge below both caps",
-            "SJ at Farmington ≤ 5,000 cfs",
+            "SJ near Archuleta ≤ 5,000 cfs",
             "SJ near Bluff ≤ 12,000 cfs",
         ],
         color=COLORS["flood"],
@@ -534,7 +534,7 @@ def build() -> plt.Figure:
     )
     connector(
         ax,
-        [(0.187, flood_y), (locations["farmington"][0] - 0.012, flood_y), (locations["farmington"][0] - 0.012, locations["farmington"][1] + 0.006)],
+        [(0.187, flood_y), (locations["archuleta"][0] - 0.012, flood_y), (locations["archuleta"][0] - 0.012, locations["archuleta"][1] + 0.006)],
         color=COLORS["flood"],
     )
     connector(

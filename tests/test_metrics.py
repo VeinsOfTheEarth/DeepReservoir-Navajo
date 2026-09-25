@@ -17,7 +17,6 @@ from deepreservoir.drl.metrics import (
 from deepreservoir.drl.rewards import (
     RewardContext,
     flooding_penalty_caps_archuleta_bluff,
-    flooding_penalty_caps_jon,
 )
 
 
@@ -211,7 +210,7 @@ class ThresholdMetricToleranceTests(unittest.TestCase):
                 "sj_at_archuleta_proxy_cfs": [5000.0005, 5000.0015],
                 "sj_at_farmington_cfs": [9000.0, 9000.0],
                 "sj_at_bluff_proxy_cfs": [12000.0005, 11999.0],
-                "rc_flooding.penalty_caps_jon": [0.0, 0.0],
+                "rc_flooding.penalty_caps_archuleta_bluff": [0.0, 0.0],
             },
             index=dates,
         )
@@ -224,7 +223,7 @@ class ThresholdMetricToleranceTests(unittest.TestCase):
             places=6,
         )
 
-    def test_flood_reward_excludes_downstream_animas_flow(self) -> None:
+    def test_flood_reward_uses_archuleta_and_bluff(self) -> None:
         ctx = RewardContext(
             t=0,
             date=pd.Timestamp("2014-01-01"),
@@ -239,7 +238,6 @@ class ThresholdMetricToleranceTests(unittest.TestCase):
         )
 
         self.assertEqual(flooding_penalty_caps_archuleta_bluff(ctx), 0.0)
-        self.assertEqual(flooding_penalty_caps_jon(ctx), -0.5)
 
     def test_agent_flood_metric_uses_paired_valid_proxy_days(self) -> None:
         dates = pd.date_range("2014-01-01", periods=3, freq="D")
@@ -247,7 +245,7 @@ class ThresholdMetricToleranceTests(unittest.TestCase):
             {
                 "sj_at_archuleta_proxy_cfs": [5_100.0, 4_900.0, 4_900.0],
                 "sj_at_bluff_proxy_cfs": [float("nan"), 9_000.0, 13_000.0],
-                "rc_flooding.penalty_caps_jon": [0.0, 0.0, 0.0],
+                "rc_flooding.penalty_caps_archuleta_bluff": [0.0, 0.0, 0.0],
             },
             index=dates,
         )
@@ -265,7 +263,7 @@ class ThresholdMetricToleranceTests(unittest.TestCase):
         df = pd.DataFrame(
             {
                 "sj_at_archuleta_proxy_cfs": [4_900.0],
-                "rc_flooding.penalty_caps_jon": [0.0],
+                "rc_flooding.penalty_caps_archuleta_bluff": [0.0],
             },
             index=dates,
         )
