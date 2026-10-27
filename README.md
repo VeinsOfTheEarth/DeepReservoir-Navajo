@@ -48,4 +48,8 @@ See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for evaluation, training, and pertu
 
 This is research software, not an operational decision authority. Operational use would require independent validation, operator review, and integration with operational forecasts and procedures.
 
+## Copyright and citation
+
+LANL copyright identifier: **O5077**.
+
 The project software license will be added after the approved copyright-holder wording is confirmed. Citation metadata are in [CITATION.cff](CITATION.cff).
